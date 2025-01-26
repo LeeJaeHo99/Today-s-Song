@@ -3,5 +3,18 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
+}
+
+.main-page section{
+    width: 100%;
+}
+
+.main-page .music-section{
     height: calc(100vh - 60px);
+
+    .inner{
+        justify-content: space-between;
+        padding-top: 80px;
+    }
 }

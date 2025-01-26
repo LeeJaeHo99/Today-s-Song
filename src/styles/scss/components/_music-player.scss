@@ -1,0 +1,25 @@
+.music-player{
+    width: 720px;
+    height: 440px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.music-desc{
+
+    li{
+        margin-bottom: 16px;
+        font-family: 'p-400';
+        font-size: 24px;
+
+        span{
+            font-family: 'p-700';
+        }
+    }
+}
+
+.music-thumnail--img{
+    border-radius: 16px;
+}
