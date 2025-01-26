@@ -98,6 +98,10 @@ a {
   src: url("/fonts/Pretendard-Thin.ttf");
   font-family: "p-100";
 }
+@font-face {
+  src: url("/fonts/kcc.woff2");
+  font-family: "kcc";
+}
 .inner {
   display: flex;
   align-items: center;
@@ -108,10 +112,31 @@ a {
   margin: auto;
 }
 
+.main-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-bg video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(50%);
+  opacity: 0.8;
+}
+
 header {
+  position: fixed;
+  z-index: 999;
   width: 100%;
   height: 60px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.062745098);
+  background-color: rgba(0, 0, 0, 0.0196078431);
+  box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.062745098);
 }
 header .inner {
   justify-content: space-between;
@@ -125,6 +150,11 @@ header .inner ul {
 header .inner ul li a {
   font-family: "p-500";
   font-size: 16px;
+  color: #fff;
+  transition: all 0.3s;
+}
+header .inner ul li a:hover {
+  color: #112112;
 }
 
 .section-title {
@@ -141,23 +171,23 @@ header .inner ul li a {
   border-radius: 16px;
 }
 
-.music-desc--wrap .music-desc--title {
-  font-family: "p-300";
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 48px;
-}
-.music-desc--wrap .music-desc li {
-  margin-bottom: 16px;
-  font-family: "p-400";
-  font-size: 24px;
-}
-.music-desc--wrap .music-desc li span {
-  font-family: "p-700";
-}
-
 .music-thumnail--img {
   border-radius: 16px;
+  box-shadow: 0px 0px 20px 16px rgba(0, 0, 0, 0.1254901961);
+}
+
+.music-desc--wrap .music-desc li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+  font-family: "kcc";
+  font-size: 30px;
+}
+.music-desc--wrap .music-desc li span {
+  font-weight: 600;
+  font-size: 36px;
+  color: #112112;
 }
 
 .play-btn {
@@ -192,17 +222,30 @@ header .inner ul li a {
 }
 
 .main-page .music-section {
+  z-index: 999;
   height: calc(100vh - 60px);
+  margin-top: 60px;
 }
 .main-page .music-section .inner {
   justify-content: flex-start;
   flex-direction: column;
-  padding-top: 80px;
+  padding-top: 40px;
+}
+.main-page .music-section .inner .music-info {
+  width: 80%;
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+}
+.main-page .music-section .inner .section-title {
+  margin-bottom: 16px;
+  font-size: 48px;
 }
 .main-page .music-section .inner .player-wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
   width: 100%;
-  padding-top: 100px;
 }/*# sourceMappingURL=style.css.map */
