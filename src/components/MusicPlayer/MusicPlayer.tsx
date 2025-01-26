@@ -26,7 +26,7 @@ export default function MusicPlayer() {
     return (
         <>
             <div id="youtube-player" className="music-player"></div>
-            <button className={`play-btn ${isPlaying ? `play` : `pause`}`} onClick={clickPlayer}>123</button>
+            <button className={`play-btn ${isPlaying ? `play` : `pause`}`} onClick={clickPlayer}></button>
             <MusicThumbnail videoId={videoId}/>
         </>
     );

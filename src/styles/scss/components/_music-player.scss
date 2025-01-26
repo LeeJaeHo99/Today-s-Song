@@ -17,14 +17,13 @@
         li{
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             margin-bottom: 24px;
             font-family: 'kcc';
-            font-size: 30px;
             
             span{
                 font-weight: 600;
-                font-size: 36px;
+                font-size: 44px;
                 color: #112112;
             }
         }
@@ -38,11 +37,11 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: #000;
+    background-color: #112112;
 }
 .play-btn.play{
-    background-color: lightblue;
+    background-image: url('/icons/play.png');
 }
 .play-btn.pause{
-    background-color: lightcoral;
+    background-image: url('/icons/pause.png');
 }
