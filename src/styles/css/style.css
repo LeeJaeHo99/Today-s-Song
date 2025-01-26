@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+@font-face {
+  src: url("/fonts/Pretendard-Black.ttf");
+  font-family: "p-900";
+}
+@font-face {
+  src: url("/fonts/Pretendard-ExtraBold.ttf");
+  font-family: "p-800";
+}
+@font-face {
+  src: url("/fonts/Pretendard-Bold.ttf");
+  font-family: "p-700";
+}
+@font-face {
+  src: url("/fonts/Pretendard-SemiBold.ttf");
+  font-family: "p-600";
+}
+@font-face {
+  src: url("/fonts/Pretendard-Medium.ttf");
+  font-family: "p-500";
+}
+@font-face {
+  src: url("/fonts/Pretendard-Regular.ttf");
+  font-family: "p-400";
+}
+@font-face {
+  src: url("/fonts/Pretendard-Light.ttf");
+  font-family: "p-300";
+}
+@font-face {
+  src: url("/fonts/Pretendard-ExtraLight.ttf");
+  font-family: "p-200";
+}
+@font-face {
+  src: url("/fonts/Pretendard-Thin.ttf");
+  font-family: "p-100";
+}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.062745098);
+}
+header .inner {
+  justify-content: space-between;
+}
+header .inner ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+header .inner ul li a {
+  font-family: "p-500";
+  font-size: 16px;
+}
+
+.main-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 60px);
+}/*# sourceMappingURL=style.css.map */
