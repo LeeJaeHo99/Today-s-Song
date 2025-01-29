@@ -1,7 +1,7 @@
 import SectionTitle from "@/components/SectionTitle";
-import Review from '@/components/Review/Review';
-import MoreViewBtn from '@/components/Btn/MoreViewBtn';
 import SubTitle from '@/components/SubTitle';
+import MoreViewBtn from '@/components/Btn/MoreViewBtn';
+import Review from '@/components/Review/Review';
 import SetReview from '@/components/Review/SetReview';
 
 export default function ReviewSection(){
