@@ -5,7 +5,7 @@ import MusicThumbnail from "./MusicThumnail";
 import { useState } from "react";
 
 export default function MusicPlayer() {
-    const videoId = "ffgGkQCC3bA";
+    const videoId = "fuz2F8GGQKI";
     const playerRef = useYoutubePlayer(videoId);
     const [isPlaying, setIsPlaying] = useState(false);
 

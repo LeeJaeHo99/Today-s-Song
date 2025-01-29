@@ -27,3 +27,18 @@
         opacity: 0.8;
     }
 }
+
+.more-view--btn__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    
+    .more-view--btn{
+        font-family: 'p-700';
+        font-size: 18px;
+        color: #daba9e;
+    }
+}

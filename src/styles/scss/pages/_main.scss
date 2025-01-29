@@ -4,7 +4,6 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #00000010;
 
     > .inner{
         flex-direction: column;
@@ -57,5 +56,26 @@
 }
 
 .review-section{
-    padding-top: 80px;
+    padding: 100px 0;
+
+    .inner{
+        flex-direction: column;
+
+        .section-title{
+            margin-bottom: 24px;
+        }
+        .sub-title{
+            margin-bottom: 80px;
+        }
+        .review-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            padding: 0 12px;
+            margin-bottom: 64px;
+        }
+    }
 }
