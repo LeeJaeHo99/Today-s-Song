@@ -7,6 +7,7 @@
 
     > .inner{
         flex-direction: column;
+        max-width: none;
         overflow: hidden;
     }
 }
@@ -76,6 +77,21 @@
             height: auto;
             padding: 0 12px;
             margin-bottom: 64px;
+        }
+    }
+}
+
+.music-history-section{
+    padding: 100px 0;
+
+    .inner{
+        flex-direction: column;
+
+        .section-title{
+            margin-bottom: 24px;
+        }
+        .sub-title{
+            margin-bottom: 80px;
         }
     }
 }

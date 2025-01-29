@@ -245,6 +245,7 @@ header .inner ul li a:hover {
   margin-bottom: 0;
   font-family: "p-400";
   font-size: 22px;
+  color: #112112;
 }
 
 .review-component {
@@ -325,6 +326,50 @@ header .inner ul li a:hover {
   background-color: rgba(218, 186, 158, 0.5647058824);
 }
 
+.music-history--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.music-history--wrap .music-history--component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 480px;
+  height: auto;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 16px 12px rgba(0, 0, 0, 0.062745098);
+}
+.music-history--wrap .music-history--component .rate-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.music-history--wrap .music-history--component .music-thumnail {
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+.music-history--wrap .music-history--component .music-desc {
+  text-align: center;
+}
+.music-history--wrap .music-history--component .music-desc .title {
+  margin-bottom: 12px;
+  font-family: "p-700";
+  font-size: 28px;
+}
+.music-history--wrap .music-history--component .music-desc .singer {
+  font-family: "p-400";
+  font-size: 22px;
+  color: #a5a5a5;
+}
+
 .main-page {
   display: flex;
   align-items: center;
@@ -334,6 +379,7 @@ header .inner ul li a:hover {
 }
 .main-page > .inner {
   flex-direction: column;
+  max-width: none;
   overflow: hidden;
 }
 
@@ -399,4 +445,17 @@ header .inner ul li a:hover {
   height: auto;
   padding: 0 12px;
   margin-bottom: 64px;
+}
+
+.music-history-section {
+  padding: 100px 0;
+}
+.music-history-section .inner {
+  flex-direction: column;
+}
+.music-history-section .inner .section-title {
+  margin-bottom: 24px;
+}
+.music-history-section .inner .sub-title {
+  margin-bottom: 80px;
 }/*# sourceMappingURL=style.css.map */

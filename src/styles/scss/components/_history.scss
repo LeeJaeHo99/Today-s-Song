@@ -1,0 +1,46 @@
+.music-history--wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+    .music-history--component{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 480px;
+        height: auto;
+        padding: 24px;
+        border-radius: 16px;
+        box-shadow: 0px 0px 16px 12px #00000010;
+
+        .rate-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        .music-thumnail{
+            width: 100%;
+            height: auto;
+            margin-bottom: 24px;
+        }
+        .music-desc{
+            text-align: center;
+
+            .title{
+                margin-bottom: 12px;
+                font-family: "p-700";
+                font-size: 28px;
+            }
+            .singer{
+                font-family: "p-400";
+                font-size: 22px;
+                color: #a5a5a5;
+            }
+        }
+    }
+}
