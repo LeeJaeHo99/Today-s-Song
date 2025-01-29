@@ -7,41 +7,62 @@
     border-radius: 16px;
 }
 
-.music-thumnail--img{
-    border-radius: 16px;
-    box-shadow: 0px 0px 20px 16px #00000020;
+.music-plauer--wrap{
+    position: relative;
+
+    .music-thumnail--img{
+        margin: 40px 0;
+        border-radius: 50%;
+        object-fit: fill;
+        box-shadow: 0px 0px 20px 16px #00000020;
+        animation: musicStart infinite 6s linear;
+    }
+    
+    .music-thumnail--img.play{
+        animation-play-state: running;
+    }
+    
+    .music-thumnail--img.pause{
+        animation-play-state: paused;
+    }
+    .play-btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+        width: 60px;
+        height: 60px;
+        background-image: url('/icons/play.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .play-btn.play{
+        background-image: url('/icons/play.png');
+    }
+    .play-btn.play{
+        background-image: url('/icons/pause.png');
+    }
+}
+
+@keyframes musicStart {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
 
 .music-desc--wrap{
     .music-desc{
         li{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            font-family: 'kcc';
+            margin-bottom: 16px;
+            font-family: 'p-700';
+            font-size: 28px;
             
-            span{
-                font-weight: 600;
-                font-size: 44px;
-                color: #112112;
+            &:last-child{
+                margin-bottom: 0;
+                font-family: 'p-400';
+                font-size: 22px;
             }
         }
     }
-}
-
-.play-btn{
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: #112112;
-}
-.play-btn.play{
-    background-image: url('/icons/play.png');
-}
-.play-btn.pause{
-    background-image: url('/icons/pause.png');
 }

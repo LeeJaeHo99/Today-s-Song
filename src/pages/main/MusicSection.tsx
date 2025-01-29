@@ -10,6 +10,7 @@ export default function MusicSection() {
             <div className="inner">
                 <div className="music-info">
                     <SectionTitle title={`𝑇𝑜𝑑𝑎𝑦'𝑠 𝑆𝑜𝑛𝑔`} />
+                    {/* <SectionTitle title={`오늘의 노래`} /> */}
                     <div className="player-wrap">
                         <MusicPlayer />
                         <MusicDesc />

@@ -3,9 +3,10 @@ export default function MusicDesc() {
         <div className="music-desc--wrap">
             <ul className="music-desc">
                 <li>
-                    <span className="singer">백예린</span>
-                    <div>&nbsp; - &nbsp;</div>
-                    <span className="title">Love Love Love</span>
+                    <div className="title">그대에게</div>
+                </li>
+                <li>
+                    <div className="singer">CAMO</div>
                 </li>
             </ul>
         </div>
