@@ -32,19 +32,20 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80%;
-            border-radius: 16px;
+            width: 70%;
+            padding: 24px;
+            background-color: #fff;
+            border-radius: 24px;
             text-align: center;
+            box-shadow: 0px 0px 50px 20px #00000025;
         }
         .section-title{
             display: inline-block;
             padding: 16px 24px;
-            background-color: #fff;
             border-radius: 8px;
-            font-family: 'p-700';
+            font-family: 'p-600';
             font-size: 60px;
-            color: #daba9e;
-            // text-shadow: 0px 0px 20px #daba9e40;
+            color: #000;
         }
         .player-wrap{
             display: flex;

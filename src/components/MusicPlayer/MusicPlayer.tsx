@@ -5,7 +5,7 @@ import MusicThumbnail from "./MusicThumnail";
 import { useState } from "react";
 
 export default function MusicPlayer() {
-    const videoId = "fuz2F8GGQKI";
+    const videoId = "9U1jiaRsHok";
     const playerRef = useYoutubePlayer(videoId);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -28,8 +28,7 @@ export default function MusicPlayer() {
 
     return (
         <>
-            <div id="youtube-player" className="music-player"></div>
-            <div className="music-plauer--wrap">
+            <div className="music-player--wrap">
                 <button className={`play-btn ${isPlaying ? `play` : `pause`}`} onClick={clickPlayer}></button>
                 <MusicThumbnail videoId={videoId} isPlaying={isPlaying}/>
             </div>

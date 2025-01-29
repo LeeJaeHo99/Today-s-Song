@@ -121,13 +121,11 @@ a {
   height: 100%;
   overflow: hidden;
 }
-.main-bg video {
+.main-bg img {
   width: 100%;
+  color: transparent;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: grayscale(50%);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .more-view--btn__wrap {
@@ -146,7 +144,7 @@ a {
 
 header {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   width: 100%;
   height: 60px;
   background-color: rgba(0, 0, 0, 0.0196078431);
@@ -155,6 +153,11 @@ header {
 header .inner {
   justify-content: space-between;
 }
+header .inner h1 {
+  font-family: "p-900";
+  font-size: 24px;
+  color: #daba9e;
+}
 header .inner ul {
   display: flex;
   align-items: center;
@@ -162,13 +165,13 @@ header .inner ul {
   gap: 16px;
 }
 header .inner ul li a {
-  font-family: "p-500";
-  font-size: 16px;
-  color: #fff;
+  font-family: "p-600";
+  font-size: 18px;
+  color: #daba9e;
   transition: all 0.3s;
 }
 header .inner ul li a:hover {
-  color: #112112;
+  color: #fff;
 }
 
 .section-title {
@@ -191,24 +194,28 @@ header .inner ul li a:hover {
   border-radius: 16px;
 }
 
-.music-plauer--wrap {
+.music-player--wrap {
   position: relative;
 }
-.music-plauer--wrap .music-thumnail--img {
+.music-player--wrap .music-thumnail--img {
+  width: 100%;
+  max-width: 480px;
+  max-height: 480px;
   margin: 40px 0;
   border-radius: 50%;
-  -o-object-fit: fill;
-     object-fit: fill;
-  box-shadow: 0px 0px 20px 16px rgba(0, 0, 0, 0.1254901961);
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #000;
+  box-shadow: 0px 0px 20px 16px rgba(0, 0, 0, 0.1882352941);
   animation: musicStart infinite 10s linear;
 }
-.music-plauer--wrap .music-thumnail--img.play {
+.music-player--wrap .music-thumnail--img.play {
   animation-play-state: running;
 }
-.music-plauer--wrap .music-thumnail--img.pause {
+.music-player--wrap .music-thumnail--img.pause {
   animation-play-state: paused;
 }
-.music-plauer--wrap .play-btn {
+.music-player--wrap .play-btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -221,10 +228,10 @@ header .inner ul li a:hover {
   background-position: center;
   background-size: contain;
 }
-.music-plauer--wrap .play-btn.play {
+.music-player--wrap .play-btn.play {
   background-image: url("/icons/play.png");
 }
-.music-plauer--wrap .play-btn.play {
+.music-player--wrap .play-btn.play {
   background-image: url("/icons/pause.png");
 }
 
@@ -239,13 +246,13 @@ header .inner ul li a:hover {
 .music-desc--wrap .music-desc li {
   margin-bottom: 16px;
   font-family: "p-700";
-  font-size: 28px;
+  font-size: 36px;
 }
 .music-desc--wrap .music-desc li:last-child {
   margin-bottom: 0;
   font-family: "p-400";
-  font-size: 22px;
-  color: #112112;
+  font-size: 24px;
+  color: #a5a5a5;
 }
 
 .review-component {
@@ -372,23 +379,27 @@ header .inner ul li a:hover {
 
 .music-recommend--component {
   width: 100%;
-  height: 64px;
+  height: 140px;
   border: 3px solid #daba9e;
   border-radius: 8px;
   margin-bottom: 64px;
 }
 .music-recommend--component > div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
+  flex-direction: column;
   width: 100%;
   height: 100%;
 }
 .music-recommend--component > div label {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
   height: 100%;
+}
+.music-recommend--component > div label:first-child {
+  border-bottom: 2px solid #daba9e;
 }
 .music-recommend--component > div label span {
   display: flex;
@@ -398,7 +409,7 @@ header .inner ul li a:hover {
   height: 100%;
   background-color: #daba9e;
   font-family: "p-700";
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
 }
 .music-recommend--component > div label input {
@@ -465,18 +476,20 @@ header .inner ul li a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  border-radius: 16px;
+  width: 70%;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 24px;
   text-align: center;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.1450980392);
 }
 .music-section .inner .section-title {
   display: inline-block;
   padding: 16px 24px;
-  background-color: #fff;
   border-radius: 8px;
-  font-family: "p-700";
+  font-family: "p-600";
   font-size: 60px;
-  color: #daba9e;
+  color: #000;
 }
 .music-section .inner .player-wrap {
   display: flex;

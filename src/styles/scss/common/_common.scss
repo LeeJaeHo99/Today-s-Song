@@ -14,17 +14,14 @@
     left: 0;
     z-index: 0;
     width: 100%;
-    // height: calc(100vh - 60px);
     height: 100%;
-    // margin-top: 60px;
     overflow: hidden;
 
-    video{
+    img{
         width: 100%;
+        color: transparent;
         height: 100%;
-        object-fit: cover;
-        filter: grayscale(50%);
-        opacity: 0.8;
+        opacity: 0.9;
     }
 }
 

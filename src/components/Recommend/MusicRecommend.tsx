@@ -10,7 +10,7 @@ export default function MusicRecommend() {
                         <input
                             id="recommend-title"
                             type="text"
-                            placeholder="노래의 제목을 입력해주세요."
+                            placeholder="제목을 입력해주세요."
                         />
                     </label>
                     <label htmlFor="recommend-singer">
@@ -18,7 +18,7 @@ export default function MusicRecommend() {
                         <input
                             id="recommend-singer"
                             type="text"
-                            placeholder="노래의 가수를 입력해주세요."
+                            placeholder="가수를 입력해주세요."
                         />
                     </label>
                 </div>

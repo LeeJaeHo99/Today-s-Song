@@ -1,18 +1,11 @@
-import Image from "next/image";
 import Link from 'next/link';
 
 export default function Header() {
     return (
         <header>
             <div className="inner">
-                <h1 style={{fontSize: '36px'}}>
-                    {/* <Image
-                        src={"/images/logo.png"}
-                        width={140}
-                        height={50}
-                        alt="logo"
-                    /> */}
-                    💿
+                <h1>
+                    💿 오느래 노래
                 </h1>
                 <HeaderList/>
             </div>
