@@ -2,6 +2,7 @@ import MainBg from '@/components/MainBg';
 import MusicSection from '@/pages/main/MusicSection';
 import ReviewSection from '@/pages/main/ReviewSection';
 import MusicHistorySection from '@/pages/main/MusicHistorySection';
+import MusicRecommendSection from '@/pages/main/MusicRecommendSection';
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
                 <MusicSection/>
                 <ReviewSection/>
                 <MusicHistorySection/>
+                <MusicRecommendSection/>
             </div>
         </div>
     );

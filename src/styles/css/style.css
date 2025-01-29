@@ -366,7 +366,7 @@ header .inner ul li a:hover {
 }
 .music-history--wrap .music-history--component .music-desc .singer {
   font-family: "p-400";
-  font-size: 22px;
+  font-size: 20px;
   color: #a5a5a5;
 }
 
@@ -457,5 +457,18 @@ header .inner ul li a:hover {
   margin-bottom: 24px;
 }
 .music-history-section .inner .sub-title {
+  margin-bottom: 80px;
+}
+
+.music-recommend-section {
+  padding: 100px 0;
+}
+.music-recommend-section .inner {
+  flex-direction: column;
+}
+.music-recommend-section .inner .section-title {
+  margin-bottom: 24px;
+}
+.music-recommend-section .inner .sub-title {
   margin-bottom: 80px;
 }/*# sourceMappingURL=style.css.map */
