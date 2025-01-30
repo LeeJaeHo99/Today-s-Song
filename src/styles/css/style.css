@@ -298,7 +298,7 @@ header.scrolled .inner ul li a:hover {
 }
 
 .music-btn--wrap.view {
-  transition: all 0.3s;
+  transition: all 0.5s;
   opacity: 1;
   transform: translateX(0px);
 }
@@ -437,7 +437,6 @@ header.scrolled .inner ul li a:hover {
   width: 60%;
   height: auto;
   padding: 24px;
-  margin-bottom: 64px;
   border-radius: 16px;
   box-shadow: 0px 0px 16px 12px rgba(0, 0, 0, 0.062745098);
 }
@@ -452,7 +451,7 @@ header.scrolled .inner ul li a:hover {
   width: 20%;
   height: 100%;
   margin-bottom: 12px;
-  font-family: "p-200";
+  font-family: "p-500";
   font-size: 18px;
 }
 .music-recommend--component label > span > span {

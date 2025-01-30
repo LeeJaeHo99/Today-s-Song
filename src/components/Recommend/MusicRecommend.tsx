@@ -1,9 +1,19 @@
+'use client';
+
+import { motion } from "motion/react";
 import Image from "next/image";
 
 export default function MusicRecommend() {
     return (
         <>
-            <form className="music-recommend--component" action="">
+            <motion.form 
+                className="music-recommend--component" 
+                action=""
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.7 }}
+            >
                 <label htmlFor="recommend-title">
                     <span>
                         제목
@@ -39,7 +49,7 @@ export default function MusicRecommend() {
                         placeholder="짧은 사연을 입력해주세요."
                     />
                 </label>
-                <button className="music-recommend-submit--btn" type="submit">
+                <button className="music-recommend-submit--btn" type="button">
                     <span>제출하기</span>
                     <Image
                         src={"/icons/arrow.png"}
@@ -48,7 +58,7 @@ export default function MusicRecommend() {
                         alt="arrow-icon"
                     />
                 </button>
-            </form>
+            </motion.form>
         </>
     );
 }

@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from "motion/react";
 import { useState } from "react";
 
 export default function SetReview() {
@@ -11,7 +12,14 @@ export default function SetReview() {
     }
 
     return (
-        <form className="set-review-component" action="">
+        <motion.form 
+            className="set-review-component" 
+            action=""
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8 }}
+        >
             <select name="rate" id="">
                 <option value="5">⭐️ ⭐️ ⭐️ ⭐️ ⭐️</option>
                 <option value="4">⭐️ ⭐️ ⭐️ ⭐️</option>
@@ -28,6 +36,6 @@ export default function SetReview() {
                 required
             />
             <button type="submit">저장하기</button>
-        </form>
+        </motion.form>
     );
 }

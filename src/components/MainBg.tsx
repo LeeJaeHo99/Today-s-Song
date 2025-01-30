@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function MainBg() {
-    const videoId = 'fuz2F8GGQKI';
+    const videoId = '_fd_hwSm9zI';
     const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
     return (
