@@ -42,7 +42,7 @@ export default function Review() {
             </div>
             <div className="nickname">- <span>이재호</span> -</div>
             <div className="review-text">
-                그대에게 그대에게 그대에게 그대에게 그대에게 그대에게 그대에게 그대에게 그대에게 그대에게 그대에게 그대에게 그대에게
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi magnam 
             </div>
         </div>
     );

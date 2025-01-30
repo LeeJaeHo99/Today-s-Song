@@ -24,9 +24,7 @@ export default function Header() {
     return (
         <header className={`${isScrolled && 'scrolled'}`}>
             <div className="inner">
-                <h1>
-                    💿 오느래 노래
-                </h1>
+                <h1>💿 오느래 노래</h1>
                 <HeaderList/>
             </div>
         </header>

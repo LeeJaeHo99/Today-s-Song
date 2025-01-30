@@ -1,9 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 
 export default function MusicBtn() {
+    const [isView, setIsView] = useState('');
+    useEffect(() => {
+        setIsView('view');
+    },[])
+
     const [saveState, setSaveState] = useState(false);
     const saveHandler = () => setSaveState(!saveState);
 
@@ -11,7 +16,7 @@ export default function MusicBtn() {
     const infiniteHandler = () => setInfiniteState(!infiniteState);
 
     return (
-        <div className="music-btn--wrap">
+        <div className={`music-btn--wrap ${isView}`}>
             <div className="save-btn" onClick={saveHandler}>
                 <Image
                     src={`/icons/save-${saveState}.png`}

@@ -157,7 +157,7 @@ header .inner {
 header .inner h1 {
   font-family: "p-900";
   font-size: 24px;
-  color: #f8b042;
+  color: #fff;
 }
 header .inner ul {
   display: flex;
@@ -169,17 +169,24 @@ header .inner ul li a {
   padding-bottom: 4px;
   font-family: "p-400";
   font-size: 18px;
-  color: #f8b042;
+  color: #fff;
 }
 header .inner ul li a:hover {
-  border-bottom: 1.5px solid #f8b042;
+  border-bottom: 1.5px solid #fff;
 }
 
 header.scrolled {
   background-color: #fff;
 }
+header.scrolled .inner h1 {
+  color: #f8b042;
+}
 header.scrolled .inner ul li a {
   font-family: "p-600";
+  color: #f8b042;
+}
+header.scrolled .inner ul li a:hover {
+  border-bottom: 1.5px solid #f8b042;
 }
 
 .section-title {
@@ -256,11 +263,23 @@ header.scrolled .inner ul li a {
   font-family: "p-700";
   font-size: 36px;
 }
-.music-desc--wrap .music-desc li:last-child {
+.music-desc--wrap .music-desc li > div {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+.music-desc--wrap .music-desc li > div.view {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.music-desc--wrap .music-desc li .title {
+  transition: all 0.3s;
+}
+.music-desc--wrap .music-desc li .singer {
   margin-bottom: 0;
   font-family: "p-400";
   font-size: 24px;
   color: #a5a5a5;
+  transition: all 0.6s;
 }
 
 .music-btn--wrap {
@@ -271,9 +290,17 @@ header.scrolled .inner ul li a {
   position: absolute;
   top: 5%;
   right: 5%;
+  opacity: 0;
+  transform: translateX(-20px);
 }
 .music-btn--wrap > div {
   cursor: pointer;
+}
+
+.music-btn--wrap.view {
+  transition: all 0.3s;
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 .review-component {
@@ -499,6 +526,7 @@ header.scrolled .inner ul li a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
+  max-height: 700px;
   padding: 24px;
   background-color: #fff;
   border-radius: 24px;

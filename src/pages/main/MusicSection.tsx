@@ -10,11 +10,11 @@ export default function MusicSection() {
             <div className="inner">
                 <div className="music-info">
                     <MusicBtn/>
-                <div id="youtube-player" className="music-player"></div>
                     <div className="player-wrap">
                         <MusicPlayer />
                         <MusicDesc />
                     </div>
+                <div id="youtube-player" className="music-player"></div>
                 </div>
             </div>
         </section>

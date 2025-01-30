@@ -13,7 +13,7 @@ header{
         h1{
             font-family: 'p-900';
             font-size: 24px;
-            color: #f8b042;
+            color: #fff;
         }
         ul{
             display: flex;
@@ -26,10 +26,10 @@ header{
                     padding-bottom: 4px;
                     font-family: 'p-400';
                     font-size: 18px;
-                    color: #f8b042;
+                    color: #fff;
 
                     &:hover{
-                        border-bottom: 1.5px solid #f8b042;
+                        border-bottom: 1.5px solid #fff;
                     }
                 }
             }
@@ -40,10 +40,18 @@ header.scrolled{
     background-color: #fff;
 
     .inner{
+        h1{
+            color: #f8b042;
+        }
         ul{
             li{
                 a{
                     font-family: 'p-600';
+                    color: #f8b042;
+
+                    &:hover{
+                        border-bottom: 1.5px solid #f8b042;
+                    }
                 }
             }
         }
