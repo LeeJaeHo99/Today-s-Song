@@ -8,7 +8,7 @@ export default function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if(window.scrollY >= 200){
+            if(window.scrollY >= 300){
                 setIsScrolled(true);
             }else{
                 setIsScrolled(false);
@@ -24,7 +24,7 @@ export default function Header() {
     return (
         <header className={`${isScrolled && 'scrolled'}`}>
             <div className="inner">
-                <h1>💿 오느래 노래</h1>
+                <h1><Link href={'/'}>💿 오느래 노래</Link></h1>
                 <HeaderList/>
             </div>
         </header>
@@ -35,16 +35,16 @@ function HeaderList(){
     return(
         <ul>
             <li>
-                <Link href={'/'}>공지사항</Link>
+                <Link href={'/notice'}>공지사항</Link>
             </li>
             <li>
-                <Link href={'/'}>감상평</Link>
+                <Link href={'/review'}>감상평</Link>
             </li>
             <li>
-                <Link href={'/'}>노래신청</Link>
+                <Link href={'/recommend'}>노래신청</Link>
             </li>
             <li>
-                <Link href={'/'}>매일노래</Link>
+                <Link href={'/everydaySong'}>매일노래</Link>
             </li>
         </ul>
     );

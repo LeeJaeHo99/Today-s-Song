@@ -142,8 +142,13 @@ a {
   color: #f8b042;
 }
 
+.sub-page--wrap .inner {
+  margin-top: 60px;
+}
+
 header {
   position: fixed;
+  top: 0;
   z-index: 9999;
   width: 100%;
   height: 60px;
@@ -154,7 +159,7 @@ header {
 header .inner {
   justify-content: space-between;
 }
-header .inner h1 {
+header .inner h1 a {
   font-family: "p-900";
   font-size: 24px;
   color: #fff;
@@ -178,7 +183,7 @@ header .inner ul li a:hover {
 header.scrolled {
   background-color: #fff;
 }
-header.scrolled .inner h1 {
+header.scrolled .inner h1 a {
   color: #f8b042;
 }
 header.scrolled .inner ul li a {
