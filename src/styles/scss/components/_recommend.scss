@@ -1,7 +1,7 @@
 .music-recommend--component{
-    width: 100%;
+    width: 50%;
     height: 140px;
-    border: 3px solid #daba9e;
+    border: 3px solid #f8b042;
     border-radius: 8px;
     margin-bottom: 64px;
 
@@ -20,7 +20,7 @@
             height: 100%;
 
             &:first-child{
-                border-bottom: 2px solid #daba9e;
+                border-bottom: 2px solid #f8b042;
             }
             span{
                 display: flex;
@@ -28,7 +28,7 @@
                 justify-content: center;
                 width: 20%;
                 height: 100%;
-                background-color: #daba9e;
+                background-color: #f8b042;
                 font-family: 'p-700';
                 font-size: 20px;
                 color: #fff;
@@ -53,7 +53,7 @@
     gap: 12px;
     width: 160px;
     height: 48px;
-    background-color: #daba9e;
+    background-color: #f8b042;
     border-radius: 8px;
     font-family: 'p-400';
     font-size: 20px;

@@ -3,10 +3,10 @@ export default function MusicDesc() {
         <div className="music-desc--wrap">
             <ul className="music-desc">
                 <li>
-                    <div className="title">그대에게</div>
+                    <div className="title">거리에서</div>
                 </li>
                 <li>
-                    <div className="singer">CAMO</div>
+                    <div className="singer">Leellamarz (Feat. Ash Island)</div>
                 </li>
             </ul>
         </div>

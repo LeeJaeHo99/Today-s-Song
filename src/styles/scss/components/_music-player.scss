@@ -72,3 +72,17 @@
         }
     }
 }
+
+.music-btn--wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+    > div{
+        cursor: pointer;
+    }
+}

@@ -1,10 +1,10 @@
-.music-history--wrap{
+.music-history--wrap {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    
-    .music-history--component{
+
+    .music-history--component {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -15,28 +15,37 @@
         border-radius: 16px;
         box-shadow: 0px 0px 16px 12px #00000010;
 
-        .rate-wrap{
+        .rate-wrap {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            gap: 8px;
+            justify-content: space-between;
             width: 100%;
             margin-bottom: 16px;
+
+            .time-icon{
+                font-size: 24px;
+            }
+            > div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 8px;
+            }
         }
-        .music-thumnail{
+        .music-thumnail {
             width: 100%;
             height: auto;
             margin-bottom: 24px;
         }
-        .music-desc{
+        .music-desc {
             text-align: center;
 
-            .title{
+            .title {
                 margin-bottom: 12px;
                 font-family: "p-700";
                 font-size: 28px;
             }
-            .singer{
+            .singer {
                 font-family: "p-400";
                 font-size: 20px;
                 color: #a5a5a5;

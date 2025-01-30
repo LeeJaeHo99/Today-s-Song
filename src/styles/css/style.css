@@ -139,7 +139,7 @@ a {
 .more-view--btn__wrap .more-view--btn {
   font-family: "p-700";
   font-size: 18px;
-  color: #daba9e;
+  color: #f8b042;
 }
 
 header {
@@ -156,7 +156,7 @@ header .inner {
 header .inner h1 {
   font-family: "p-900";
   font-size: 24px;
-  color: #daba9e;
+  color: #f8b042;
 }
 header .inner ul {
   display: flex;
@@ -167,7 +167,7 @@ header .inner ul {
 header .inner ul li a {
   font-family: "p-600";
   font-size: 18px;
-  color: #daba9e;
+  color: #f8b042;
   transition: all 0.3s;
 }
 header .inner ul li a:hover {
@@ -255,6 +255,19 @@ header .inner ul li a:hover {
   color: #a5a5a5;
 }
 
+.music-btn--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.music-btn--wrap > div {
+  cursor: pointer;
+}
+
 .review-component {
   width: 30%;
   height: 240px;
@@ -291,7 +304,7 @@ header .inner ul li a:hover {
 .set-review-component select {
   width: 15%;
   height: 64px;
-  border: 3px solid #daba9e;
+  border: 3px solid #f8b042;
   border-right: none;
   border-radius: 8px;
   border-top-right-radius: 0;
@@ -307,7 +320,7 @@ header .inner ul li a:hover {
   width: 75%;
   height: 64px;
   padding-left: 24px;
-  border: 3px solid #daba9e;
+  border: 3px solid #f8b042;
   border-left: none;
   border-right: none;
   font-family: "p-400";
@@ -318,8 +331,8 @@ header .inner ul li a:hover {
 .set-review-component button {
   width: 10%;
   height: 64px;
-  background-color: #daba9e;
-  border: 3px solid #daba9e;
+  background-color: #f8b042;
+  border: 3px solid #f8b042;
   border-left: none;
   border-radius: 8px;
   border-top-left-radius: 0;
@@ -330,7 +343,7 @@ header .inner ul li a:hover {
   transition: all 0.3s;
 }
 .set-review-component button:hover {
-  background-color: rgba(218, 186, 158, 0.5647058824);
+  background-color: rgba(248, 176, 66, 0.5647058824);
 }
 
 .music-history--wrap {
@@ -353,10 +366,18 @@ header .inner ul li a:hover {
 .music-history--wrap .music-history--component .rate-wrap {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 8px;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 16px;
+}
+.music-history--wrap .music-history--component .rate-wrap .time-icon {
+  font-size: 24px;
+}
+.music-history--wrap .music-history--component .rate-wrap > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
 }
 .music-history--wrap .music-history--component .music-thumnail {
   width: 100%;
@@ -378,9 +399,9 @@ header .inner ul li a:hover {
 }
 
 .music-recommend--component {
-  width: 100%;
+  width: 50%;
   height: 140px;
-  border: 3px solid #daba9e;
+  border: 3px solid #f8b042;
   border-radius: 8px;
   margin-bottom: 64px;
 }
@@ -399,7 +420,7 @@ header .inner ul li a:hover {
   height: 100%;
 }
 .music-recommend--component > div label:first-child {
-  border-bottom: 2px solid #daba9e;
+  border-bottom: 2px solid #f8b042;
 }
 .music-recommend--component > div label span {
   display: flex;
@@ -407,7 +428,7 @@ header .inner ul li a:hover {
   justify-content: center;
   width: 20%;
   height: 100%;
-  background-color: #daba9e;
+  background-color: #f8b042;
   font-family: "p-700";
   font-size: 20px;
   color: #fff;
@@ -430,7 +451,7 @@ header .inner ul li a:hover {
   gap: 12px;
   width: 160px;
   height: 48px;
-  background-color: #daba9e;
+  background-color: #f8b042;
   border-radius: 8px;
   font-family: "p-400";
   font-size: 20px;
@@ -481,7 +502,7 @@ header .inner ul li a:hover {
   background-color: #fff;
   border-radius: 24px;
   text-align: center;
-  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.1450980392);
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.062745098);
 }
 .music-section .inner .section-title {
   display: inline-block;
