@@ -1,0 +1,29 @@
+footer{
+    width: 100%;
+    height: 160px;
+    background-color: #ddd;
+
+    .inner{
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 40px;
+        padding: 32px 0;
+
+        h2{
+            font-family: "p-900";
+            font-size: 24px;
+            color: #a5a5a5;
+        }
+        div{
+            p{
+                font-family: 'p-400';
+                font-size: 18px;
+                color: #a5a5a5;
+
+                &:first-child{
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}
