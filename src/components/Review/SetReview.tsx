@@ -27,7 +27,7 @@ export default function SetReview() {
                 placeholder="한줄평을 50글자 이내로 남겨주세요."
                 required
             />
-            <button type="button">저장하기</button>
+            <button type="submit">저장하기</button>
         </form>
     );
 }
