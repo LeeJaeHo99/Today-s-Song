@@ -1,12 +1,12 @@
 import SectionTitle from "@/components/SectionTitle";
-import NoticeTable from '@/components/Notice/NoticeTable';
+import NoticeComment from '../../../../components/Notice/NoticeComment';
 
 export default function NoticePage() {
     return (
         <div className="notice-page sub-page--wrap">
             <div className="inner">
                 <SectionTitle title={"공지사항"} />
-                <NoticeTable/>
+                <NoticeComment/>
             </div>
         </div>
     );
