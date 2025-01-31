@@ -1,5 +1,5 @@
 import SectionTitle from "@/components/SectionTitle";
-import NoticeComment from '../../../../components/Notice/NoticeComment';
+import NoticeComment from '@/components/Notice/NoticeComment';
 
 export default function NoticePage() {
     return (
