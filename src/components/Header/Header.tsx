@@ -1,10 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const pathName = usePathname();
+    console.log('pathName: ', pathName);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -22,7 +25,7 @@ export default function Header() {
     })
 
     return (
-        <header className={`${isScrolled && 'scrolled'}`}>
+        <header className={`${isScrolled && 'scrolled' || pathName !== '/' && 'scrolled'}`}>
             <div className="inner">
                 <h1><Link href={'/'}>💿 오느래 노래</Link></h1>
                 <HeaderList/>
