@@ -59,4 +59,22 @@ export const everyDaySongData = [
             singer: 'Leellamarz'
         },
     },
+    {
+        id: 2,
+        date: {
+            year: 2025,
+            month: 2,
+            day: 5,
+        },
+        morning: {
+            videoId: '_fd_hwSm9zI',
+            title: '잘지내자 우리',
+            singer: '최유리'
+        },
+        night: {
+            videoId: 'fuz2F8GGQKI',
+            title: '거리에서',
+            singer: 'Leellamarz'
+        },
+    },
 ]

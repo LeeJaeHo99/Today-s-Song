@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function MusicRecommend() {
     return (
         <>
-            <form className="music-recommend--component">
+            <form className="music-recommend--component" action={''}>
                 <label htmlFor="recommend-title">
                     <span>
                         제목

@@ -1,5 +1,5 @@
 import { everyDaySongData } from "@/data/data";
-import Image from "next/image";
+import HistoryMusic from "./HistoryMusic";
 
 export default function SongHistory() {
     return (
@@ -26,32 +26,6 @@ export default function SongHistory() {
                     </div>
                 );
             })}
-        </div>
-    );
-}
-
-interface HistoryMusicProp {
-    thumnail: React.ReactNode;
-    title: React.ReactNode;
-    singer: React.ReactNode;
-}
-
-function HistoryMusic({ thumnail, title, singer }: HistoryMusicProp) {
-    const thumbnailUrl = `https://img.youtube.com/vi/${thumnail}/maxresdefault.jpg`;
-
-    return (
-        <div className="song-history--music">
-            <Image
-                className={`song-history--music__img`}
-                src={thumbnailUrl}
-                width={400}
-                height={320}
-                alt="thumnail"
-            />
-            <div className="song-history--music__info">
-                <div className="title">{title}</div>
-                <div className="singer">{singer}</div>
-            </div>
         </div>
     );
 }

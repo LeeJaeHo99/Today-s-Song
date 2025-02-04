@@ -1,8 +1,12 @@
+import SectionTitle from "@/components/SectionTitle";
+import MusicRecommend from '@/components/Recommend/MusicRecommend';
+
 export default function RecommendPage(){
     return(
-        <div className="sub-page--wrap">
+        <div className="recommend-page sub-page--wrap">
             <div className="inner">
-                RecommendPage
+            <SectionTitle title={'노래신청'}/>
+                <MusicRecommend/>
             </div>
         </div>
     );
