@@ -1,3 +1,42 @@
 .recommend-page{
-    
+    .music-recommend--component{
+        margin: 0 auto 120px;
+        box-shadow: 0px 0px 15px 5px #00000010;
+    }
+    .recommend-list--wrap{
+        width: 100%;
+        margin: auto;
+
+        .section-title{
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .sub-title{
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        table{
+            thead{
+                tr{
+                    th{
+                        &:first-child{
+                            width: 15%;
+                        }
+                        &:nth-child(2){
+                            width: 40%;
+                        }
+                        &:nth-child(3){
+                            width: 30%;
+                        }
+                        &:last-child{
+                            width: 15%;
+                            border-radius: 12px;
+                            border-top-left-radius: 0;
+                            border-bottom-left-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

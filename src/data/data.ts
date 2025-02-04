@@ -77,4 +77,25 @@ export const everyDaySongData = [
             singer: 'Leellamarz'
         },
     },
+];
+
+export const recommendData = [
+    {
+        id: 0,
+        title: '잘지내자 우리',
+        singer: '최유리',
+        author: '이재호',
+    },
+    {
+        id: 1,
+        title: '거리에서',
+        singer: 'Lellamarz',
+        author: '이재호2',
+    },
+    {
+        id: 2,
+        title: '사이렌',
+        singer: '호미들',
+        author: '이재호3',
+    },
 ]
