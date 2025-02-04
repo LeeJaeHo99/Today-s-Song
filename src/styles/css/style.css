@@ -680,4 +680,48 @@ footer .inner div p:first-child {
 .notice-page table .title-part {
   padding-left: 16px;
   text-align: left;
+}
+
+.everyday-song-page .inner .section-title {
+  margin-bottom: 80px;
+}
+.everyday-song-page .inner .song-history--wrap > div {
+  margin-bottom: 120px;
+}
+.everyday-song-page .inner .song-history--wrap .song-history--date {
+  margin-bottom: 40px;
+  font-family: "p-700";
+  font-size: 24px;
+  color: #f8b042;
+}
+.everyday-song-page .inner .song-history--wrap .song-history--music--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 64px;
+}
+.everyday-song-page .inner .song-history--wrap .song-history--music--wrap .song-history--music {
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.062745098);
+  overflow: hidden;
+}
+.everyday-song-page .inner .song-history--wrap .song-history--music--wrap .song-history--music .song-history--music__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.everyday-song-page .inner .song-history--wrap .song-history--music--wrap .song-history--music .song-history--music__info {
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  text-align: center;
+}
+.everyday-song-page .inner .song-history--wrap .song-history--music--wrap .song-history--music .song-history--music__info .title {
+  margin-bottom: 12px;
+  font-family: "p-700";
+  font-size: 24px;
+}
+.everyday-song-page .inner .song-history--wrap .song-history--music--wrap .song-history--music .song-history--music__info .singer {
+  font-family: "p-400";
+  font-size: 18px;
+  color: #a5a5a5;
 }/*# sourceMappingURL=style.css.map */
