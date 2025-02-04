@@ -1,19 +1,11 @@
 'use client';
 
-import { motion } from "motion/react";
 import Image from "next/image";
 
 export default function MusicRecommend() {
     return (
         <>
-            <motion.form 
-                className="music-recommend--component" 
-                action=""
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.7 }}
-            >
+            <form className="music-recommend--component">
                 <label htmlFor="recommend-title">
                     <span>
                         제목
@@ -58,7 +50,7 @@ export default function MusicRecommend() {
                         alt="arrow-icon"
                     />
                 </button>
-            </motion.form>
+            </form>
         </>
     );
 }
