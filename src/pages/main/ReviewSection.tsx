@@ -10,7 +10,7 @@ export default function ReviewSection(){
             <div className="inner">
                 <SectionTitle title={`✏️ 한줄평 남기기 ✏️`} />
                 <SubTitle title={`현재 추천중인 음악에 대한 감상을 공유해주세요.`}/>
-                <MoreViewBtn/>
+                <MoreViewBtn link={''}/>
                 <div className="review-wrap">
                     <Review/>
                     <Review/>

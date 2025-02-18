@@ -9,7 +9,7 @@ export default function MusicHistorySection() {
             <div className="inner">
                 <SectionTitle title={`🎧 어제의 노래 🎧`} />
                 <SubTitle title={`지금까지 추천된 음악을 확인 할 수 있습니다.`}/>
-                <MoreViewBtn />
+                <MoreViewBtn link={'everydaySong'}/>
                 <div className="music-history--wrap">
                     <MusicHistory time={'☀️'}/>
                     <MusicHistory time={'🌙'}/>
