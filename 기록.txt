@@ -14,23 +14,65 @@ PM 18 : 00 ~ AM 06: 00
 
 - 감상평은 해당 기간에만 작성 가능
 
-더보기 버튼 라우팅 필요
 
 
-데이터 연결 필요
-
-- 노래 유튜브 아이디
-- 노래 제목, 가수
-- 리뷰, 리뷰 쓰기
-- 어제의 노래(노래 id로)
-
-- videoId 데이터 가져오기
-
-
-- 해야할것
 - 연속재생
-- 다음곡 타이머
 
-//**
-노래신청 페이지에서 신청리스트를 제목으로 하고 리스트 보여줌
-그다음 신청하러 가기 누르면 모달로 테이블 뜸
+
+
+< 데이터 구조 > 
+
+//노래
+const song = [
+    {
+        id,
+        date,
+        morning: {
+            videoId,
+            title,
+            singer,
+            review: [
+                {
+                    id,
+                    userName,
+                    content,
+                    rate,
+                },
+            ],
+        },
+        night: {
+            videoId,
+            title,
+            singer,
+            review: [
+                {
+                    id,
+                    userName,
+                    content,
+                    rate,
+                },
+            ],
+        }
+    }
+];
+
+//노래 신청
+const recommendSong = [
+    {
+        id,
+        title,
+        singer,
+        userName,
+    }
+];
+
+//공지사항
+const noticeData = [
+    {
+        id,
+        title,
+        content,
+        author,
+        date,
+    }
+];
