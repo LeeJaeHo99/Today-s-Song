@@ -7,7 +7,7 @@ export default function NoticeComment(){
     const data = noticeData;
     console.log('data: ', data);
     const pathName = usePathname();
-    const pathNum = pathName?.split('/')?.[2]
+    const pathNum = pathName?.split('/')?.[2];
     console.log('pathNum: ', pathNum);
 
     return(

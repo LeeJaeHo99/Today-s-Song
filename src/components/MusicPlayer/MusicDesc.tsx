@@ -7,7 +7,7 @@ export default function MusicDesc() {
 
     useEffect(() => {
             setIsView('view');
-    }, [])
+    }, []);
 
     return (
         <div className="music-desc--wrap">
