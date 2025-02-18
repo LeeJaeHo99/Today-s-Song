@@ -727,20 +727,19 @@ footer .inner div p:first-child {
 }
 
 .recommend-page .music-recommend--component {
-  margin: 0 auto 120px;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.062745098);
+  width: 100%;
+  margin-bottom: 80px;
 }
 .recommend-page .recommend-list--wrap {
   width: 100%;
+  padding: 60px 0;
   margin: auto;
 }
 .recommend-page .recommend-list--wrap .section-title {
   margin-bottom: 24px;
-  text-align: center;
 }
 .recommend-page .recommend-list--wrap .sub-title {
   margin-bottom: 40px;
-  text-align: center;
 }
 .recommend-page .recommend-list--wrap table thead tr th:first-child {
   width: 15%;

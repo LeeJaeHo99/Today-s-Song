@@ -10,7 +10,7 @@ export default function RecommendPage(){
             <SectionTitle title={'노래신청'}/>
                 <MusicRecommend/>
                 <div className="recommend-list--wrap">
-                    <SectionTitle title={'🎶 신청리스트 🎶'}/>
+                    <SectionTitle title={'신청리스트'}/>
                     <SubTitle title={'현재까지 신청된 노래를 소개해드립니다.'}/>
                     <RecommendTable/>
                 </div>
