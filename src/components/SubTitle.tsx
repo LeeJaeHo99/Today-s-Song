@@ -1,13 +1,11 @@
 'use client';
 
 import { motion } from "motion/react";
-
-interface SubTitleProp{
-    title: React.ReactNode;
-}
+import { TitleProp } from "@/types/types";
 
 
-export default function SubTitle({title}: SubTitleProp){
+
+export default function SubTitle({title}: TitleProp){
     return (
         <motion.h3 
             className="sub-title"

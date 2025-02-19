@@ -1,18 +1,10 @@
 "use client";
 
 import { motion } from "motion/react";
-
+import { MusicThumnailProp } from "@/types/types";
 import Image from "next/image";
 
-interface MusicThumnailProp {
-    videoId: React.ReactNode;
-    isPlaying: React.ReactNode;
-}
-
-export default function MusicThumbnail({
-    videoId,
-    isPlaying,
-}: MusicThumnailProp) {
+export default function MusicThumbnail({ videoId, isPlaying }: MusicThumnailProp) {
     const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
     return (

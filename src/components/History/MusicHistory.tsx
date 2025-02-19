@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MusicHistoryProp } from "@/types/types";
 
-interface MusicHistoryProp{
-    time: React.ReactNode;
-}
 
 export default function MusicHistory({time}: MusicHistoryProp) {
     return (

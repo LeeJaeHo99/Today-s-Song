@@ -2,12 +2,8 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
+import { HistoryMusicProp } from '@/types/types';
 
-interface HistoryMusicProp {
-    thumnail: React.ReactNode;
-    title: React.ReactNode;
-    singer: React.ReactNode;
-}
 
 export default function HistoryMusic({ thumnail, title, singer }: HistoryMusicProp) {
     const thumbnailUrl = `https://img.youtube.com/vi/${thumnail}/maxresdefault.jpg`;

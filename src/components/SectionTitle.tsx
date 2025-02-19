@@ -1,9 +1,9 @@
 'use client';
 
-import { SectionTitleProp } from "@/types/types";
+import { TitleProp } from "@/types/types";
 import { motion } from "motion/react";
 
-export default function SectionTitle({ title }: SectionTitleProp) {
+export default function SectionTitle({ title }: TitleProp) {
     return (
         <motion.h2
             className="section-title"
