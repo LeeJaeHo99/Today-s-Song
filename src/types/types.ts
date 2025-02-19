@@ -16,3 +16,7 @@ export interface MusicThumnailProp {
     videoId: React.ReactNode;
     isPlaying: React.ReactNode;
 }
+
+export interface SongProviderProp{
+    children: React.ReactNode;
+}

@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const pathName = usePathname();
-    console.log('pathName: ', pathName);
 
     useEffect(() => {
         const handleScroll = () => {

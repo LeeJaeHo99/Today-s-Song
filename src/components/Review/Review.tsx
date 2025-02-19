@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-export default function Review() {
+export default function Review({review}) {
+    console.log('review: ', review);
     return (
         <div className="review-component">
             <div className="rate-wrap">
@@ -11,34 +12,7 @@ export default function Review() {
                     height={40}
                     alt="star-icon"
                 />
-                <Image
-                    className="rate"
-                    src={"/icons/star.png"}
-                    width={40}
-                    height={40}
-                    alt="star-icon"
-                />
-                <Image
-                    className="rate"
-                    src={"/icons/star.png"}
-                    width={40}
-                    height={40}
-                    alt="star-icon"
-                />
-                <Image
-                    className="rate"
-                    src={"/icons/star.png"}
-                    width={40}
-                    height={40}
-                    alt="star-icon"
-                />
-                <Image
-                    className="rate"
-                    src={"/icons/star.png"}
-                    width={40}
-                    height={40}
-                    alt="star-icon"
-                />
+
             </div>
             <div className="nickname">- <span>이재호</span> -</div>
             <div className="review-text">

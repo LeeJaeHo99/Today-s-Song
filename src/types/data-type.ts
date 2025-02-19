@@ -1,9 +1,16 @@
+export type TodaySong = {
+    id: number;
+    videoId: string;
+    title: string;
+    singer: string;
+}
+
 export type Song = [
     {
         id: number;
         date: number;
         morning: {
-            videoId: number;
+            videoId: string;
             title: string;
             singer: string;
             review: {
@@ -12,9 +19,9 @@ export type Song = [
                 content: string;
                 rate: number;
             }[]
-        }[];
+        };
         night: {
-            videoId: number;
+            videoId: string;
             title: string;
             singer: string;
             review: {
@@ -23,7 +30,7 @@ export type Song = [
                 content: string;
                 rate: number;
             }[]
-        }[];
+        };
     },
 ];
 
