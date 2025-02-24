@@ -3,6 +3,7 @@ export type TodaySong = {
     videoId: string;
     title: string;
     singer: string;
+    time: string;
 }
 
 export type Song = [
@@ -33,6 +34,12 @@ export type Song = [
         };
     },
 ];
+
+export type Review = {
+    userName: string;
+    content: string;
+    rate: number;
+}
 
 export type RecommendSong = {
     id: number;

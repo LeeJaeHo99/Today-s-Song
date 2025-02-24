@@ -3,7 +3,9 @@ import Link from "next/link";
 import { MusicHistoryProp } from "@/types/types";
 
 
-export default function MusicHistory({time}: MusicHistoryProp) {
+export default function MusicHistory({time, musicData}: MusicHistoryProp) {
+    const thumbnailUrl = `https://img.youtube.com/vi/${musicData.videoId}/maxresdefault.jpg`;
+    console.log('musicData: ', musicData);
     return (
         <Link href={"/"} className="music-history--component">
             <div className="rate-wrap">
@@ -11,14 +13,14 @@ export default function MusicHistory({time}: MusicHistoryProp) {
             </div>
             <Image
                 className="music-thumnail"
-                src={"/images/music-history/fuz2F8GGQKI.webp"}
+                src={thumbnailUrl}
                 width={480}
                 height={480}
                 alt="music-thumnail"
             />
             <div className="music-desc">
-                <div className="title">거리에서</div>
-                <div className="singer">Leellamarz</div>
+                <div className="title">{musicData.title}</div>
+                <div className="singer">{musicData.singer}</div>
             </div>
         </Link>
     );

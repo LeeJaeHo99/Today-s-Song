@@ -4,7 +4,7 @@ import { connectDB } from "@/util/mongodb";
 export async function GET(){
         try{
             const db = (await connectDB).db('todaysSong');
-            const collection = db.collection('song');
+            const collection = db.collection('music');
             const song = await collection.find({}).toArray();
 
             return NextResponse.json({

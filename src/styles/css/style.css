@@ -648,7 +648,7 @@ footer .inner div p:first-child {
 .review-section .inner .review-wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
