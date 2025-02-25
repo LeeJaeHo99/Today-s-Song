@@ -16,63 +16,9 @@ PM 18 : 00 ~ AM 06: 00
 
 
 
-- 연속재생
+< 해야할 것 >
 
-
-
-< 데이터 구조 > 
-
-//노래
-const song = [
-    {
-        id,
-        date,
-        morning: {
-            videoId,
-            title,
-            singer,
-            review: [
-                {
-                    id,
-                    userName,
-                    content,
-                    rate,
-                },
-            ],
-        },
-        night: {
-            videoId,
-            title,
-            singer,
-            review: [
-                {
-                    id,
-                    userName,
-                    content,
-                    rate,
-                },
-            ],
-        }
-    }
-];
-
-//노래 신청
-const recommendSong = [
-    {
-        id,
-        title,
-        singer,
-        userName,
-    }
-];
-
-//공지사항
-const noticeData = [
-    {
-        id,
-        title,
-        content,
-        author,
-        date,
-    }
-];
+videoId 데이터 필요한 곳
+- MainBg
+- MusicPlayer
+- MusicThumnail

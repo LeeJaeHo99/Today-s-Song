@@ -7,7 +7,7 @@ export default function MusicHistory({time, musicData}: MusicHistoryProp) {
     const thumbnailUrl = `https://img.youtube.com/vi/${musicData.videoId}/maxresdefault.jpg`;
     console.log('musicData: ', musicData);
     return (
-        <Link href={"/"} className="music-history--component">
+        <Link href={"/everydaySong"} className="music-history--component">
             <div className="rate-wrap">
                 <div className="time-icon">{time}</div>
             </div>

@@ -4,6 +4,7 @@ export interface TitleProp{
 
 export interface MusicHistoryProp{
     time: React.ReactNode;
+    musicData: React.ReactNode;
 }
 
 export interface HistoryMusicProp {

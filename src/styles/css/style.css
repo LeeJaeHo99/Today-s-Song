@@ -298,7 +298,7 @@ footer .inner div p:first-child {
 .music-player--wrap {
   position: relative;
 }
-.music-player--wrap .music-thumnail--img {
+.music-player--wrap .music-thumbnail--img {
   width: 100%;
   max-width: 480px;
   max-height: 480px;
@@ -310,10 +310,10 @@ footer .inner div p:first-child {
   box-shadow: 0px 0px 20px 16px rgba(0, 0, 0, 0.1882352941);
   animation: musicStart infinite 10s linear;
 }
-.music-player--wrap .music-thumnail--img.play {
+.music-player--wrap .music-thumbnail--img.play {
   animation-play-state: running;
 }
-.music-player--wrap .music-thumnail--img.pause {
+.music-player--wrap .music-thumbnail--img.pause {
   animation-play-state: paused;
 }
 .music-player--wrap .play-btn {
@@ -504,6 +504,7 @@ footer .inner div p:first-child {
   width: 100%;
   height: auto;
   margin-bottom: 24px;
+  border-radius: 8px;
 }
 .music-history--wrap .music-history--component .music-desc {
   text-align: center;

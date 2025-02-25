@@ -5,7 +5,7 @@ import { MusicThumnailProp } from "@/types/types";
 import Image from "next/image";
 
 export default function MusicThumbnail({ videoId, isPlaying }: MusicThumnailProp) {
-    const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+    const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
     return (
         <motion.div
@@ -17,13 +17,13 @@ export default function MusicThumbnail({ videoId, isPlaying }: MusicThumnailProp
             }}
         >
             <Image
-                className={`music-thumnail--img ${
+                className={`music-thumbnail--img ${
                     isPlaying ? `play` : `pause`
                 }`}
-                src={thumbnailUrl}
+                src={thumbnail}
                 width={480}
                 height={480}
-                alt="thumnail"
+                alt="thumbnail"
             />
         </motion.div>
     );

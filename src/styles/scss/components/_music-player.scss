@@ -10,7 +10,7 @@
 .music-player--wrap{
     position: relative;
 
-    .music-thumnail--img{
+    .music-thumbnail--img{
         width: 100%;
         max-width: 480px;
         max-height: 480px;
@@ -22,11 +22,11 @@
         animation: musicStart infinite 10s linear;
     }
     
-    .music-thumnail--img.play{
+    .music-thumbnail--img.play{
         animation-play-state: running;
     }
     
-    .music-thumnail--img.pause{
+    .music-thumbnail--img.pause{
         animation-play-state: paused;
     }
     .play-btn{

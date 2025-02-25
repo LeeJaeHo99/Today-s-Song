@@ -16,7 +16,6 @@ export default function MusicPlayer() {
         }
 
         const playerState = playerRef.current.getPlayerState();
-
         if (playerState === window.YT.PlayerState.PLAYING) {
             playerRef.current.pauseVideo();
             setIsPlaying(false);
