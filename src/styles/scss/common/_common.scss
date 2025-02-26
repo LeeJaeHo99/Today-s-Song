@@ -1,3 +1,12 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 .inner{
     display: flex;
     align-items: center;
@@ -41,6 +50,8 @@
 }
 
 .sub-page--wrap{
+    flex: 1;
+    
     .inner{
         align-items: flex-start;
         flex-direction: column;

@@ -102,6 +102,15 @@ a {
   src: url("/fonts/kcc.woff2");
   font-family: "kcc";
 }
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .inner {
   display: flex;
   align-items: center;
@@ -142,6 +151,9 @@ a {
   color: #f8b042;
 }
 
+.sub-page--wrap {
+  flex: 1;
+}
 .sub-page--wrap .inner {
   align-items: flex-start;
   flex-direction: column;
@@ -756,35 +768,42 @@ footer .inner div p:first-child {
   color: #a5a5a5;
 }
 
-.recommend-page .music-recommend--component {
+.recommend-page .inner {
+  gap: 40px;
+  flex-direction: row;
+}
+.recommend-page .inner > div {
+  width: 50%;
+}
+.recommend-page .inner .music-recommend--component {
   width: 100%;
   margin-bottom: 80px;
 }
-.recommend-page .recommend-list--wrap {
-  width: 100%;
-  padding: 60px 0;
-  margin: auto;
-}
-.recommend-page .recommend-list--wrap .section-title {
+.recommend-page .inner .recommend-list--wrap .section-title {
   margin-bottom: 24px;
 }
-.recommend-page .recommend-list--wrap .sub-title {
+.recommend-page .inner .recommend-list--wrap .sub-title {
   margin-bottom: 40px;
 }
-.recommend-page .recommend-list--wrap table thead tr th:first-child {
+.recommend-page .inner .recommend-list--wrap table thead tr th:first-child {
   width: 15%;
 }
-.recommend-page .recommend-list--wrap table thead tr th:nth-child(2) {
-  width: 40%;
+.recommend-page .inner .recommend-list--wrap table thead tr th:nth-child(2) {
+  width: 35%;
 }
-.recommend-page .recommend-list--wrap table thead tr th:nth-child(3) {
-  width: 30%;
-}
-.recommend-page .recommend-list--wrap table thead tr th:last-child {
+.recommend-page .inner .recommend-list--wrap table thead tr th:last-child {
   width: 15%;
   border-radius: 12px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+.recommend-page .inner .recommend-list--wrap table tbody tr td:nth-child(2) {
+  font-family: "p-700";
+  font-size: 18px;
+}
+.recommend-page .inner .recommend-list--wrap table tbody tr td:last-child {
+  font-family: "p-600";
+  font-size: 17px;
 }
 
 .admin-page h3 {

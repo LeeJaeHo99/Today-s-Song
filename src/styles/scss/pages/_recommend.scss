@@ -1,37 +1,52 @@
-.recommend-page{
-    .music-recommend--component{
-        width: 100%;
-        margin-bottom: 80px;
-    }
-    .recommend-list--wrap{
-        width: 100%;
-        padding: 60px 0;
-        margin: auto;
+.recommend-page {
+    .inner {
+        gap: 40px;
+        flex-direction: row;
 
-        .section-title{
-            margin-bottom: 24px;
+        > div{
+            width: 50%;
         }
-        .sub-title{
-            margin-bottom: 40px;
+        .music-recommend--component {
+            width: 100%;
+            margin-bottom: 80px;
         }
-        table{
-            thead{
-                tr{
-                    th{
-                        &:first-child{
-                            width: 15%;
+        .recommend-list--wrap {
+            .section-title {
+                margin-bottom: 24px;
+            }
+            .sub-title {
+                margin-bottom: 40px;
+            }
+            table {
+                thead {
+                    tr {
+                        th {
+                            &:first-child {
+                                width: 15%;
+                            }
+                            &:nth-child(2) {
+                                width: 35%;
+                            }
+                            &:last-child {
+                                width: 15%;
+                                border-radius: 12px;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
                         }
-                        &:nth-child(2){
-                            width: 40%;
-                        }
-                        &:nth-child(3){
-                            width: 30%;
-                        }
-                        &:last-child{
-                            width: 15%;
-                            border-radius: 12px;
-                            border-top-left-radius: 0;
-                            border-bottom-left-radius: 0;
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            &:nth-child(2){
+                                font-family: 'p-700';
+                                font-size: 18px;
+                            }
+                            &:last-child{
+                                font-family: 'p-600';
+                                font-size: 17px;
+                            }
                         }
                     }
                 }
