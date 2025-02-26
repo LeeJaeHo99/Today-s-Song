@@ -7,7 +7,6 @@ export default async function SongHistory() {
     }
     let result = await response.json();
     let musicData = result.data[0].music;
-    console.log('musicData: ', musicData);
 
     return (
         <div className="song-history--wrap">

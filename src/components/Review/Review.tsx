@@ -24,7 +24,6 @@ export default function Review({ musicInfo }) {
             setReviewData(musicInfo[time]); // ✅ time이 변경될 때 reviewData 업데이트
         }
     }, [time, musicInfo]); 
-    console.log('reviewData: ', reviewData);
 
 
     return (

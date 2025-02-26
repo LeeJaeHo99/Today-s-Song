@@ -1,6 +1,9 @@
-import { recommendData } from "@/data/data";
 
-export default function RecommendTable() {
+export default async function RecommendTable() {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getRecommend`);
+    const result = await response.json();
+    const recommendData = result.data[0].recommendMusic;
+
     return (
         <table>
             <thead>
@@ -8,17 +11,15 @@ export default function RecommendTable() {
                     <th>번호</th>
                     <th className="title-part">제목</th>
                     <th>가수</th>
-                    <th>작성자</th>
                 </tr>
             </thead>
             <tbody>
-                {recommendData.map((data) => {
+                {recommendData.map((data, i) => {
                     return (
-                        <tr key={data.id}>
-                            <td>{data.id + 1}</td>
-                            <td className="title-part">{data.title}</td>
-                            <td>{data.singer}</td>
-                            <td>{data.author}</td>
+                        <tr key={data._id}>
+                            <td>{1}</td>
+                            <td className="title-part">{data.recommendTitle}</td>
+                            <td>{data.recommendSinger}</td>
                         </tr>
                     );
                 })}
