@@ -111,6 +111,10 @@ body {
   flex-direction: column;
 }
 
+body:has(.main-page) {
+  height: auto;
+}
+
 .inner {
   display: flex;
   align-items: center;

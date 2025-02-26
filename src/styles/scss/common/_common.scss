@@ -7,6 +7,10 @@ body{
     flex-direction: column;
 }
 
+body:has(.main-page){
+    height: auto;
+}
+
 .inner{
     display: flex;
     align-items: center;
@@ -51,7 +55,7 @@ body{
 
 .sub-page--wrap{
     flex: 1;
-    
+
     .inner{
         align-items: flex-start;
         flex-direction: column;
