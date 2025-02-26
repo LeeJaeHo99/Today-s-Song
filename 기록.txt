@@ -22,3 +22,6 @@ videoId 데이터 필요한 곳
 - MainBg
 - MusicPlayer
 - MusicThumnail
+
+- 공지사항 api
+- 리뷰 POST, GET api

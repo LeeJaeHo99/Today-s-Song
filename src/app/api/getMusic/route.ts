@@ -19,3 +19,6 @@ export async function GET(){
         })
     }
 }
+
+// 메인 페이지 (어제의 노래)
+// 매일노래 페이지

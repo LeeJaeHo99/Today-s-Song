@@ -17,7 +17,7 @@ export default async function RecommendTable() {
                 {recommendData.map((data, i) => {
                     return (
                         <tr key={data._id}>
-                            <td>{1}</td>
+                            <td>{i + 1}</td>
                             <td className="title-part">{data.recommendTitle}</td>
                             <td>{data.recommendSinger}</td>
                         </tr>
