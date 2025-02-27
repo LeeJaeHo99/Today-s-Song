@@ -5,6 +5,7 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
     try {
         const body = await req.json();
+        console.log('body: ', body);
         const { recommendTitle, recommendSinger } = body;
 
         if (!recommendTitle || !recommendSinger) {
@@ -18,8 +19,9 @@ export async function POST(req) {
         const collection = db.collection("recommend");
         const newMusic = { recommendTitle, recommendSinger };
 
+        const RECOMMEND_ID = process.env.NEXT_PUBLIC_RECOMMEND_COLLECTION_ID;
         const result = await collection.updateOne(
-            { _id: new ObjectId("67bdec350b7afd184bf792c1") },
+            { _id: new ObjectId (RECOMMEND_ID) },
             { $push: { recommendMusic: newMusic } }
         );
 
