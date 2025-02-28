@@ -23,16 +23,21 @@ videoId 데이터 필요한 곳
 - MusicPlayer
 - MusicThumnail
 
-- 리뷰 POST, GET api
-- 모달
 - 로그인
-
 - 시간마다 변경
-
-- 자유게시판
-
-- pagination
 
 
 3/4
-- 
+- 리뷰 POST, GET api
+
+3/5
+- 자유게시판
+- music collection 자료구조 변경
+
+3/6
+- pagination (react-paginate)
+- videoId Zustand state로 변경
+
+3/7
+- 모달 (shadcn)
+- 매일노래 (shadcn / skeleton)

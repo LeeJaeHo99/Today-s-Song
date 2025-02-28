@@ -50,6 +50,9 @@ function HeaderList(){
                 <Link href={'/everydaySong'}>매일노래</Link>
             </li>
             <li>
+                <Link href={'/free-board'}>자유게시판</Link>
+            </li>
+            <li>
                 <BtnComponent onClick={onClickLoginBtn} type={'login-btn'} text={'로그인'}/>
             </li>
         </ul>
