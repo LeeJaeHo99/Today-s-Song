@@ -1,3 +1,8 @@
+interface RecommendData{
+    _id?: string;
+    recommendTitle: string;
+    recommendSinger: string;
+}
 
 export default async function RecommendTable() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getRecommend`);
@@ -14,7 +19,8 @@ export default async function RecommendTable() {
                 </tr>
             </thead>
             <tbody>
-                {recommendData.map((data, i) => {
+                {recommendData.map((data: RecommendData, i: number) => {
+                    console.log('data123: ', data);
                     return (
                         <tr key={data._id}>
                             <td>{i + 1}</td>

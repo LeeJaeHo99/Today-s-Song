@@ -40,9 +40,6 @@ function HeaderList(){
                 <Link href={'/notice'}>공지사항</Link>
             </li>
             <li>
-                <Link href={'/recommend'}>노래신청</Link>
-            </li>
-            <li>
                 <Link href={'/everydaySong'}>매일노래</Link>
             </li>
         </ul>

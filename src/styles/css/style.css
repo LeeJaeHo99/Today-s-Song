@@ -152,7 +152,7 @@ body:has(.main-page) {
 .more-view--btn__wrap .more-view--btn {
   font-family: "p-700";
   font-size: 18px;
-  color: #f8b042;
+  color: #BDD299;
 }
 
 .sub-page--wrap {
@@ -174,7 +174,7 @@ table {
 table thead {
   width: 100%;
   height: 60px;
-  background-color: #f8b042;
+  background-color: #BDD299;
 }
 table thead tr th {
   vertical-align: middle;
@@ -256,14 +256,14 @@ header.scrolled {
   background-color: #fff;
 }
 header.scrolled .inner h1 a {
-  color: #f8b042;
+  color: #BDD299;
 }
 header.scrolled .inner ul li a {
   font-family: "p-600";
-  color: #f8b042;
+  color: #BDD299;
 }
 header.scrolled .inner ul li a:hover {
-  border-bottom: 1.5px solid #f8b042;
+  border-bottom: 1.5px solid #BDD299;
 }
 
 footer {
@@ -441,7 +441,7 @@ footer .inner div p:first-child {
 .set-review-component select {
   width: 15%;
   height: 64px;
-  border: 3px solid #f8b042;
+  border: 3px solid #BDD299;
   border-right: none;
   border-radius: 8px;
   border-top-right-radius: 0;
@@ -457,7 +457,7 @@ footer .inner div p:first-child {
   width: 75%;
   height: 64px;
   padding-left: 24px;
-  border: 3px solid #f8b042;
+  border: 3px solid #BDD299;
   border-left: none;
   border-right: none;
   font-family: "p-400";
@@ -468,8 +468,8 @@ footer .inner div p:first-child {
 .set-review-component button {
   width: 10%;
   height: 64px;
-  background-color: #f8b042;
-  border: 3px solid #f8b042;
+  background-color: #BDD299;
+  border: 3px solid #BDD299;
   border-left: none;
   border-radius: 8px;
   border-top-left-radius: 0;
@@ -480,7 +480,7 @@ footer .inner div p:first-child {
   transition: all 0.3s;
 }
 .set-review-component button:hover {
-  background-color: rgba(248, 176, 66, 0.5647058824);
+  background-color: rgba(189, 210, 153, 0.5647058824);
 }
 
 .music-history--wrap {
@@ -580,7 +580,7 @@ footer .inner div p:first-child {
   width: 100%;
   height: 40px;
   margin: auto;
-  background-color: #f8b042;
+  background-color: #BDD299;
   border-radius: 8px;
   font-family: "p-400";
   font-size: 20px;
@@ -699,13 +699,26 @@ footer .inner div p:first-child {
   margin-bottom: 64px;
 }
 
+.recommend-history-section {
+  padding: 100px 0;
+}
+.recommend-history-section .inner {
+  flex-direction: column;
+}
+.recommend-history-section .inner .section-title {
+  margin-bottom: 24px;
+}
+.recommend-history-section .inner .sub-title {
+  margin-bottom: 64px;
+}
+
 .notice-page .notice-content {
   width: 100%;
-  border-top: 1px solid #f8b042;
+  border-top: 1px solid #BDD299;
 }
 .notice-page .notice-content--header {
   padding: 32px;
-  background-color: rgba(248, 176, 66, 0.062745098);
+  background-color: rgba(189, 210, 153, 0.062745098);
   font-size: 24px;
   font-family: "p-500";
   text-align: center;
@@ -738,7 +751,7 @@ footer .inner div p:first-child {
   margin-bottom: 40px;
   font-family: "p-700";
   font-size: 24px;
-  color: #f8b042;
+  color: #BDD299;
 }
 .everyday-song-page .inner .song-history--wrap .song-history--music--wrap {
   display: flex;

@@ -45,17 +45,17 @@ header.scrolled {
     .inner {
         h1 {
             a{
-                color: #f8b042;
+                color: $primary;
             }
         }
         ul {
             li {
                 a {
                     font-family: "p-600";
-                    color: #f8b042;
+                    color: $primary;
 
                     &:hover {
-                        border-bottom: 1.5px solid #f8b042;
+                        border-bottom: 1.5px solid $primary;
                     }
                 }
             }
