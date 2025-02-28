@@ -5,7 +5,6 @@ export default async function NoticeTable() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getNotice`);
     const result = await response.json();
     const noticeData = result.data;
-    console.log('noticeData: ', noticeData);
 
     return (
         <table>
@@ -23,7 +22,7 @@ export default async function NoticeTable() {
                         <tr key={data._id}>
                             <td>{i + 1}</td>
                             <td className="title-part">
-                                <Link href={`/notice/${data.number}`}>
+                                <Link href={`/notice/${i}`}>
                                     {data.title}
                                 </Link>
                             </td>
