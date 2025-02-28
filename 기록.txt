@@ -23,6 +23,16 @@ videoId 데이터 필요한 곳
 - MusicPlayer
 - MusicThumnail
 
-- 공지사항 api
 - 리뷰 POST, GET api
 - 모달
+- 로그인
+
+- 시간마다 변경
+
+- 자유게시판
+
+- pagination
+
+
+3/4
+- 

@@ -7,7 +7,7 @@ export default function RecommendHistorySection(){
         <section className="recommend-history-section">
             <div className="inner">
                 <SectionTitle title={`⭐️ 노래 신청 리스트 ⭐️`}/>
-                <SubTitle title={`지금까지 추천된 음악을 확인 할 수 있습니다.`}/>
+                <SubTitle title={`현재까지 신청된 음악을 확인 할 수 있습니다.`}/>
                 <RecommendTable/>
             </div>
         </section>

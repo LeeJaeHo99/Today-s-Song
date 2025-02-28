@@ -8,6 +8,7 @@ export default async function RecommendTable() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getRecommend`);
     const result = await response.json();
     const recommendData = result.data[0].recommendMusic;
+    const reverseRecommendData = recommendData.reverse();
 
     return (
         <table>
@@ -19,7 +20,7 @@ export default async function RecommendTable() {
                 </tr>
             </thead>
             <tbody>
-                {recommendData.map((data: RecommendData, i: number) => {
+                {reverseRecommendData.map((data: RecommendData, i: number) => {
                     console.log('data123: ', data);
                     return (
                         <tr key={data._id}>

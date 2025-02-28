@@ -132,6 +132,7 @@ body:has(.main-page) {
   z-index: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.4392156863);
   overflow: hidden;
 }
 .main-bg img {
@@ -218,6 +219,15 @@ table .title-part {
   text-align: left;
 }
 
+.btn-component {
+  padding: 4px 6px;
+  background-color: #BDD299;
+  border-radius: 4px;
+  font-family: "p-400";
+  font-size: 14px;
+  color: #fff;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -251,6 +261,9 @@ header .inner ul li a {
 header .inner ul li a:hover {
   border-bottom: 1.5px solid #fff;
 }
+header .inner ul li .login-btn {
+  background-color: #a7a7a7;
+}
 
 header.scrolled {
   background-color: #fff;
@@ -265,11 +278,14 @@ header.scrolled .inner ul li a {
 header.scrolled .inner ul li a:hover {
   border-bottom: 1.5px solid #BDD299;
 }
+header.scrolled .inner ul li .login-btn {
+  background-color: #BDD299;
+}
 
 footer {
   width: 100%;
   height: 160px;
-  background-color: #ddd;
+  background-color: #615f63;
 }
 footer .inner {
   align-items: flex-start;
@@ -577,7 +593,7 @@ footer .inner div p:first-child {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  width: 100%;
+  width: 25%;
   height: 40px;
   margin: auto;
   background-color: #BDD299;
@@ -711,6 +727,9 @@ footer .inner div p:first-child {
 .recommend-history-section .inner .sub-title {
   margin-bottom: 64px;
 }
+.recommend-history-section .inner table {
+  width: 70%;
+}
 
 .notice-page .notice-content {
   width: 100%;
@@ -739,6 +758,9 @@ footer .inner div p:first-child {
   font-family: "p-400";
   font-size: 24px;
   line-height: 1.5;
+}
+.notice-page .inner {
+  justify-content: flex-start;
 }
 
 .everyday-song-page .inner .section-title {
@@ -783,44 +805,6 @@ footer .inner div p:first-child {
   font-family: "p-400";
   font-size: 18px;
   color: #a5a5a5;
-}
-
-.recommend-page .inner {
-  gap: 40px;
-  flex-direction: row;
-}
-.recommend-page .inner > div {
-  width: 50%;
-}
-.recommend-page .inner .music-recommend--component {
-  width: 100%;
-  margin-bottom: 80px;
-}
-.recommend-page .inner .recommend-list--wrap .section-title {
-  margin-bottom: 24px;
-}
-.recommend-page .inner .recommend-list--wrap .sub-title {
-  margin-bottom: 40px;
-}
-.recommend-page .inner .recommend-list--wrap table thead tr th:first-child {
-  width: 15%;
-}
-.recommend-page .inner .recommend-list--wrap table thead tr th:nth-child(2) {
-  width: 35%;
-}
-.recommend-page .inner .recommend-list--wrap table thead tr th:last-child {
-  width: 15%;
-  border-radius: 12px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.recommend-page .inner .recommend-list--wrap table tbody tr td:nth-child(2) {
-  font-family: "p-700";
-  font-size: 18px;
-}
-.recommend-page .inner .recommend-list--wrap table tbody tr td:last-child {
-  font-family: "p-600";
-  font-size: 17px;
 }
 
 .admin-page h3 {

@@ -35,6 +35,9 @@ header {
                         border-bottom: 1.5px solid #fff;
                     }
                 }
+                .login-btn{
+                    background-color: #a7a7a7;
+                }
             }
         }
     }
@@ -57,6 +60,9 @@ header.scrolled {
                     &:hover {
                         border-bottom: 1.5px solid $primary;
                     }
+                }
+                .login-btn{
+                    background-color: $primary;
                 }
             }
         }

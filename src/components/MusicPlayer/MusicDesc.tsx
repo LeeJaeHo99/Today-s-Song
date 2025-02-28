@@ -13,10 +13,10 @@ export default function MusicDesc() {
         <div className="music-desc--wrap">
             <ul className="music-desc">
                 <li>
-                    <div className={`title ${isView}`}>거리에서</div>
+                    <div className={`title ${isView}`}>오늘이 지나면</div>
                 </li>
                 <li>
-                    <div className={`singer ${isView}`}>Leellamarz (Feat. Ash Island)</div>
+                    <div className={`singer ${isView}`}>Cloudybay</div>
                 </li>
             </ul>
         </div>
