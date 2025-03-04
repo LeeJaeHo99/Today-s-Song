@@ -7,7 +7,6 @@ export default async function MusicHistorySection() {
     let response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
     let result = await response.json();
     let yesterdayMusicData = result.data[1];
-    console.log('yesterdayMusicData: ', yesterdayMusicData);
 
 
     return (

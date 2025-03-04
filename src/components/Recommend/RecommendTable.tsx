@@ -7,7 +7,7 @@ interface RecommendData{
 export default async function RecommendTable() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getRecommend`);
     const result = await response.json();
-    const recommendData = result.data[0].recommendMusic;
+    const recommendData = result.data;
     const reverseRecommendData = recommendData.reverse();
 
     return (
