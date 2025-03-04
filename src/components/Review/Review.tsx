@@ -1,35 +1,12 @@
-"use client";
-
 import Image from "next/image";
-import { Review } from "@/types/data-type";
-import { useEffect, useState } from "react";
 
-export default function Review({ musicInfo }) {
-    let [time, setTime] = useState("");
-    const [reviewData, setReviewData] = useState(null); // ✅ reviewData 상태 추가
-
-    useEffect(() => {
-        const now = new Date();
-        const currentHour = now.getHours();
-
-        if (currentHour >= 6 && currentHour < 18) {
-            setTime("morning");
-        } else {
-            setTime("night");
-        }
-    }, []);
-
-    useEffect(() => {
-        if (time && musicInfo) {
-            setReviewData(musicInfo[time]); // ✅ time이 변경될 때 reviewData 업데이트
-        }
-    }, [time, musicInfo]); 
-
+export default function Review({ reviewInfo }) {
+    const {userName, content, rate} = reviewInfo;
 
     return (
         <div className="review-component">
             <div className="rate-wrap">
-                {/* {Array.from({ length: rate }, (rate, i) => (
+                {Array.from({ length: rate }, (rate, i) => (
                     <Image
                         key={i}
                         className="rate"
@@ -38,13 +15,13 @@ export default function Review({ musicInfo }) {
                         height={40}
                         alt="star-icon"
                     />
-                ))} */}
+                ))}
             </div>
             <div className="nickname">
                 {/* - <span>{userName}</span> - */}
-                {time}
+                - <span>userName</span> -
             </div>
-            {/* <div className="review-text">{content}</div> */}
+            <div className="review-text">{content}</div>
         </div>
     );
 }

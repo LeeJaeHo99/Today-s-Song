@@ -21,7 +21,6 @@ export default async function RecommendTable() {
             </thead>
             <tbody>
                 {reverseRecommendData.map((data: RecommendData, i: number) => {
-                    console.log('data123: ', data);
                     return (
                         <tr key={data._id}>
                             <td>{i + 1}</td>

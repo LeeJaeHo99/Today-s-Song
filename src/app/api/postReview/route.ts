@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
     try {
         const body = await req.json();
-        const { recommendTitle, recommendSinger } = body;
+        const { userName, content, rate } = body;
 
-        if (!recommendTitle || !recommendSinger) {
+        if (!userName || !content || !rate) {
             return NextResponse.json(
                 { message: "제목과 가수를 입력하세요." },
                 { status: 400 }
@@ -14,18 +14,19 @@ export async function POST(req) {
         }
 
         const db = (await connectDB).db("todaysSong");
-        const collection = db.collection("recommend");
+        const collection = db.collection("review");
 
         const result = await collection.insertOne(
             {     
-                recommendTitle,
-                recommendSinger,
+                userName,
+                content,
+                rate,
             }
         );
 
         return NextResponse.json({
             message: "성공적으로 저장되었습니다.",
-            data: { recommendTitle, recommendSinger },
+            data: { userName, content, rate },
         });
     } catch (e) {
         return NextResponse.json(
