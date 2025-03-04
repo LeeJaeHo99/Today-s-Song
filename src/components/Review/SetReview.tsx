@@ -26,7 +26,6 @@ export default function SetReview() {
             content: reviewText,
             rate: rate,
             userName: "이재호",  // ⭐️ 유저명을 임시로 추가 (실제 로그인 정보에서 가져오도록 수정 가능)
-            songTitle: "잘 지내자, 우리",  // ⭐️ 노래 제목도 임시 추가
         };
 
         try{
@@ -40,7 +39,7 @@ export default function SetReview() {
             setRate('5');
         }
         catch(e){
-
+            console.log(e);
         }
     }
 

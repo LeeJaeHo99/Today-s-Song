@@ -18,8 +18,7 @@ export default function Review({ reviewInfo }) {
                 ))}
             </div>
             <div className="nickname">
-                {/* - <span>{userName}</span> - */}
-                - <span>userName</span> -
+                - <span>{userName}</span> -
             </div>
             <div className="review-text">{content}</div>
         </div>
