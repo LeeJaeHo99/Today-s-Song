@@ -6,6 +6,7 @@ import SetReview from '@/components/Review/SetReview';
 
 export default async function ReviewSection(){
     let result = {success: false, data: []};
+    console.log('result: ', result);
 
     try{
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`, {
@@ -20,8 +21,6 @@ export default async function ReviewSection(){
     catch(error){
         console.error('Failed to fetch today’s song:', error);
     }
-    let reviewInfo = result.data[0].music[0].morning.review;
-    let musicInfo = result.data[0].music[0];
 
     return(
         <section className="review-section">
@@ -29,9 +28,9 @@ export default async function ReviewSection(){
                 <SectionTitle title={`✏️ 한줄평 남기기 ✏️`} />
                 <SubTitle title={`현재 추천중인 음악에 대한 감상을 공유해주세요.`}/>
                 <MoreViewBtn link={''}/>
-                <div className="review-wrap">
+                {/* <div className="review-wrap">
                     {reviewInfo.map((review, i) => <Review key={review.userName} musicInfo={musicInfo}/>)}
-                </div>
+                </div> */}
                 <SetReview/>
             </div>
         </section>

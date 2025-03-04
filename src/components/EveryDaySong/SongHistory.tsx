@@ -6,7 +6,7 @@ export default async function SongHistory() {
         alert('오류가 발생하였습니다. 새로고침 부탁드립니다.');
     }
     let result = await response.json();
-    let musicData = result.data[0].music;
+    let musicData = result.data;
 
     return (
         <div className="song-history--wrap">
