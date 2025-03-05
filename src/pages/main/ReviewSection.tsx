@@ -18,7 +18,6 @@ export default async function ReviewSection() {
         reviewData.length >= 3
             ? reviewData.slice(reviewData.length - 3).reverse()
             : reviewData;
-    console.log("lastThrReview: ", lastThrReview);
 
     return (
         <section className="review-section">
