@@ -28,7 +28,6 @@ videoId 데이터 필요한 곳
 3/5
 - 리뷰 모음 페이지
 - 매일노래 (skeleton)
-- 무한스크롤
 
 3/6
 - pagination (react-paginate)

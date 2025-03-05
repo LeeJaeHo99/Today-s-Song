@@ -4,9 +4,9 @@ import MoreViewBtn from "@/components/Btn/MoreViewBtn";
 import MusicHistory from '@/components/History/MusicHistory';
 
 export default async function MusicHistorySection() {
-    let response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
-    let result = await response.json();
-    let yesterdayMusicData = result.data[1];
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
+    const result = await response.json();
+    const yesterdayMusicData = result.data[1];
 
 
     return (

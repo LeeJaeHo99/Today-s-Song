@@ -1,16 +1,23 @@
-import HistoryMusic from "./HistoryMusic";
+'use client';
 
-export default async function SongHistory() {
-    let response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
-    if(!response.ok){
-        alert('오류가 발생하였습니다. 새로고침 부탁드립니다.');
-    }
-    let result = await response.json();
-    let musicData = result.data;
+import HistoryMusic from "./HistoryMusic";
+import { useSelectedDate } from "@/store/store";
+
+export default function SongHistory({musicData}) {
+    const { selectedDate, setSelectedDate } = useSelectedDate();
+    console.log('selectedDate: ', selectedDate);
+
+    const selectedYear = selectedDate.split('-')[0];
+    const selectedMonth = selectedDate.split('-')[1];
+    const filterMonth = selectedMonth[0] === '0' ? selectedMonth.slice(1) : selectedMonth;
+
+    const filteredMusic = musicData.filter((music) => {
+            return music.date.year === selectedYear && music.date.month === filterMonth;
+    })
 
     return (
         <div className="song-history--wrap">
-            {musicData.map((data) => {
+            {filteredMusic.map((data) => {
                 return (
                     <div key={data._id}>
                         <div className="song-history--date">
