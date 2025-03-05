@@ -5,7 +5,6 @@ import { useSelectedDate } from "@/store/store";
 
 export default function SongHistory({musicData}) {
     const { selectedDate, setSelectedDate } = useSelectedDate();
-    console.log('selectedDate: ', selectedDate);
 
     const selectedYear = selectedDate.split('-')[0];
     const selectedMonth = selectedDate.split('-')[1];

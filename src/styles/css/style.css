@@ -807,6 +807,26 @@ footer .inner div p:first-child {
   font-size: 18px;
   color: #a5a5a5;
 }
+.everyday-song-page .inner .select-month-input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.everyday-song-page .inner .select-month-input input {
+  width: 140px;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: "p-600";
+  font-size: 16px;
+  color: #BDD299;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .admin-page h3 {
   margin-bottom: 16px;
   font-family: "p-700";
