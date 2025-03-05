@@ -25,23 +25,20 @@ videoId 데이터 필요한 곳
 
 < 일정 >
 
-3/5
-- 리뷰 모음 페이지
-- 매일노래 (skeleton)
-
 3/6
 - pagination (react-paginate)
-- videoId Zustand state로 변경
+- 모달 (shadcn)
 
 3/7
-- 모달 (shadcn)
 - admin
 
 3/10
-- 자유게시판
+- 극락만이 락이다
 
 3/11 ~ 14
 - 로그인
 
 3//17 ~ 21
+- videoId Zustand state로 변경
 - 시간마다 videoId 변경 + 리뷰 데이터 삭제
+- 배포
