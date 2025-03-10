@@ -9,9 +9,7 @@ interface ReviewType {
 }
 
 export default async function ReviewSection() {
-    const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/getReview`
-    );
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getReview`);
     const result = await response.json();
     const reviewData = result.data;
     const lastThrReview =

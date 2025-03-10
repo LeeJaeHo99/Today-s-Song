@@ -9,7 +9,7 @@ export default function WriteNotice() {
                 </label>
                 <label htmlFor="">
                     <span>글</span>
-                    <input name="notice-text" type="text" />
+                    <textarea name="notice-text"/>
                 </label>
                 <button type="submit">제출</button>
             </form>

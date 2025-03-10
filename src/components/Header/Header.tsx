@@ -40,6 +40,9 @@ function HeaderList(){
     const onClickLoginBtn = () => {
         router.push('/auth');
     }
+    const onClickAdminBtn = () => {
+        router.push('/admin');
+    }
 
     return(
         <ul>
@@ -54,6 +57,9 @@ function HeaderList(){
             </li>
             <li>
                 <BtnComponent onClick={onClickLoginBtn} type={'login-btn'} text={'로그인'}/>
+            </li>
+            <li>
+                <BtnComponent onClick={onClickAdminBtn} type={'admin-btn'} text={'관리자'}/>
             </li>
         </ul>
     );
