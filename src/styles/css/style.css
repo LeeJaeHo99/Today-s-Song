@@ -776,6 +776,9 @@ footer .inner div p:first-child {
 .everyday-song-page .inner .section-title {
   margin-bottom: 80px;
 }
+.everyday-song-page .inner .song-history--wrap {
+  width: 100%;
+}
 .everyday-song-page .inner .song-history--wrap > div {
   margin-bottom: 120px;
 }
@@ -815,6 +818,14 @@ footer .inner div p:first-child {
   font-family: "p-400";
   font-size: 18px;
   color: #a5a5a5;
+}
+.everyday-song-page .inner .song-history--wrap .none-music--comment {
+  margin: 0 auto;
+  margin-top: 40px;
+  font-family: "p-400";
+  font-size: 24px;
+  color: #BDD299;
+  text-align: center;
 }
 .everyday-song-page .inner .select-month-input {
   display: flex;
