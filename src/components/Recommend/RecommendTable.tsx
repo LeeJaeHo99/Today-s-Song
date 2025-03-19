@@ -1,18 +1,12 @@
-import ReactPaginate from "react-paginate";
+import { get } from "http";
 
 interface RecommendData {
     _id?: string;
     recommendTitle: string;
     recommendSinger: string;
 }
-export default async function RecommendTable() {
-    const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/getRecommend`
-    );
-    const result = await response.json();
-    const recommendData = result.data;
-    const reverseRecommendData = recommendData.reverse();
-
+export default async function RecommendTable({getData}) {
+    let viewData = getData.slice(0, 10);
     return (
         <table>
             <thead>
@@ -23,7 +17,7 @@ export default async function RecommendTable() {
                 </tr>
             </thead>
             <tbody>
-                {reverseRecommendData.map((data: RecommendData, i: number) => {
+                {viewData.map((data: RecommendData, i: number) => {
                     return (
                         <tr key={data._id}>
                             <td>{i + 1}</td>

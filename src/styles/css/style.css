@@ -619,6 +619,30 @@ footer .inner div p:first-child {
   background-color: #000;
 }
 
+.table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.table-pagination div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-family: "p-600";
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.table-pagination .selected {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  color: #BDD299;
+}
+
 .main-page {
   display: flex;
   align-items: center;
@@ -824,7 +848,7 @@ footer .inner div p:first-child {
   margin-top: 40px;
   font-family: "p-400";
   font-size: 24px;
-  color: #BDD299;
+  color: #202632;
   text-align: center;
 }
 .everyday-song-page .inner .select-month-input {

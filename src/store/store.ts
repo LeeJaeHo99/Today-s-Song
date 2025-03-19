@@ -22,4 +22,4 @@ export const useSelectedDate = create<SelectedDateType>((set) => ({
 
     selectedDate: `${year}-${month}`,
     setSelectedDate: (date) => set(() => ({selectedDate: date})),
-}))
+}));
