@@ -1,19 +1,20 @@
 'use client';
-import { useState } from 'react';
+import { useTablePagination } from '@/store/store';
 
 export default function TablePagination({ getData }) {
     const pageNum = Math.ceil(getData.length / 10);
     const arr = new Array(pageNum).fill(1);
 
-    const [selectedPage, setSelectedPage] = useState(0); 
+    const {pagination, setPagination} = useTablePagination();
+    console.log('pagination: ', pagination);
 
     return (
         <div className="table-pagination">
             {arr.map((_, i) => (
                 <div 
                     key={i} 
-                    className={selectedPage === i ? 'selected' : ''} 
-                    onClick={() => setSelectedPage(i)}
+                    className={pagination === i ? 'selected' : ''} 
+                    onClick={() => setPagination(i)}
                 >
                     {i + 1}
                 </div>

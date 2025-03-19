@@ -23,3 +23,8 @@ export const useSelectedDate = create<SelectedDateType>((set) => ({
     selectedDate: `${year}-${month}`,
     setSelectedDate: (date) => set(() => ({selectedDate: date})),
 }));
+
+export const useTablePagination = create((set) => ({
+    pagination: 0,
+    setPagination: (page) => set({pagination: page}),
+}))
