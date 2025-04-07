@@ -38,11 +38,12 @@ export default function Header() {
 function HeaderList(){
     const router= useRouter();
     const onClickLoginBtn = () => {
-        router.push('/auth');
+        router.push('/login');
     }
     const onClickAdminBtn = () => {
         router.push('/admin');
     }
+    const userId = 1;
 
     return(
         <ul>
@@ -58,9 +59,12 @@ function HeaderList(){
             <li>
                 <BtnComponent onClick={onClickLoginBtn} type={'login-btn'} text={'로그인'}/>
             </li>
-            <li>
-                <BtnComponent onClick={onClickAdminBtn} type={'admin-btn'} text={'관리자'}/>
-            </li>
+            {
+                userId === 0 && 
+                <li>
+                    <BtnComponent onClick={onClickAdminBtn} type={'admin-btn'} text={'관리자'}/>
+                </li>
+            }
         </ul>
     );
 }
