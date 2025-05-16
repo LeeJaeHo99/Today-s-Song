@@ -1,3 +1,6 @@
+@use 'color' as *;
+@use 'font' as *;
+
 html, body{
     height: 100%;
 }
@@ -9,6 +12,12 @@ body{
 
 body:has(.main-page){
     height: auto;
+}
+
+.blur-box{
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.1882352941);
 }
 
 .inner{
@@ -36,6 +45,7 @@ body:has(.main-page){
         color: transparent;
         height: 100%;
         opacity: 0.9;
+        filter: grayscale(0.3) blur(8px);
     }
 }
 

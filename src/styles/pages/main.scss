@@ -35,10 +35,8 @@
             width: 70%;
             max-height: 700px;
             padding: 24px;
-            background-color: #fff;
             border-radius: 24px;
             text-align: center;
-            box-shadow: 0px 0px 20px 20px #00000010;
         }
         .section-title{
             display: inline-block;
@@ -54,6 +52,13 @@
             justify-content: center;
             flex-direction: column;
             width: 100%;
+
+            p{
+                position: absolute;
+                top: 6%;
+                left: 6%;
+                font-size: 24px;
+            }
         }
     }
 }

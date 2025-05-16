@@ -1,3 +1,6 @@
+@use '../common/color' as *;
+@use '../common/font' as *;
+
 .table-pagination{
     display: flex;
     align-items: center;

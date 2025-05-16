@@ -1,0 +1,20 @@
+@use './common/reset.scss';
+@use './common/color.scss';
+@use './common/font.scss';
+@use './common/common.scss';
+
+@use './components/header.scss';
+@use './components/footer.scss';
+@use './components/modal.scss';
+@use './components/pagination.scss';
+@use './components/review.scss';
+@use './components/recommend.scss';
+@use './components/music-player.scss';
+@use './components/title.scss';
+
+@use './pages/admin.scss';
+@use './pages/everydaysong.scss';
+@use './pages/login.scss';
+@use './pages/main.scss';
+@use './pages/notice.scss';
+@use './pages/reviewPage.scss';

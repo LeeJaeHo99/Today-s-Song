@@ -1,7 +1,12 @@
 import Image from "next/image";
 
-export default function MainBg() {
-    const videoId = 'occxYSeXSJE';
+export default async function MainBg() {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getVideoId`);
+    if(!response.ok){
+        return <div>오류가 발생했습니다...</div>
+    }
+    const result = await response.json();
+    const videoId = result.data[result.data.length - 1].videoId;
     const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
     return (
