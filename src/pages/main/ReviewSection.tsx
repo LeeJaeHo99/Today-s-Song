@@ -1,6 +1,6 @@
-import SectionTitle from "@/components/SectionTitle";
-import SubTitle from "@/components/SubTitle";
-import MoreViewBtn from "@/components/Btn/MoreViewBtn";
+import SectionTitle from "@/components/ui/SectionTitle";
+import SubTitle from "@/components/ui/SubTitle";
+import MoreViewBtn from "@/components/ui/MoreViewBtn";
 import Review from "@/components/Review/Review";
 import SetReview from "@/components/Review/SetReview";
 
@@ -18,17 +18,17 @@ export default async function ReviewSection() {
             : reviewData;
 
     return (
-        <section className="review-section">
+        <section className="review-section section">
             <div className="inner">
-                <SectionTitle title={`✏️ 한줄평 남기기 ✏️`} />
+                <SectionTitle title={`한줄평 남기기`} />
                 <SubTitle
                     title={`현재 추천중인 음악에 대한 감상을 공유해주세요.`}
                 />
                 {lastThrReview.length >= 3 && <MoreViewBtn link={""} />}
                 <div className="review-wrap">
-                    {lastThrReview.map((review: ReviewType) => (
+                    {/* {lastThrReview.map((review: ReviewType) => (
                         <Review key={review._id} reviewInfo={review} />
-                    ))}
+                    ))} */}
                 </div>
                 <SetReview />
             </div>

@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { userName, content, rate } = body;
+        const { userName, content } = body;
 
-        if (!userName || !content || !rate) {
+        if (!userName || !content) {
             return NextResponse.json(
                 { message: "제목과 가수를 입력하세요." },
                 { status: 400 }
@@ -20,13 +20,12 @@ export async function POST(req: Request) {
             {     
                 userName,
                 content,
-                rate,
             }
         );
 
         return NextResponse.json({
             message: "성공적으로 저장되었습니다.",
-            data: { userName, content, rate },
+            data: { userName, content },
         });
     } catch (e: unknown) {
         if (e instanceof Error) {

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Modal from "../modal/Modal";
+import Modal from "../ui/Modal";
 
 export default function MusicRecommend() {
     const router = useRouter();

@@ -1,5 +1,5 @@
-import LoginComponent from '@/components/login/LoginComponent';
-import SectionTitle from '@/components/SectionTitle';
+import LoginComponent from '@/components/ui/LoginComponent';
+import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function AuthPage(){
     return(

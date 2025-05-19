@@ -12,14 +12,14 @@
 
     .music-thumbnail--img{
         width: 100%;
-        max-width: 480px;
-        max-height: 480px;
+        max-width: 360px;
+        max-height: 360px;
         margin: 40px 0;
         border-radius: 50%;
-        object-fit: contain;
-        background-color: #000;
+        object-fit: cover   ;
+        background-color: #00000050;
         box-shadow: 0px 0px 20px 16px #00000030;
-        animation: musicStart infinite 10s linear;
+        animation: musicStart infinite 16s linear;
     }
     
     .music-thumbnail--img.play{
@@ -35,8 +35,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 9;
-        width: 60px;
-        height: 60px;
+        width: 44px;
+        height: 44px;
         background-image: url('/icons/play.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -60,7 +60,9 @@
         li{
             margin-bottom: 16px;
             font-family: 'p-700';
-            font-size: 36px;
+            font-size: 30px;
+            color: #fff;
+            text-shadow: 0 0 16px #00000060;
             
             > div{
                 transform: translateY(-30px);
@@ -76,7 +78,7 @@
             .singer{
                 margin-bottom: 0;
                 font-family: 'p-400';
-                font-size: 24px;
+                font-size: 20px;
                 color: #a5a5a5;
                 transition: all 0.6s;
             }

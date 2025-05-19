@@ -1,4 +1,4 @@
-import SectionTitle from "@/components/SectionTitle";
+import SectionTitle from "@/components/ui/SectionTitle";
 import SongHistory from "@/components/EveryDaySong/SongHistory";
 import SelectMonthInput from "@/components/EveryDaySong/SelectMonthInput";
 

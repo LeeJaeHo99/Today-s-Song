@@ -1,6 +1,6 @@
-import SectionTitle from "@/components/SectionTitle";
-import SubTitle from "@/components/SubTitle";
-import MoreViewBtn from "@/components/Btn/MoreViewBtn";
+import SectionTitle from "@/components/ui/SectionTitle";
+import SubTitle from "@/components/ui/SubTitle";
+import MoreViewBtn from "@/components/ui/MoreViewBtn";
 import MusicHistory from '@/components/History/MusicHistory';
 
 export default async function MusicHistorySection() {
@@ -10,10 +10,10 @@ export default async function MusicHistorySection() {
 
 
     return (
-        <section className="music-history-section">
+        <section className="music-history-section section">
             <div className="inner">
                 <SectionTitle title={`🎧 어제의 노래 🎧`} />
-                <SubTitle title={`지금까지 추천된 음악을 확인 할 수 있습니다.`}/>
+                <SubTitle title={`어제 추천된 음악을 확인 할 수 있습니다.`}/>
                 <MoreViewBtn link={'everydaySong'}/>
                 <div className="music-history--wrap">
                     <MusicHistory time={'☀️'} musicData={yesterdayMusicData.morning}/>

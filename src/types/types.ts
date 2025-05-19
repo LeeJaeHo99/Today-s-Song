@@ -21,3 +21,11 @@ export interface MusicThumnailProp {
 export interface SongProviderProp{
     children: React.ReactNode;
 }
+
+export interface MusicDataProp{
+    musicData: {
+        videoId: string;
+        title: string;
+        singer: string;
+    }
+}

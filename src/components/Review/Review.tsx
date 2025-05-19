@@ -4,7 +4,7 @@ export default function Review({ reviewInfo }) {
     const {userName, content, rate} = reviewInfo;
 
     return (
-        <div className="review-component">
+        <div className="review-component blur-box">
             <div className="rate-wrap">
                 {Array.from({ length: rate }, (rate, i) => (
                     <Image

@@ -1,4 +1,4 @@
-import SectionTitle from "@/components/SectionTitle";
+import SectionTitle from "@/components/ui/SectionTitle";
 import NoticeTable from '@/components/Notice/NoticeTable';
 
 export default function NoticePage() {

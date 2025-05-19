@@ -1,6 +1,7 @@
 @use './common/reset.scss';
 @use './common/color.scss';
 @use './common/font.scss';
+@use './common/keyframes.scss';
 @use './common/common.scss';
 
 @use './components/header.scss';
@@ -11,6 +12,7 @@
 @use './components/recommend.scss';
 @use './components/music-player.scss';
 @use './components/title.scss';
+@use './components/history.scss';
 
 @use './pages/admin.scss';
 @use './pages/everydaysong.scss';

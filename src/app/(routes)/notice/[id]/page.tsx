@@ -1,4 +1,4 @@
-import SectionTitle from "@/components/SectionTitle";
+import SectionTitle from "@/components/ui/SectionTitle";
 import NoticeContent from '@/components/Notice/NoticeContent';
 
 export default async function NoticePage() {

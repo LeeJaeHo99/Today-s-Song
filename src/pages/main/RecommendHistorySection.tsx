@@ -1,6 +1,6 @@
-import SectionTitle from '@/components/SectionTitle';
+import SectionTitle from '@/components/ui/SectionTitle';
 import RecommendTable from '@/components/Recommend/RecommendTable';
-import SubTitle from '@/components/SubTitle';
+import SubTitle from '@/components/ui/SubTitle';
 import TablePagination from '@/components/Recommend/TablePagination';
 
 export default async function RecommendHistorySection(){

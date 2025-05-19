@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
-import Modal from "./modal/Modal";
+import Modal from "./ui/Modal";
 
 export default function Form({ onSubmit, message, fields }) {
     const router = useRouter();

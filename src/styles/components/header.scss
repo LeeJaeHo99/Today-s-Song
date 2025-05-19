@@ -7,8 +7,6 @@ header {
     z-index: 9999;
     width: 100%;
     height: 60px;
-    background-color: #00000020;
-    box-shadow: 0px 0px 16px 10px #00000010;
     transition: all 0.3s;
 
     .inner {
@@ -16,7 +14,7 @@ header {
 
         h1 {
             a {
-                font-family: "p-900";
+                font-family: "p-500";
                 font-size: 24px;
                 color: #fff;
             }
@@ -30,7 +28,7 @@ header {
             li {
                 a {
                     padding-bottom: 4px;
-                    font-family: "p-400";
+                    font-family: "p-600";
                     font-size: 18px;
                     color: #fff;
 
@@ -39,7 +37,7 @@ header {
                     }
                 }
                 .login-btn{
-                    background-color: #a7a7a7;
+                    background-color: #ababab75;
                 }
                 .admin-btn{
                     background-color: $gray;
@@ -47,30 +45,7 @@ header {
             }
         }
     }
-}
-header.scrolled {
-    background-color: #fff;
-
-    .inner {
-        h1 {
-            a{
-                color: $primary;
-            }
-        }
-        ul {
-            li {
-                a {
-                    font-family: "p-600";
-                    color: $primary;
-
-                    &:hover {
-                        border-bottom: 1.5px solid $primary;
-                    }
-                }
-                .login-btn{
-                    background-color: $primary;
-                }
-            }
-        }
+    &.blur-box{
+        background-color: rgba(255, 255, 255, 0.01);
     }
 }
