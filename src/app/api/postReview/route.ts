@@ -4,11 +4,11 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { userName, content } = body;
+        const { userName } = body;
 
-        if (!userName || !content) {
+        if (!userName) {
             return NextResponse.json(
-                { message: "제목과 가수를 입력하세요." },
+                { message: "감상평을 입력하세요." },
                 { status: 400 }
             );
         }
@@ -16,16 +16,11 @@ export async function POST(req: Request) {
         const db = (await connectDB).db("todaysSong");
         const collection = db.collection("review");
 
-        await collection.insertOne(
-            {     
-                userName,
-                content,
-            }
-        );
+        await collection.insertOne({ userName });
 
         return NextResponse.json({
             message: "성공적으로 저장되었습니다.",
-            data: { userName, content },
+            data: { userName },
         });
     } catch (e: unknown) {
         if (e instanceof Error) {

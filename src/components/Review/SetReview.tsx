@@ -9,18 +9,17 @@ export default function SetReview() {
     const router = useRouter();
     const [reviewText, setReviewText] = useState('');
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.value.length <= 50) {
             setReviewText(e.target.value);
         }
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const reviewData = {
             content: reviewText,
-            userName: "이재호",  // ⭐️ 유저명을 임시로 추가 (실제 로그인 정보에서 가져오도록 수정 가능)
         };
 
         try{
@@ -31,16 +30,15 @@ export default function SetReview() {
             });
             router.refresh();
             setReviewText('');
-            setRate('5');
         }
         catch(e){
-            console.log(e);
+            console.error(e);
         }
     }
 
     return (
         <motion.form 
-            className="set-review-component" 
+            className="set-review-component blur-box" 
             action=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -49,6 +47,7 @@ export default function SetReview() {
             onSubmit={handleSubmit}
         >
             <input
+                className="blur-box"
                 onChange={handleChange}
                 value={reviewText}
                 type="text"

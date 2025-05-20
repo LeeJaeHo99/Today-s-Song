@@ -15,7 +15,7 @@ export interface HistoryMusicProp {
 
 export interface MusicThumnailProp {
     videoId: React.ReactNode;
-    isPlaying: React.ReactNode;
+    isPlaying?: React.ReactNode;
 }
 
 export interface SongProviderProp{

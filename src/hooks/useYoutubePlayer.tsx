@@ -1,6 +1,8 @@
+'use client';
+
 import { useEffect, useRef } from "react";
 
-export function useYoutubePlayer(videoId: string){
+export function useYoutubePlayer(videoId: string, elementId: string = "youtube-player"){
     const playerRef = useRef(null);
 
     useEffect(() => {
@@ -12,7 +14,7 @@ export function useYoutubePlayer(videoId: string){
         };
 
         window.onYouTubeIframeAPIReady = () => {
-            playerRef.current = new window.YT.Player("youtube-player", {
+            playerRef.current = new window.YT.Player(elementId, {
                 videoId: videoId,
             });
         };
