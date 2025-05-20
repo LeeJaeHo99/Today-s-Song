@@ -23,7 +23,6 @@ export default function MusicRecommend() {
                     recommendSinger: singer,
                 }),
             });
-            const data = await response.json();
 
             if (response.ok) {
                 setTitle('');
@@ -39,7 +38,7 @@ export default function MusicRecommend() {
         }
     }
 
-    const handleSubmitClick = (e) => {
+    const handleSubmitClick = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!title || !singer) {
             alert('가수와 제목을 입력해주세요.');
@@ -50,10 +49,10 @@ export default function MusicRecommend() {
 
     return (
         <>
-            <form className="music-recommend--component" onSubmit={handleSubmitClick}>
+            <form className="music-recommend--component blur-box" onSubmit={handleSubmitClick}>
                 {message && <p>{message}</p>}
                 <label htmlFor="recommend-title">
-                    <span>제목 <span>*</span></span>
+                    <span>제목</span>
                     <input
                         id="recommend-title"
                         type="text"
@@ -64,7 +63,7 @@ export default function MusicRecommend() {
                     />
                 </label>
                 <label htmlFor="recommend-singer">
-                    <span>가수 <span>*</span></span>
+                    <span>가수</span>
                     <input
                         id="recommend-singer"
                         type="text"
@@ -74,7 +73,7 @@ export default function MusicRecommend() {
                         required
                     />
                 </label>
-                <button className="music-recommend-submit--btn" type="submit">
+                <button className="submit-btn--component" type="submit">
                     <span>제출하기</span>
                     <Image
                         src={"/icons/arrow.png"}
