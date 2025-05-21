@@ -1,4 +1,3 @@
-import { noticeData } from "@/data/data";
 import Link from "next/link";
 
 export default async function NoticeTable() {
@@ -9,7 +8,7 @@ export default async function NoticeTable() {
     return (
         <table>
             <thead>
-                <tr>
+                <tr className="blur-box">
                     <th>번호</th>
                     <th className="title-part">제목</th>
                     <th>작성자</th>

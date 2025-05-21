@@ -9,7 +9,7 @@ export default function DataSection() {
                 <div className="notice-section">
                     <div>
                         <SectionTitle title="공지사항" />
-                        <MoreViewBtn link="board" />
+                        <MoreViewBtn link="notice" />
                     </div>
                     <div className="preview-box blur-box">
                         <div className="title-wrap">

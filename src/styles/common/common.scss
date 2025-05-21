@@ -72,14 +72,13 @@ table{
     thead{
         width: 100%;
         height: 60px;
-        background-color: $primary;
 
         tr{
             th{
                 vertical-align: middle;
                 font-family: 'p-600';
                 font-size: 18px;
-                color: #fff;
+                color: #a5a5a5;
 
                 &:first-child{
                     width: 10%;
@@ -104,8 +103,8 @@ table{
     }
     tbody{
         tr{
-            height: 48px;
-            border-bottom: 1px solid #ddd;
+            height: 56px;
+            border-bottom: 1px solid #dddddd40;
             text-align: center;
 
             &:last-child{
@@ -114,7 +113,18 @@ table{
             td{
                 height: 100%;
                 font-family: 'p-400';
+                color: #ddd;
                 vertical-align: middle;
+
+                a{
+                    color: #ddd;
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover{
+                        font-size: 17px;
+                        color: #fff;
+                    }
+                }
             }
         }
     }
