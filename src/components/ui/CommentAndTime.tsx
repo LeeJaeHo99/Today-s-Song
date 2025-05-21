@@ -121,11 +121,13 @@ function WriteModal({ onClick }: { onClick: () => void }) {
                 maxLength={30}
                 onChange={handleChange}
                 onClick={e => e.stopPropagation()}
+                required
             ></textarea>
             <button 
                 type="submit" 
                 className="submit-btn--component"
                 onClick={e => e.stopPropagation()}
+                disabled={!reviewText.trim()}
             >
                 <span>제출하기</span>
                 <Image

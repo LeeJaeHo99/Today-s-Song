@@ -14,32 +14,14 @@ export type Song = [
             videoId: string;
             title: string;
             singer: string;
-            review: {
-                id: number;
-                userName: string;
-                content: string;
-                rate: number;
-            }[]
         };
         night: {
             videoId: string;
             title: string;
             singer: string;
-            review: {
-                id: number;
-                userName: string;
-                content: string;
-                rate: number;
-            }[]
         };
     },
 ];
-
-export type Review = {
-    userName: string;
-    content: string;
-    rate: number;
-}
 
 export type RecommendSong = {
     id: number;
