@@ -275,14 +275,66 @@
 }
 
 .data-section {
+    height: auto;
+    padding-bottom: 120px;
+
     .inner {
         gap: 80px;
-        
+
         > div {
             width: 50%;
 
             .section-title{
                 font-size: 32px;
+            }
+            .preview-box{
+                width: 100%;
+                height: auto;
+                max-height: 370px;
+                padding: 20px;
+                border-radius: 12px;
+
+                .title-wrap {
+                    .writing {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 24px 0;
+                        border-bottom: 1px solid #a5a5a5;
+            
+                        &:last-child {
+                            padding-bottom: 12px;
+                            border: none;
+                        }
+                        .title {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 8px;
+                            width: 80%;
+                            font-family: "gs-m";
+                            color: #fff;
+            
+                            span {
+                                max-width: 85%;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .comment-num {
+                                font-family: "gs-l";
+                                font-size: 14px;
+                                color: lightcoral;
+                            }
+                        }
+                        .date {
+                            width: 20%;
+                            font-family: "gs-l";
+                            font-size: 14px;
+                            color: #a5a5a5;
+                            text-align: right;
+                        }
+                    }
+                }
             }
         }
     }
