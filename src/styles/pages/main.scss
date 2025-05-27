@@ -218,13 +218,34 @@
 
 .music-history-section,
 .music-recommend-section,
+.artist-section,
 .play-list-section {
     .inner {
         flex-direction: column;
     }
 }
 
+.artist-section {
+    .info-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+
+        .artist-image{
+            img{
+                border-radius: 50%;
+            }
+        }
+        .artist-info {}
+    }
+}
+
 .play-list-section {
+    height: 90vh;
+    padding-top: 80px;
+
     .sub-title {
         margin-bottom: 0;
     }

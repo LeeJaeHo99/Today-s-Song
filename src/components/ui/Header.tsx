@@ -1,8 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import BtnComponent from '@/components/ui/BtnComponent';
 import { useEffect } from 'react';
 
 export default function Header() {
@@ -33,11 +31,6 @@ export default function Header() {
 
 
 function HeaderList(){
-    const router= useRouter();
-    const onClickLoginBtn = () => {
-        router.push('/login');
-    }
-
     return(
         <ul>
             <li>
@@ -47,10 +40,7 @@ function HeaderList(){
                 <Link href={'/everydaySong'}>매일노래</Link>
             </li>
             <li>
-                <Link href={'/free-board'}>자유게시판</Link>
-            </li>
-            <li>
-                <BtnComponent onClick={onClickLoginBtn} type={'login-btn'} text={'로그인'}/>
+                <Link href={'/board'}>자유게시판</Link>
             </li>
         </ul>
     );

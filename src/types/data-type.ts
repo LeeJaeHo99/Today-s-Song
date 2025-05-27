@@ -6,23 +6,6 @@ export type TodaySong = {
     time: string;
 }
 
-export type Song = [
-    {
-        id: number;
-        date: number;
-        morning: {
-            videoId: string;
-            title: string;
-            singer: string;
-        };
-        night: {
-            videoId: string;
-            title: string;
-            singer: string;
-        };
-    },
-];
-
 export type RecommendSong = {
     id: number;
     title: string;
@@ -37,3 +20,30 @@ export type NoticeData = {
     author: string;
     date: number;
 }[];
+
+
+// ===========
+
+export interface SongData{
+    _id: string;
+    date: {
+        year: string;
+        month: string;
+        day: string;
+    };
+    morning: {
+        videoId: string;
+        title: string;
+        singer: string;
+    };
+    night: {
+        videoId: string;
+        title: string;
+        singer: string;
+    };
+}
+
+export interface CommentData {
+    _id: string;
+    comment: string;
+}

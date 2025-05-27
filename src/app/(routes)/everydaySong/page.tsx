@@ -24,7 +24,7 @@ async function MusicInputAndHistory() {
     return (
         <>
             <SelectMonthInput/>
-            <SongHistory  musicData={musicData}/>
+            <SongHistory  music={musicData}/>
         </>
     );
 }

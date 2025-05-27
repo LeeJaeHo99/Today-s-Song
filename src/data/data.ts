@@ -98,4 +98,17 @@ export const recommendData = [
         singer: '호미들',
         author: '이재호3',
     },
-]
+];
+
+export let artistData = {
+    name: '123',
+    desc: [''],
+    imgLink: '',
+    songData: [
+        {
+            img: '',
+            title: '',
+            album: '',
+        },
+    ]
+};
