@@ -56,6 +56,3 @@ function NoneMusic(){
         </div>
     );
 }
-
-
-// music.date.year이랑 selectedYear가 같고 music.date.month가 selectedMonth와 같은 것만 추출

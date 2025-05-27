@@ -13,10 +13,10 @@ export default function MusicDesc() {
         <div className="music-desc--wrap">
             <ul className="music-desc">
                 <li>
-                    <div className={`title ${isView}`}>좋은 밤 좋은 꿈</div>
+                    <div className={`title ${isView}`}>숲</div>
                 </li>
                 <li>
-                    <div className={`singer ${isView}`}>Nerd Connection</div>
+                    <div className={`singer ${isView}`}>최유리</div>
                 </li>
             </ul>
         </div>

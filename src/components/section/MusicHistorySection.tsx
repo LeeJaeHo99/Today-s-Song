@@ -1,7 +1,7 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import SubTitle from "@/components/ui/SubTitle";
 import MoreViewBtn from "@/components/ui/MoreViewBtn";
-import MusicHistory from '@/components/History/MusicHistory';
+import MusicHistory from '@/components/ui/MusicHistory';
 
 export default async function MusicHistorySection() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);

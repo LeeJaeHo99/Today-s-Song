@@ -20,12 +20,12 @@ export default function WriteComment({setComment}: {setComment: (comment: Commen
             onClick={handleClick}
         >
             <span>📝</span>
-            {isClicked && <WriteModal onClick={handleClose} setComment={setComment}/>}
+            {isClicked && <WriteModal onClick={handleClose} setComment={setComment} handleClose={handleClose}/>}
         </div>
     );
 }
 
-function WriteModal({ onClick, setComment }: { onClick: () => void, setComment: (comment: CommentData[]) => void }) {
+function WriteModal({ onClick, setComment, handleClose }: { onClick: () => void, setComment: (comment: CommentData[]) => void, handleClose: () => void }) {
     const [reviewText, setReviewText] = useState("");
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         if (e.target.value.length <= 30) {
@@ -46,7 +46,8 @@ function WriteModal({ onClick, setComment }: { onClick: () => void, setComment: 
                 body: JSON.stringify({ reviewData }),
             });
             setReviewText("");
-            setComment(prev => [...prev, { _id: Date.now().toString(), comment: reviewText }]);
+            handleClose();
+            setComment(prev => [...prev, { _id: Date.now().toString(), comment: reviewText } as CommentData]);
         } catch (e) {
             console.error(e);
         }

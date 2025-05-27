@@ -2,8 +2,27 @@
 
 import { useEffect, useRef } from "react";
 
+interface YouTubePlayer {
+    playVideo: () => void;
+    pauseVideo: () => void;
+    stopVideo: () => void;
+    seekTo: (seconds: number) => void;
+    getPlayerState: () => number;
+    getCurrentTime: () => number;
+    getDuration: () => number;
+}
+
+declare global {
+    interface Window {
+        YT: {
+            Player: new (elementId: string, options: { videoId: string }) => YouTubePlayer;
+        };
+        onYouTubeIframeAPIReady: () => void;
+    }
+}
+
 export function useYoutubePlayer(videoId: string, elementId: string = "youtube-player"){
-    const playerRef = useRef(null);
+    const playerRef = useRef<YouTubePlayer | null>(null);
 
     useEffect(() => {
         const loadYouTubeIframeAPI = () => {
@@ -20,7 +39,7 @@ export function useYoutubePlayer(videoId: string, elementId: string = "youtube-p
         };
 
         loadYouTubeIframeAPI();
-    }, [videoId]);
+    }, [elementId, videoId]);
 
     return playerRef;
 }

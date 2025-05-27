@@ -22,7 +22,7 @@ export default function Header() {
     return (
         <header>
             <div className="inner">
-                <h1><Link href={'/'}>𝙏͜𝙊͜𝘿͜𝘼͜𝙔͜𝙎͜𝙎͜𝙊͜𝙉͜𝙂͜</Link></h1>
+                <h1><Link href={'/'}>🅣🅞🅓🅐🅨🅢🅢🅞🅝🅖</Link></h1>
                 <HeaderList/>
             </div>
         </header>
@@ -34,14 +34,14 @@ function HeaderList(){
     return(
         <ul>
             <li>
-                <Link href={'/notice'}>공지사항</Link>
+                <Link href={'/notice'}>Notice</Link>
             </li>
             <li>
-                <Link href={'/everydaySong'}>매일노래</Link>
+                <Link href={'/everydaySong'}>EverySong</Link>
             </li>
-            <li>
+            {/* <li>
                 <Link href={'/board'}>자유게시판</Link>
-            </li>
+            </li> */}
         </ul>
     );
 }

@@ -7,6 +7,7 @@ export default function MusicThumbnail({
     videoId,
     isPlaying,
 }: MusicThumnailProp) {
+    // const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
     const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
     return (

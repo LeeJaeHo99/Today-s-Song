@@ -10,24 +10,10 @@ PM 18 : 00 ~ AM 06: 00
 
 videoId 데이터 필요한 곳
 - MusicPlayer
-- MusicThumnail
-
-- 로그인
-- 시간마다 변경
-- 리뷰는 시간마다 데이터 삭제
-
 
 < 일정 >
-
-- 모달 (shadcn)
-- admin
-- 로그인
 - 시간마다 videoId 변경 + 리뷰 데이터 삭제
-- 배포
 
-
-
-// 모달추가, 버튼, 폼 컴포넌트 화
 // 반응형 수정
 
 
@@ -35,18 +21,33 @@ videoId 데이터 필요한 곳
 
 
 
-가사
-어제의 노래
-한줄평
-
-
-
-
-
-메인페이지에 한줄평이 날라댕김
-아래에 어제의 노래 + 한줄평 쓰기 + 자유게시판
-
-
 
 puppeteer 사용이유
 cheerio와 axios를 이용하면 렌더링 이전 데이터만 크롤링 해오기 때문
+
+
+
+
+
+데이터
+
+songData = {
+    date: {
+        year,
+        month,
+        day,
+    },
+    morning: {
+        videoId,
+        title,
+        singer,
+        lyric,
+    },
+    night: {
+        videoId,
+        title,
+        singer,
+        lyric,
+    }
+}
+

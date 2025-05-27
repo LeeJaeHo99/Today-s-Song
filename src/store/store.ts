@@ -1,11 +1,5 @@
 import { create } from "zustand";
-import { VideoIdType, SelectedDateType } from "@/types/types";
-
-export const useVideoId = create<VideoIdType>((set) => ({
-    videoId: "VALUE",
-    setVideoId: (id: string) => set(() => ({ videoId: id })),
-}));
-
+import { SelectedDateType } from "@/types/types";
 
 const date = new Date();
 const year = date.getFullYear();

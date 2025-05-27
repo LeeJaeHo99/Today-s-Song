@@ -1,6 +1,6 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import SubTitle from "@/components/ui/SubTitle";
-import MusicRecommend from '@/components/Recommend/MusicRecommend';
+import MusicRecommend from '@/components/ui/MusicRecommend';
 
 export default function MusicRecommendSection() {
     return (

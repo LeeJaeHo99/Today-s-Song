@@ -2,10 +2,19 @@
 
 import { usePathname } from "next/navigation";
 
-export default function NoticeContent({noticeData}){
+interface NoticeData{
+    id: string;
+    title: string;
+    author: string;
+    date: string;
+    content: string;
+}
+
+export default function NoticeContent({noticeData}: {noticeData: NoticeData[]}){
+    console.log('noticeData: ', noticeData);
     const pathName = usePathname();
     const pathNum: string = pathName?.split('/')?.[2];
-    const {id, title, author, date, content} = noticeData[pathNum];
+    const {title, author, date, content} = noticeData[Number(pathNum)];
 
     return(
         <div className="notice-content">

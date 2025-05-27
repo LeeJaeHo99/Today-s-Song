@@ -24,10 +24,8 @@ export async function GET(request: Request) {
             const name = document.querySelector('.badge_track_info .artist')?.textContent || '';
             const desc = Array.from(document.querySelectorAll('.badge_track_info dl dd')).map(item => item.textContent);
 
-            const imgLinkElement = document.querySelector('.link_thumbnail');
-            const imgLink = imgLinkElement?.style.backgroundImage
-                ? imgLinkElement.style.backgroundImage.replace(/^url\(['"]?|['"]?\)$/g, '')
-                : '';
+            const imgLinkElement = document.querySelector('.link_thumbnail') as HTMLElement;
+            const imgLink = imgLinkElement?.style.backgroundImage?.replace(/^url\(['"]?|['"]?\)$/g, '');
 
             const songData = Array.from(document.querySelectorAll('.track_list_table tbody tr')).slice(0, 5).map(item => {
                 const imgElement = item.querySelector('.thumb img');

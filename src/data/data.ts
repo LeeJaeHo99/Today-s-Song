@@ -100,7 +100,18 @@ export const recommendData = [
     },
 ];
 
-export let artistData = {
+interface ArtistData {
+    name: string;
+    desc: string[];
+    imgLink: string;
+    songData: {
+        img: string;
+        title: string;
+        album: string;
+    }[];
+}
+
+export const artistData: ArtistData = {
     name: '123',
     desc: [''],
     imgLink: '',

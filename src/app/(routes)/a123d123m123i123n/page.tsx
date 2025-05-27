@@ -15,6 +15,5 @@ export default function adminPage(){
 }
 
 // 공지사항 쓰기
-// 노래 추가
+// 노래 추가 ()
 // 노래 정보
-// 회원 관리

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 
 export default function MusicPlayer() {
-    const videoId = "H2ncCtw2YxA";
+    const videoId = "fuz2F8GGQKI";
     const playerRef = useYoutubePlayer(videoId);
     const [isPlaying, setIsPlaying] = useState(false);
 

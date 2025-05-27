@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import SectionTitle from "../ui/SectionTitle";
 import SubTitle from "../ui/SubTitle";
 import { parsing } from "@/util/getArtist";
@@ -23,7 +22,6 @@ interface ArtistData {
 export default function ArtistSection() {
     const [artist, setArtist] = useState<ArtistData | null>(null);
     const [error, setError] = useState<string | null>(null);
-    const router = useRouter();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -55,8 +53,8 @@ export default function ArtistSection() {
                                         <Image
                                             src={artist.imgLink}
                                             alt={artist.name}
-                                            width={180}
-                                            height={180}
+                                            width={190}
+                                            height={190}
                                             unoptimized
                                         />
                                     </div>
@@ -77,18 +75,14 @@ export default function ArtistSection() {
                                         <div
                                             key={index}
                                             className="song-item"
-                                            onClick={() =>
-                                                router.push(
-                                                    `https://www.youtube.com/results?search_query=${song.title}`
-                                                )
-                                            }
+                                            onClick={() => window.open(`https://www.youtube.com/results?search_query=${song.title}`, '_blank')}
                                         >
                                             {song.img && (
                                                 <Image
                                                     src={song.img}
                                                     alt={song.title}
-                                                    width={100}
-                                                    height={100}
+                                                    width={120}
+                                                    height={120}
                                                     unoptimized
                                                 />
                                             )}
