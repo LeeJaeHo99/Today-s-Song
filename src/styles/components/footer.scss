@@ -15,7 +15,12 @@ footer{
             color: #a5a5a5;
         }
         div{
-            p{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            p, a{
                 font-family: 'p-400';
                 font-size: 18px;
                 color: #a5a5a5;
@@ -23,6 +28,9 @@ footer{
                 &:first-child{
                     margin-bottom: 12px;
                 }
+            }
+            a{
+                display: block;
             }
         }
     }

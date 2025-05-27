@@ -51,3 +51,9 @@ songData = {
     }
 }
 
+
+
+
+// 해야될것 
+1. 반응형
+2. morning / night 자동 반영

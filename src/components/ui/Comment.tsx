@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
-import { CommentData } from "@/types/data-type";    
+import { CommentData } from "@/types/data-type";
 
-export default function Comment({comment}: {comment?: CommentData[]}) {
+export default function Comment({ comment }: { comment?: CommentData[] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visible, setVisible] = useState(true);
 
@@ -22,7 +22,15 @@ export default function Comment({comment}: {comment?: CommentData[]}) {
         return () => clearInterval(interval);
     }, [comment]);
 
-    if(!comment) return null;
+    if (!comment || comment.length === 0) {
+        return (
+            <div className="comment-wrap blur-box">
+                <span className={`fadeIn`}>
+                    댓글을 기다리고 있습니다.
+                </span>
+            </div>
+        );
+    }
     return (
         <div className="comment-wrap blur-box">
             <span className={`${visible ? "fadeIn" : "fadeOut"}`}>

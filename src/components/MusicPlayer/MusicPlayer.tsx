@@ -2,13 +2,31 @@
 
 import { useYoutubePlayer } from "@/hooks/useYoutubePlayer";
 import MusicThumbnail from "./MusicThumnail";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 
 export default function MusicPlayer() {
-    const videoId = "fuz2F8GGQKI";
+    const [videoId, setVideoId] = useState<string>("");
+    const [isMorning, setIsMorning] = useState<string>('morning');
+
     const playerRef = useYoutubePlayer(videoId);
     const [isPlaying, setIsPlaying] = useState(false);
+
+    const getTime = () => {
+        const now = new Date();
+        const hours = now.getHours();
+        setIsMorning(hours < 18 && hours > 6 ? 'morning' : 'night');
+    }
+    
+    useEffect(() => {
+        getTime();
+        const fetchData = async () => {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`, {cache: 'force-cache'});
+            const result = await response.json();
+            setVideoId(`${result.data[result.data.length - 1][isMorning].videoId}`);
+        }
+        fetchData();
+    }, [isMorning])
 
     const clickPlayer = () => {
         if (
@@ -37,6 +55,7 @@ export default function MusicPlayer() {
             transition={{
                 duration: 0.5,
                 ease: [0, 0.71, 0.2, 1.01],
+                delay: 0.5,
             }}
         >
             <button

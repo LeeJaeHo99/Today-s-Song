@@ -41,12 +41,25 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        transition: all 0.2s;
+
+        &:hover{
+            transform: translate(-50%, -50%) scale(1.05);
+        }
     }
     .play-btn.play{
         background-image: url('/icons/play.png');
     }
     .play-btn.play{
         background-image: url('/icons/pause.png');
+    }
+    .music-thumbnail--none{
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        background-color: rgb(31 31 31 / 36%);
+        box-shadow: 0px 0px 20px 16px #00000030;
+        animation: musicStart infinite 16s linear;
     }
 }
 

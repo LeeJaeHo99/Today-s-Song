@@ -5,6 +5,8 @@ import SectionTitle from "../ui/SectionTitle";
 import SubTitle from "../ui/SubTitle";
 import { parsing } from "@/util/getArtist";
 import Image from "next/image";
+import { parsingData } from "@/data/data";
+import { isoWeek } from "@/util/getWeekNum";
 
 interface SongData {
     img: string;
@@ -26,7 +28,7 @@ export default function ArtistSection() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await parsing("80137177");
+                const data = await parsing(`${parsingData[isoWeek - 22]}`);
                 setArtist(data);
                 setError(null);
             } catch (err) {
