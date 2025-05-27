@@ -231,14 +231,125 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 16px;
+        gap: 64px;
+        width: 100%;
+        height: auto;
+        padding: 40px;
+        border-radius: 16px;
 
-        .artist-image{
-            img{
-                border-radius: 50%;
+        .loading{
+            padding: 40px;
+            font-family: 'bnv';
+            font-size: 40px;
+            color: #fff;
+        }
+        .artist-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+            .artist-image{
+                img{
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 20px 8px rgba(255, 255, 255, 0.07);
+                }
+            }
+            h3{
+                margin-bottom: 16px;
+                font-family: 'p-700';
+                font-size: 24px;
+                color: #fff;
+            }
+            .artist-desc{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 16px;
+
+                p{
+                    font-family: 'p-400';
+                    font-size: 14px;
+                    color: #a5a5a5;
+
+                    &:nth-child(2){
+                        position: relative;
+
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            width: 0.5px;
+                            height: 100%;
+                            background-color: #676666;
+                            transform: translateY(-50%);
+                        }
+                        &::before{
+                            left: -8px;
+                        }
+                        &::after{
+                            right: -8px;
+                        }
+                    }
+                }
             }
         }
-        .artist-info {}
+        .song-list{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+
+            > p{
+                margin-bottom: 40px;
+                font-family: 'bnv';
+                font-size: 24px;
+                color: #a5a5a5;
+            }
+            .song-item-wrap{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 16px;
+                width: 100%;
+
+                .song-item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 16px;
+                    width: 18%;
+                    cursor: pointer;
+
+                    img{
+                        border-radius: 8px;
+                        box-shadow: 0px 0px 20px 8px rgba(255, 255, 255, 0.07);
+                    }
+                    .song-info{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        h4{
+                            margin-bottom: 8px;
+                            font-family: 'p-700';
+                            font-size: 14px;
+                            color: #fff;
+                        }
+                        p{
+                            font-family: 'p-400';
+                            font-size: 12px;
+                            color: #a5a5a5;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
