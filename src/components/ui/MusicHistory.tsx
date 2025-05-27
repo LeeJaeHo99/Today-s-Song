@@ -5,6 +5,7 @@ import { MusicHistoryProp } from "@/types/types";
 
 export default function MusicHistory({time, musicData}: MusicHistoryProp) {
     const thumbnailUrl = `https://img.youtube.com/vi/${musicData.videoId}/maxresdefault.jpg`;
+
     return (
         <Link href={"/everydaySong"} className="music-history--component blur-box">
             <div className="rate-wrap">

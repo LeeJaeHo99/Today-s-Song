@@ -14,7 +14,6 @@ export default function CommentAndTime() {
     }, []);
 
     const [comment, setComment] = useState<CommentData[]>([]);
-    console.log('comment: ', comment);
     useEffect(() => {
         const getComment = async () => {
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getReview`);

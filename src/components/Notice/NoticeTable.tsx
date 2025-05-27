@@ -1,4 +1,7 @@
+'use client';
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface NoticeData {
     _id: string;
@@ -7,10 +10,22 @@ interface NoticeData {
     date: string;
 }
 
-export default async function NoticeTable() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getNotice`);
-    const result = await response.json();
-    const noticeData = result.data;
+export default function NoticeTable() {
+    const [noticeData, setNoticeData] = useState<NoticeData[]>([]);
+
+    useEffect(() => {
+        const fetchNotice = async () => {
+            try {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getNotice`);
+                const result = await response.json();
+                setNoticeData(result.data);
+            } catch (error) {
+                console.error('Failed to fetch notice data:', error);
+            }
+        };
+
+        fetchNotice();
+    }, []);
 
     return (
         <table>
