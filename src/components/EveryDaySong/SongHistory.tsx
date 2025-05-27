@@ -6,14 +6,18 @@ import { SongData } from "@/types/data-type";
 import { useEffect, useState } from "react";
 
 export default function SongHistory({ music }: { music: SongData[] }) {
-    console.log('music: ', music);
     const { selectedDate } = useSelectedDate();
     const selectedYear = selectedDate.split("-")[0];
     const selectedMonth = selectedDate.split("-")[1];
-    console.log('selectedYear: ', selectedYear);
-    console.log('selectedMonth: ', selectedMonth);
 
-    const [dataList, setDataList] = useState([...music]);
+    const [dataList, setDataList] = useState([...music.reverse().slice(0, 10)]);
+
+    useEffect(() => {
+        const filteredMusic = music.filter((data) => {
+            return data.date.year === selectedYear && data.date.month === selectedMonth;
+        });
+        setDataList(filteredMusic);
+    }, [selectedYear, selectedMonth, music]);
     
     return (
         <div className="song-history--wrap">
@@ -52,3 +56,6 @@ function NoneMusic(){
         </div>
     );
 }
+
+
+// music.date.year이랑 selectedYear가 같고 music.date.month가 selectedMonth와 같은 것만 추출

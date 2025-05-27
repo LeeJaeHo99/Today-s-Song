@@ -16,9 +16,9 @@
             }
             .song-history--date{
                 margin-bottom: 40px;
-                font-family: 'p-700';
+                font-family: 'gs-m';
                 font-size: 24px;
-                color: $primary;
+                color: #fff;
             }
             .song-history--music--wrap{
                 display: flex;
@@ -27,8 +27,9 @@
                 gap: 64px;
 
                 .song-history--music{
+                    background: rgb(54 54 54 / 18%);
                     border-radius: 16px;
-                    box-shadow: 0px 0px 10px 10px #00000010;
+                    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
                     overflow: hidden;
 
                     .song-history--music__img{
@@ -44,6 +45,7 @@
                             margin-bottom: 12px;
                             font-family: 'p-700';
                             font-size: 24px;
+                            color: #fff;
                         }
                         .singer{
                             font-family: 'p-400';
@@ -68,16 +70,18 @@
             justify-content: flex-end;
             width: 100%;
 
-            input{
-                width: 140px;
+            input[type="month"]{
+                width: 160px;
                 height: 40px;
-                padding: 8px;
-                border: 1px solid #ddd;
+                padding: 8px 12px;
+                background-color: #a5a5a520;
+                border: none;
                 border-radius: 8px;
                 font-family: 'p-600';
                 font-size: 16px;
-                color: $primary;
-                appearance: none;
+                color: #a5a5a5;
+                // appearance: none;
+                cursor: pointer;
             }
         }
     }

@@ -29,3 +29,17 @@ export interface MusicDataProp{
         singer: string;
     }
 }
+
+
+
+// STORE
+export interface VideoIdType {
+    videoId: string;
+    setVideoId: (id: string) => void;
+}
+
+export interface SelectedDateType{
+    selectedDate: string;
+    setSelectedDate: (date: string) => void
+}
+

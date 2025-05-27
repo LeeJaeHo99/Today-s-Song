@@ -1,5 +1,12 @@
 import Link from "next/link";
 
+interface NoticeData {
+    _id: string;
+    title: string;
+    author: string;
+    date: string;
+}
+
 export default async function NoticeTable() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getNotice`);
     const result = await response.json();
@@ -16,7 +23,7 @@ export default async function NoticeTable() {
                 </tr>
             </thead>
             <tbody>
-                {noticeData.map((data, i) => {
+                {noticeData.map((data: NoticeData, i: number) => {
                     return (
                         <tr key={data._id}>
                             <td>{i + 1}</td>

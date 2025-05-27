@@ -10,7 +10,7 @@ export default function HistoryMusic({ thumnail, title, singer }: HistoryMusicPr
 
     return (
         <motion.div 
-            className="song-history--music"
+            className="song-history--music blur-box"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 1 }}

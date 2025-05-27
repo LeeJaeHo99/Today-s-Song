@@ -6,9 +6,7 @@ body{
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
-    background: linear-gradient(135deg, #232526 0%, #414345 100%);
-    background: linear-gradient(to bottom, #000000, #1c1c1c, #2f3640);
-    background: linear-gradient(to bottom, #000000, #1b1b1b, #333333, #434343);
+    background: #191919;
 }
 
 .section{
@@ -74,6 +72,8 @@ table{
         height: 60px;
 
         tr{
+            background-color: rgba(0, 0, 0, 0.6);
+            
             th{
                 vertical-align: middle;
                 font-family: 'p-600';

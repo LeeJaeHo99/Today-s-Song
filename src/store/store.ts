@@ -1,30 +1,23 @@
 import { create } from "zustand";
+import { VideoIdType, SelectedDateType } from "@/types/types";
 
-interface VideoIdType {
-    videoId: string;
-    setVideoId: (id: string) => void;
-}
 export const useVideoId = create<VideoIdType>((set) => ({
     videoId: "VALUE",
     setVideoId: (id: string) => set(() => ({ videoId: id })),
 }));
 
 
-interface SelectedDateType{
-    selectedDate: string;
-    setSelectedDate: (date: string) => void
-}
 const date = new Date();
 const year = date.getFullYear();
-const month = date.getMonth() + 1;
+const month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
 
 export const useSelectedDate = create<SelectedDateType>((set) => ({
-
     selectedDate: `${year}-${month}`,
     setSelectedDate: (date) => set(() => ({selectedDate: date})),
 }));
 
+
 export const useTablePagination = create((set) => ({
     pagination: 0,
-    setPagination: (page) => set({pagination: page}),
-}))
+    setPagination: (page: number) => set({pagination: page}),
+}));
