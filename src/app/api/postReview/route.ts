@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { reviewData } = body;
+        const comment = body;
 
-        if (!reviewData) {
+        if (!comment) {
             return NextResponse.json(
                 { message: "감상평을 입력하세요." },
                 { status: 400 }
@@ -16,11 +16,11 @@ export async function POST(req: Request) {
         const db = (await connectDB).db("todaysSong");
         const collection = db.collection("review");
 
-        await collection.insertOne({ reviewData });
+        await collection.insertOne(comment);
 
         return NextResponse.json({
             message: "성공적으로 저장되었습니다.",
-            data: { reviewData },
+            data: { comment },
         });
     } catch (e: unknown) {
         if (e instanceof Error) {

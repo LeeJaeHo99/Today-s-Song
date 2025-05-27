@@ -30,6 +30,11 @@ export interface MusicDataProp{
     }
 }
 
+export interface CommentData{
+    comment: string;
+    _id: string;
+}
+
 
 
 // STORE

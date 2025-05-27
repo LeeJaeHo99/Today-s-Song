@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { CommentData } from "@/types/data-type";
 
-export default function WriteComment({setComment}: {setComment: (comment: CommentData[]) => void}) {
+export default function WriteComment({ setComment, comment}: {setComment: (comment: CommentData[]) => void, comment: CommentData[]}) {
     const [isClicked, setIsClicked] = useState(false);
     const handleClick = () => {
         setIsClicked(true);
@@ -20,12 +20,12 @@ export default function WriteComment({setComment}: {setComment: (comment: Commen
             onClick={handleClick}
         >
             <span>📝</span>
-            {isClicked && <WriteModal onClick={handleClose} setComment={setComment} handleClose={handleClose}/>}
+            {isClicked && <WriteModal onClick={handleClose} setComment={setComment} handleClose={handleClose} comment={comment}/>}
         </div>
     );
 }
 
-function WriteModal({ onClick, setComment, handleClose }: { onClick: () => void, setComment: (comment: CommentData[]) => void, handleClose: () => void }) {
+function WriteModal({ onClick, setComment, handleClose, comment }: { onClick: () => void, setComment: (comment: CommentData[]) => void, handleClose: () => void, comment: CommentData[] }) {
     const [reviewText, setReviewText] = useState("");
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         if (e.target.value.length <= 30) {
@@ -36,18 +36,17 @@ function WriteModal({ onClick, setComment, handleClose }: { onClick: () => void,
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const reviewData = {
-            content: reviewText,
-        };
         try {
             await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/postReview`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ reviewData }),
+                body: JSON.stringify({ comment: reviewText }),
             });
+            
             setReviewText("");
             handleClose();
-            setComment(prev => [...prev, { _id: Date.now().toString(), comment: reviewText } as CommentData]);
+            const newComment = { _id: Date.now().toString(), comment: reviewText } as CommentData;
+            setComment([...comment, newComment]);
         } catch (e) {
             console.error(e);
         }
@@ -62,8 +61,8 @@ function WriteModal({ onClick, setComment, handleClose }: { onClick: () => void,
             <h3>한줄평 작성</h3>
             <textarea
                 value={reviewText}
-                placeholder="한줄평을 작성해주세요. (30자 이내)" 
-                maxLength={30}
+                placeholder="한줄평을 작성해주세요. (20자 이내)" 
+                maxLength={20}
                 onChange={handleChange}
                 onClick={e => e.stopPropagation()}
                 required

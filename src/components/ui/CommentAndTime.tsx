@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Comment from "./Comment";
 import WriteComment from "./WriteComment";
+import { CommentData } from "@/types/types";
 
 export default function CommentAndTime() {
     const [isMorning, setIsMorning] = useState(false);
@@ -12,13 +13,15 @@ export default function CommentAndTime() {
         setIsMorning(hours >= 6 && hours < 18);
     }, []);
 
-    const [comment, setComment] = useState([]);
+    const [comment, setComment] = useState<CommentData[]>([]);
+    console.log('comment: ', comment);
     useEffect(() => {
         const getComment = async () => {
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getReview`);
             const result = await response.json();
             const commentData = result.data;
-            setComment(commentData);
+            const reverseData = [...commentData].reverse();
+            setComment(reverseData);
         }
         getComment();
     }, []);
@@ -26,7 +29,7 @@ export default function CommentAndTime() {
     return (
         <div className="comment">
             <Comment comment={comment}/>
-            <WriteComment setComment={setComment}/>
+            <WriteComment comment={comment} setComment={setComment}/>
             <div className="time blur-box">
                 <p>{isMorning ? "☀️" : "🌙"}</p>
             </div>
