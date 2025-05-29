@@ -32,28 +32,179 @@
 }
 
 @media (max-width: 1000px) {
-    section.music-section .inner{
-        flex-direction: column;
-        padding: 120px 0;
+    section.music-section{
+        height: auto;
 
-        .music-info{
-            width: 70%;
-            min-height: auto;
-            padding: 0;
-        }
-        .player-wrap{
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 48px;
-            width: 100%;
+        .inner{
+            flex-direction: column;
+            padding: 100px 0;
+    
+            .music-info{
+                width: 80%;
+                min-height: auto;
+                padding: 0;
+            }
+            .player-wrap{
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 48px;
+                width: 100%;
+    
+                .music-player--wrap{
+                    .music-thumbnail--img{
+                        width: 280px;
+                        height: 280px;
+                    }
+                }
+            }
+            .player-wrap{
+                height: 260px;
 
-            .music-player--wrap{
-                .music-thumbnail--img{
-                    width: 280px;
-                    height: 280px;
+                .music-player--wrap .music-thumbnail--img{
+                    width: 200px;
+                    height: 200px;
+                }
+            } 
+            .side-content{
+                width: 80%;
+                
+                > div.lyric{
+                    p{
+                        font-size: 18px;
+                    }
+                }
+                > div.comment{
+                    .write-comment--component,
+                    .comment-wrap,
+                    .time{
+                        min-height: 48px;
+                    }
+                    .write-comment--component,
+                    .time{
+                        font-size: 20px;
+                    }
                 }
             }
         }
+    } 
+}
+
+@media (max-width: 830px) {
+    header div.inner{
+        h1 a{
+            font-size: 24px;
+        }
+        ul li a{
+            font-size: 16px;
+        }
+    } 
+    section.music-section .inner{
+        .side-content > div.lyric {
+            padding-left: 40px;
+        }
+        .player-wrap{
+            height: 220px;
+            gap: 32px;
+
+            .music-player--wrap{
+                .music-thumbnail--img {
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
+        div.music-desc--wrap .music-desc li {
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
     }
+}
+
+@media (max-width: 600px) {
+    section.music-section .inner{
+        .side-content {
+            width: 90%;
+
+            > div.comment {
+                gap: 8px;
+
+                .write-comment--component,
+                .time {
+                    font-size: 16px;
+                }
+            }
+        }
+        .music-info {
+            width: 90%;
+        }
+    } 
+}
+
+@media (max-width: 480px) {
+    header div.inner{
+        h1 a{
+            font-size: 20px;
+        }
+        ul li a{
+            font-size: 14px;
+        }
+    } 
+    section.music-section .inner{
+        gap: 24px;
+
+        .player-wrap {
+            flex-direction: column;
+            height: 390px;
+            gap: 0px;
+
+            .music-player--wrap .music-thumbnail--img{
+                width: 240px;
+                height: 240px;
+                margin: 28px 0;
+            }
+        }
+        .side-content{
+            > div.lyric{
+                padding: 24px;
+                padding-right: 12px;
+    
+                p{
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+            }
+            > div.comment{
+                .write-comment--component,
+                .time{
+                    font-size: 14px;
+                }
+                .comment-wrap span{
+                    font-size: 14px;
+                    line-height: 1.4;
+                }
+            } 
+        }
+    } 
+}
+
+@media (max-width: 400px) {
+    header div.inner{
+        h1 a{
+            font-size: 16px;
+        }
+        ul li a{
+            font-size: 13px;
+        }
+    } 
+    section.music-section .inner{
+        .player-wrap{
+            height: 330px;
+
+            .music-player--wrap .music-thumbnail--img {
+                width: 200px;
+                height: 200px;
+            }
+        } 
+    } 
 }
