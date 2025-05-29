@@ -204,6 +204,33 @@
             } 
         } 
     } 
+    .notice-page{
+        table thead tr th{
+            font-size: 16px;
+        }
+        table tbody tr td{
+            font-size: 14px;
+
+            a{
+                &:hover{
+                    font-size: 14px;
+                }
+            }
+        }
+        div.notice-content--header{
+            font-size: 20px;
+        }
+        div.notice-content--body{
+            padding: 28px;
+
+            .content-info--wrap{
+                margin-bottom: 48px;
+            }
+            .content-text{
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 @media (max-width: 600px) {

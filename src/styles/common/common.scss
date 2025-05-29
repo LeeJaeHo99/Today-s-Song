@@ -129,8 +129,13 @@ table{
         }
     }
     .title-part{
+        max-width: 660px;
+        width: 55%;
         padding-left: 16px;
         text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
