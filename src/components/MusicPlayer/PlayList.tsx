@@ -61,6 +61,17 @@ export default function PlayList() {
                 spaceBetween={39}
                 modules={[Autoplay]}
                 autoplay={{ delay: 2500, disableOnInteraction: true }}
+                breakpoints={{
+                    1300: {
+                        slidesPerView: 4,
+                    },
+                    1000: {
+                        slidesPerView: 3,
+                    },
+                    0: {
+                        slidesPerView: 2,
+                    }
+                }}
             >
             {videoIds.map((video) => {
                 return (
