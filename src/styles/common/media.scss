@@ -102,6 +102,15 @@
             }
         }
     } 
+    div.music-history--wrap .music-history--component .music-desc{
+        .title{
+            font-size: 24px;
+        }
+        .singer{
+            font-size: 16px;
+        }
+    }
+    
 }
 
 @media (max-width: 830px) {
@@ -145,6 +154,27 @@
         div.music-desc--wrap .music-desc li {
             margin-bottom: 12px;
             font-size: 22px;
+        }
+    }
+    section.section{
+        height: auto;
+        padding-top: 120px;
+
+        &:last-child{
+            padding-bottom: 120px;
+        }
+    }
+    .more-view--btn__wrap a.more-view--btn{
+        font-size: 16px;
+    }
+    div.music-history--wrap .music-history--component .rate-wrap .time-icon{
+        font-size: 20px;
+    }
+    div.music-history--wrap{
+        flex-direction: column;
+
+        .music-history--component{
+            width: 80%;
         }
     }
 }
@@ -191,14 +221,15 @@
         }
     } 
     section.music-recommend-section{
-        padding-top: 0;
-
         .inner{
             .modal{
                 width: 300px;
                 height: 160px;
             }
         }
+    }
+    div.music-history--wrap {
+        gap: 28px;
     }
 }
 
@@ -279,6 +310,14 @@
             } 
         }
     } 
+    div.music-history--wrap .music-history--component .music-desc{
+        .title{
+            font-size: 20px;
+        }
+        .singer{
+            font-size: 14px;
+        }
+    }
 }
 
 @media (max-width: 400px) {
