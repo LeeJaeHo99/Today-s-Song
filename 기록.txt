@@ -11,7 +11,6 @@ cheerio와 axios를 이용하면 렌더링 이전 데이터만 크롤링 해오�
 
 
 데이터
-
 songData = {
     date: {
         year,
@@ -33,6 +32,5 @@ songData = {
 }
 
 // 해야될것 
-1. 반응형
-2. morning / night 자동 반영 / 리뷰 데이터 삭제
-3. 가사 추가
+1. morning / night 자동 반영 / 리뷰 데이터 삭제
+2. 가사 추가
