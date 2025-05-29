@@ -110,7 +110,16 @@
             font-size: 16px;
         }
     }
-    
+    section.artist-section .info-wrap .artist-info{
+        .artist-image img{
+            width: 160px;
+            height: 160px;
+        }
+        h3{
+            font-size: 24px;
+        }
+
+    } 
 }
 
 @media (max-width: 830px) {
@@ -174,9 +183,22 @@
         flex-direction: column;
 
         .music-history--component{
-            width: 80%;
+            width: 70%;
         }
     }
+}
+
+@media (max-width: 700px) {
+    section.artist-section{
+        .info-wrap{
+            .song-list{
+                > p{
+                    top: -12px;
+                    font-size: 24px;
+                }
+            } 
+        } 
+    } 
 }
 
 @media (max-width: 600px) {
@@ -230,7 +252,35 @@
     }
     div.music-history--wrap {
         gap: 28px;
+
+        .music-history--component {
+            width: 80%;
+        }
     }
+    section.artist-section{
+        .info-wrap{
+            padding: 32px;
+            
+            .artist-info{
+                gap: 24px;
+
+                .artist-image img{
+                    width: 140px;
+                    height: 140px;
+                }
+                h3{
+                    font-size: 20px;
+                }
+            }
+            .song-list{
+                padding: 56px 16px 16px 16px;
+
+                > p{
+                    top: -9px;
+                }
+            } 
+        } 
+    } 
 }
 
 @media (max-width: 480px) {
@@ -318,6 +368,46 @@
             font-size: 14px;
         }
     }
+    section.artist-section{
+        .info-wrap{
+            .artist-info{
+                flex-direction: column;
+
+                .artist-desc{
+                    justify-content: center;
+                }
+                .artist-image img{
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+            .song-list{
+                > p{
+                    font-size: 20px;
+                }
+                .song-item-wrap{
+                    gap: 24px;
+
+                    .song-item{
+                        width: 100%;
+
+                        img{
+                            width: 160px;
+                            height: 160px;
+                        }
+                        .song-info{
+                            h4{
+                                font-size: 16px;
+                            }
+                            p{
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            } 
+        } 
+    } 
 }
 
 @media (max-width: 400px) {
