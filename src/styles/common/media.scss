@@ -191,6 +191,23 @@
             width: 70%;
         }
     }
+    div.everyday-song-page .inner .song-history--wrap .song-history--music--wrap{
+        gap: 32px;
+
+        .song-history--music .song-history--music__img{
+            width: 240px;
+            height: 240px;
+        }
+        .song-history--music .song-history--music__info{
+            .title{
+                margin-bottom: 8px;
+                font-size: 18px;
+            }
+            .singer{
+                font-size: 14px;
+            }
+        } 
+    } 
 }
 
 @media (max-width: 700px) {
@@ -468,6 +485,28 @@
             } 
         } 
     } 
+    div.everyday-song-page .inner .song-history--wrap{
+        > div{
+            margin-bottom: 80px;
+        }
+        .song-history--date{
+            margin-top: 24px;
+            font-size: 20px;
+        }
+        .song-history--music--wrap{
+            flex-direction: column;
+
+            .song-history--music .song-history--music__img{
+                width: 310px;
+            }
+        } 
+    } 
+    div.everyday-song-page .inner .section-title{
+        margin-bottom: 40px;
+    }
+    .sub-page--wrap .inner{
+        padding-top: 60px;
+    }
 }
 
 @media (max-width: 400px) {
