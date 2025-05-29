@@ -113,6 +113,20 @@
             font-size: 16px;
         }
     } 
+    form.music-recommend--component{
+        width: 90%;
+    }
+    h2.section-title{
+        font-size: 32px;
+    }
+    h3.sub-title{
+        margin-bottom: 60px;
+        font-size: 18px;
+    }
+    button.submit-btn--component{
+        width: 30%;
+        font-size: 18px;
+    }
     section.music-section .inner{
         .side-content > div.lyric {
             padding-left: 40px;
@@ -136,6 +150,20 @@
 }
 
 @media (max-width: 600px) {
+    button.submit-btn--component {
+        width: 40%;
+    }
+    form.music-recommend--component{
+        min-height: 340px;
+
+        label{
+            margin-bottom: 40px;
+
+            > span{
+                font-size: 16px;
+            }
+        }
+    } 
     section.music-section .inner{
         .side-content {
             width: 90%;
@@ -162,6 +190,16 @@
             width: 90%;
         }
     } 
+    section.music-recommend-section{
+        padding-top: 0;
+
+        .inner{
+            .modal{
+                width: 300px;
+                height: 160px;
+            }
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -173,6 +211,29 @@
             font-size: 14px;
         }
     } 
+    form.music-recommend--component{
+        min-height: 310px;
+
+        label {
+            margin-bottom: 30px;
+
+            > span{
+                font-size: 14px;
+            }
+        }
+    }
+    h2.section-title {
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+    h3.sub-title {
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+    button.submit-btn--component {
+        width: 50%;
+        font-size: 16px;
+    }
     section.music-section .inner{
         gap: 24px;
 
