@@ -17,6 +17,11 @@
         > div.comment .comment-wrap span{
             font-size: 16px;
         }
+        > div.comment .write-comment--component{
+            .write-modal{
+                left: -10%;
+            }
+        }
     } 
     div.music-player--wrap .music-thumbnail--img{
         width: 340px;
@@ -83,6 +88,15 @@
                     .write-comment--component,
                     .time{
                         font-size: 20px;
+
+                        &:hover{
+                            font-size: 20px;
+                        }
+                    }
+                    .write-comment--component{
+                        .write-modal{
+                            bottom: 60px;
+                        }
                     }
                 }
             }
@@ -132,6 +146,15 @@
                 .write-comment--component,
                 .time {
                     font-size: 16px;
+
+                    &:hover{
+                        font-size: 16px;
+                    }
+                }
+                .write-comment--component{
+                    .write-modal{
+                        left: -130%;
+                    }
                 }
             }
         }
@@ -178,10 +201,19 @@
                 .write-comment--component,
                 .time{
                     font-size: 14px;
+
+                    &:hover{
+                        font-size: 14px;
+                    }
                 }
                 .comment-wrap span{
                     font-size: 14px;
                     line-height: 1.4;
+                }
+                .write-comment--component{
+                    .write-modal{
+                        left: -230%;
+                    }
                 }
             } 
         }
@@ -206,5 +238,10 @@
                 height: 200px;
             }
         } 
+        .side-content > div.comment .write-comment--component{
+            .write-modal{
+                left: -310%;
+            }
+        }
     } 
 }
