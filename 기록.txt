@@ -6,27 +6,8 @@ AM 06 : 00 ~ PM 18 : 00
 저녁
 PM 18 : 00 ~ AM 06: 00
 
-< 해야할 것 >
-
-videoId 데이터 필요한 곳
-- MusicPlayer
-
-< 일정 >
-- 시간마다 videoId 변경 + 리뷰 데이터 삭제
-
-// 반응형 수정
-
-
-
-
-
-
-
 puppeteer 사용이유
 cheerio와 axios를 이용하면 렌더링 이전 데이터만 크롤링 해오기 때문
-
-
-
 
 
 데이터
@@ -51,9 +32,7 @@ songData = {
     }
 }
 
-
-
-
 // 해야될것 
 1. 반응형
-2. morning / night 자동 반영
+2. morning / night 자동 반영 / 리뷰 데이터 삭제
+3. 가사 추가

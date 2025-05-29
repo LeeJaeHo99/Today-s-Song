@@ -4,13 +4,14 @@
 .notice-page{
     .notice-content{
         width: 100%;
-        border-top: 1px solid $primary;
+        border-top: 1px solid #a5a5a5;
 
         &--header{
             padding: 32px;
-            background-color: $primary-10;
+            background-color: #00000040;
             font-size: 24px;
             font-family: 'p-500';
+            color: #fff;
             text-align: center;
         }
         &--body{
@@ -20,7 +21,7 @@
                 display: flex;
                 justify-content: flex-end;
                 gap: 16px;
-                margin-bottom: 40px;
+                margin-bottom: 64px;
 
                 span{
                     color: #a5a5a5;
@@ -28,7 +29,8 @@
             }
             .content-text{
                 font-family: 'p-400';
-                font-size: 24px;
+                font-size: 20px;
+                color: #fff;
                 line-height: 1.5;
             }
         }

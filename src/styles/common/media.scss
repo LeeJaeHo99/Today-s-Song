@@ -1,0 +1,59 @@
+@media (max-width: 1300px) {
+    .inner{
+        width: 90%;
+        max-width: 1000px;
+    }
+    .main-page > .inner{
+        width: 100%;
+    }
+    section.music-section .inner .side-content{
+        > div.lyric{
+            padding-left: 60px;
+    
+            p{
+                font-size: 20px;
+            }
+        }
+        > div.comment .comment-wrap span{
+            font-size: 16px;
+        }
+    } 
+    div.music-player--wrap .music-thumbnail--img{
+        width: 340px;
+        height: 340px;
+    }
+    div.music-desc--wrap .music-desc li{
+        font-size: 26px;
+
+        .singer{
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    section.music-section .inner{
+        flex-direction: column;
+        padding: 120px 0;
+
+        .music-info{
+            width: 70%;
+            min-height: auto;
+            padding: 0;
+        }
+        .player-wrap{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            width: 100%;
+
+            .music-player--wrap{
+                .music-thumbnail--img{
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+        }
+    }
+}
