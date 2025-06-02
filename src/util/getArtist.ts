@@ -1,8 +1,6 @@
 export const parsing = async (artistNum: string) => {
     try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getArtist?artistNum=${artistNum}`, {
-            cache: 'force-cache',
-        });
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getArtist?artistNum=${artistNum}`);
         if (!response.ok) {
             throw new Error('Failed to fetch artist data');
         }

@@ -3,7 +3,8 @@ import puppeteer from 'puppeteer';
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
-    const artistNum = searchParams.get('artistNum');
+    const rawArtistNum = searchParams.get('artistNum');
+    const artistNum = rawArtistNum?.split(':')[0];
 
     if (!artistNum) {
         return NextResponse.json({ error: 'Artist number is required' }, { status: 400 });
