@@ -32,5 +32,4 @@ songData = {
 }
 
 // 해야될것 
-1. morning / night 자동 반영 / 리뷰 데이터 삭제
-2. 가사 추가
+1. 매일 아침 6시가 되면 songData

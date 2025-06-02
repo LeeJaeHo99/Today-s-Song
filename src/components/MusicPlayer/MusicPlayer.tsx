@@ -21,7 +21,7 @@ export default function MusicPlayer() {
     useEffect(() => {
         getTime();
         const fetchData = async () => {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`, {cache: 'force-cache'});
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
             const result = await response.json();
             setVideoId(`${result.data[result.data.length - 1][isMorning].videoId}`);
         }

@@ -17,7 +17,7 @@ export default function MusicDesc() {
     useEffect(() => {
         getTime();
         const fetchData = async () => {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`, {cache: 'force-cache'});
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
             const result = await response.json();
             setTitle(`${result.data[result.data.length - 1][isMorning].title}`);
             setSinger(`${result.data[result.data.length - 1][isMorning].singer}`);

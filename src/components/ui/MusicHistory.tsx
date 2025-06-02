@@ -4,7 +4,7 @@ import { MusicHistoryProp } from "@/types/types";
 
 
 export default function MusicHistory({time, musicData}: MusicHistoryProp) {
-    const thumbnailUrl = `https://img.youtube.com/vi/${musicData.videoId}/maxresdefault.jpg`;
+    const thumbnailUrl = `https://img.youtube.com/vi/${musicData?.videoId}/maxresdefault.jpg`;
 
     return (
         <Link href={"/everydaySong"} className="music-history--component blur-box">
@@ -19,8 +19,8 @@ export default function MusicHistory({time, musicData}: MusicHistoryProp) {
                 alt="music-thumnail"
             />
             <div className="music-desc">
-                <div className="title">{musicData.title}</div>
-                <div className="singer">{musicData.singer}</div>
+                <div className="title">{musicData?.title}</div>
+                <div className="singer">{musicData?.singer}</div>
             </div>
         </Link>
     );

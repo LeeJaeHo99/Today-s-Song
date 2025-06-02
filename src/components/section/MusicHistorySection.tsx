@@ -14,7 +14,7 @@ export default async function MusicHistorySection() {
         }
 
         const result = await response.json();
-        yesterdayMusicData = result.data[1];
+        yesterdayMusicData = result.data[result.data.length - 2];
     } catch (error) {
         console.error("음악 데이터를 가져오는 중 오류 발생:", error);
         return (
@@ -35,8 +35,8 @@ export default async function MusicHistorySection() {
                 <SubTitle title={`어제 추천된 음악을 확인 할 수 있습니다.`}/>
                 <MoreViewBtn link={'everydaySong'}/>
                 <div className="music-history--wrap">
-                    <MusicHistory time={'☀️'} musicData={yesterdayMusicData.morning}/>
-                    <MusicHistory time={'🌙'} musicData={yesterdayMusicData.night}/>
+                    <MusicHistory time={'☀️'} musicData={yesterdayMusicData?.morning}/>
+                    <MusicHistory time={'🌙'} musicData={yesterdayMusicData?.night}/>
                 </div>
             </div>
         </section>
