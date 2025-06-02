@@ -3,10 +3,7 @@
 import { useState, useEffect } from "react";
 import SectionTitle from "../ui/SectionTitle";
 import SubTitle from "../ui/SubTitle";
-import { parsing } from "@/util/getArtist";
 import Image from "next/image";
-import { parsingData } from "@/data/data";
-import { isoWeek } from "@/util/getWeekNum";
 
 interface SongData {
     img: string;
@@ -23,14 +20,17 @@ interface ArtistData {
 
 export default function ArtistSection() {
     const [artist, setArtist] = useState<ArtistData | null>(null);
+    console.log('artist: ', artist);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await parsing(`${parsingData[isoWeek - 22]}`);
-                setArtist(data);
-                setError(null);
+                const response = await fetch(
+                    `${process.env.NEXT_PUBLIC_API_URL}/api/getArtist`
+                );
+                const result = await response.json();
+                setArtist(result.data[0]);
             } catch (err) {
                 setError("아티스트 정보를 불러오는데 실패했습니다.");
                 console.error(err);
@@ -77,7 +77,12 @@ export default function ArtistSection() {
                                         <div
                                             key={index}
                                             className="song-item"
-                                            onClick={() => window.open(`https://www.youtube.com/results?search_query=${song.title}`, '_blank')}
+                                            onClick={() =>
+                                                window.open(
+                                                    `https://www.youtube.com/results?search_query=${song.title}`,
+                                                    "_blank"
+                                                )
+                                            }
                                         >
                                             {song.img && (
                                                 <Image
