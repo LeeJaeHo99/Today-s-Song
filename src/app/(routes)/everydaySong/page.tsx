@@ -1,6 +1,5 @@
 import SectionTitle from "@/components/ui/SectionTitle";
-import SongHistory from "@/components/EveryDaySong/SongHistory";
-import SelectMonthInput from "@/components/EveryDaySong/SelectMonthInput";
+import MusicInputAndHistory from "@/components/EveryDaySong/MusicInputAndHistory";
 
 export default function everydaySongPage() {
     return (
@@ -13,18 +12,3 @@ export default function everydaySongPage() {
     );
 }
 
-async function MusicInputAndHistory() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
-    if(!response.ok){
-        alert('오류가 발생하였습니다. 새로고침 부탁드립니다.');
-    }
-    const result = await response.json();
-    const musicData = result.data;
-
-    return (
-        <>
-            <SelectMonthInput/>
-            <SongHistory  music={musicData}/>
-        </>
-    );
-}
