@@ -7,7 +7,6 @@ import { SongData } from "@/types/data-type";
 
 export default function MusicInputAndHistory() {
     const [musicData, setMusicData] = useState<SongData[]>([]);
-
     useEffect(() => {
         const fetchMusicData = async () => {
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
