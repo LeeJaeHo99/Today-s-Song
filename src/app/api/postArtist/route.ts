@@ -5,7 +5,7 @@ import { isoWeek } from "@/util/getWeekNum";
 
 export async function POST(){
     try{
-        const artist = await parsing(`${parsingData[isoWeek - 22]}`);
+        const artist = await parsing(`${parsingData[isoWeek - 21]}`);
 
         const db = (await connectDB).db("todaysSong");
         await db.collection("artist").insertOne(artist);

@@ -30,6 +30,3 @@ songData = {
         lyric,
     }
 }
-
-// 해야될것 
-1. 매일 아침 6시가 되면 songData
