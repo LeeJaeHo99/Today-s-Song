@@ -3,10 +3,12 @@
 import { animate, stagger } from "motion"
 import { splitText } from "motion-plus"
 import { useEffect, useRef, useState } from "react"
+import Spinner from "../spinner/Spinner";
 
 export default function Lyric() {
     const containerRef = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState('false');
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         setTimeout(() => {
@@ -56,13 +58,15 @@ export default function Lyric() {
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
             const result = await response.json();
             setLyric(result.data.reverse()[0][isMorning].lyric.split('  '));
+            setIsLoading(false);
         }
         fetchData();
     }, [isMorning]);
 
     return (
         <div className="lyric blur-box" ref={containerRef}>
-            {lyric.map((item, i) => (
+            {isLoading && <Spinner />}
+            {!isLoading && lyric.map((item, i) => (
                 <p key={i} className={isVisible}>{item}</p>
             ))}
         </div>

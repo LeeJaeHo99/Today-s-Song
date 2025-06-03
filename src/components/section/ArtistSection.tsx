@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import SectionTitle from "../ui/SectionTitle";
 import SubTitle from "../ui/SubTitle";
 import Image from "next/image";
+import Spinner from "../spinner/Spinner";
 
 interface SongData {
     img: string;
@@ -20,7 +21,7 @@ interface ArtistData {
 
 export default function ArtistSection() {
     const [artist, setArtist] = useState<ArtistData | null>(null);
-    console.log('artist: ', artist);
+    const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
@@ -31,6 +32,7 @@ export default function ArtistSection() {
                 );
                 const result = await response.json();
                 setArtist(result.data[0]);
+                setIsLoading(false);
             } catch (err) {
                 setError("아티스트 정보를 불러오는데 실패했습니다.");
                 console.error(err);
@@ -47,7 +49,8 @@ export default function ArtistSection() {
                 <SectionTitle title={"🎵 아티스트 추천 🎵"} />
                 <SubTitle title={"매주 추천 아티스트를 소개합니다."} />
                 <div className="info-wrap blur-box">
-                    {artist ? (
+                    {isLoading && <Spinner />}
+                    {!isLoading && artist && (
                         <>
                             <div className="artist-info">
                                 {artist.imgLink && (
@@ -102,8 +105,6 @@ export default function ArtistSection() {
                                 </div>
                             </div>
                         </>
-                    ) : (
-                        <div className="loading">loading...</div>
                     )}
                 </div>
             </div>
