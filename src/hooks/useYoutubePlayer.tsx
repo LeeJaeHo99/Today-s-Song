@@ -15,7 +15,7 @@ interface YouTubePlayer {
 declare global {
     interface Window {
         YT: {
-            Player: new (elementId: string, options: { videoId: string }) => YouTubePlayer;
+            Player: new (elementId: string, options: { videoId: string, host: string }) => YouTubePlayer;
         };
         onYouTubeIframeAPIReady: () => void;
     }
@@ -35,6 +35,7 @@ export function useYoutubePlayer(videoId: string, elementId: string = "youtube-p
         window.onYouTubeIframeAPIReady = () => {
             playerRef.current = new window.YT.Player(elementId, {
                 videoId: videoId,
+                host: 'https://www.youtube.com',
             });
         };
 

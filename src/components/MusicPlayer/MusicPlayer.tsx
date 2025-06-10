@@ -9,6 +9,7 @@ import Spinner from "../spinner/Spinner";
 export default function MusicPlayer() {
     const [isLoading, setIsLoading] = useState(true);
     const [videoId, setVideoId] = useState<string>("");
+    console.log('videoId: ', videoId);
     const [isMorning, setIsMorning] = useState<string>("morning");
 
     const playerRef = useYoutubePlayer(videoId);
