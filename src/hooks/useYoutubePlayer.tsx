@@ -15,7 +15,7 @@ interface YouTubePlayer {
 declare global {
     interface Window {
         YT: {
-            Player: new (elementId: string, options: { videoId: string, host: string }) => YouTubePlayer;
+            Player: new (elementId: string, options: { videoId: string, host: string, playerVars: { origin: string }, events: { onReady: () => void } }) => YouTubePlayer;
         };
         onYouTubeIframeAPIReady: () => void;
     }
@@ -36,6 +36,17 @@ export function useYoutubePlayer(videoId: string, elementId: string = "youtube-p
             playerRef.current = new window.YT.Player(elementId, {
                 videoId: videoId,
                 host: 'https://www.youtube.com',
+                playerVars: {
+                    origin: 'https://today-s-song.vercel.app',
+                },
+                events: {
+                    onReady: () => {
+                        const iframe = document.getElementById(elementId)?.querySelector('iframe');
+                        if (iframe) {
+                            iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+                        }
+                    },
+                },
             });
         };
 
