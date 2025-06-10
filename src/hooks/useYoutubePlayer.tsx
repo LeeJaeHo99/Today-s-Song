@@ -25,6 +25,8 @@ export function useYoutubePlayer(videoId: string, elementId: string = "youtube-p
     const playerRef = useRef<YouTubePlayer | null>(null);
 
     useEffect(() => {
+        if (!videoId) return;
+
         const loadYouTubeIframeAPI = () => {
             const tag = document.createElement("script");
             tag.src = "https://www.youtube.com/iframe_api";
