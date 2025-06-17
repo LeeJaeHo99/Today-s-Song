@@ -9,7 +9,7 @@ import Spinner from "../spinner/Spinner";
 export default function MusicPlayer() {
     const [isLoading, setIsLoading] = useState(true);
     const [videoId, setVideoId] = useState<string>("");
-    const [isMorning, setIsMorning] = useState<string>("morning");
+    const [isMorning, setIsMorning] = useState<string>("");
 
     const playerRef = useYoutubePlayer(videoId);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -27,9 +27,8 @@ export default function MusicPlayer() {
                 `${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`
             );
             const result = await response.json();
-            setVideoId(
-                `${result.data[result.data.length - 1][isMorning].videoId}`
-            );
+
+            setVideoId(`${result.data[result.data.length - 1][isMorning].videoId}`);
             setIsLoading(false);
         };
         fetchData();

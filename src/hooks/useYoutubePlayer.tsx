@@ -39,7 +39,7 @@ export function useYoutubePlayer(videoId: string, elementId: string = "youtube-p
                 videoId: videoId,
                 host: 'https://www.youtube.com',
                 playerVars: {
-                    origin: 'https://today-s-song.vercel.app',
+                    origin: 'https://www.todayssong.co.kr',
                 },
                 events: {
                     onReady: () => {
