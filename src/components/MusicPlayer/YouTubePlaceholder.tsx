@@ -22,11 +22,13 @@ export default function YouTubePlaceholder({ videoId, onClick, isPlaying }: YouT
             <div className="thumbnail-container">
                 <Image 
                     src={thumbnailUrl} 
+                    width={480}
+                    height={480}
                     alt="YouTube thumbnail"
-                    className="thumbnail-image"
+                    className={`music-thumbnail--img ${isPlaying ? 'play' : 'pause'}`}
                 />
                 <button 
-                    className={`play-button ${isPlaying ? 'playing' : ''}`}
+                    className='play-btn'
                     onClick={onClick}
                     aria-label={isPlaying ? "일시정지" : "재생"}
                 >

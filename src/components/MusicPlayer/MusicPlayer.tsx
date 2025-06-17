@@ -34,7 +34,7 @@ export default function MusicPlayer() {
                 );
                 const result = await response.json();
 
-                setVideoId(`${result.data[result.data.length - 1][isMorning].videoId}`);
+                setVideoId(`${result.data[result.data.length - 1][isMorning]?.videoId}`);
                 setIsLoading(false);
             } catch (error) {
                 console.error("Error fetching music data:", error);
@@ -47,10 +47,9 @@ export default function MusicPlayer() {
     const handlePlayClick = () => {
         if (!shouldLoadPlayer) {
             setShouldLoadPlayer(true);
-            // 플레이어가 로드될 때까지 잠시 대기
             setTimeout(() => {
                 if (playerRef.current) {
-                    playerRef.current.playVideo();
+                    playerRef.current?.playVideo();
                     setIsPlaying(true);
                 }
             }, 1000);

@@ -1,172 +1,172 @@
 @media (max-width: 1300px) {
-    .inner{
+    .inner {
         width: 90%;
         max-width: 1000px;
     }
-    .main-page > .inner{
+    .main-page > .inner {
         width: 100%;
     }
-    section.music-section .inner .side-content{
-        > div.lyric{
+    section.music-section .inner .side-content {
+        > div.lyric {
             padding-left: 60px;
-    
-            p{
+
+            p {
                 font-size: 20px;
             }
         }
-        > div.comment .comment-wrap span{
+        > div.comment .comment-wrap span {
             font-size: 16px;
         }
-        > div.comment .write-comment--component{
-            .write-modal{
+        > div.comment .write-comment--component {
+            .write-modal {
                 left: -10%;
             }
         }
-    } 
-    div.music-player--wrap .music-thumbnail--img{
+    }
+    div.music-player--wrap .music-thumbnail--img {
         width: 340px;
         height: 340px;
     }
-    div.music-desc--wrap .music-desc li{
+    div.music-desc--wrap .music-desc li {
         font-size: 26px;
 
-        .singer{
+        .singer {
             font-size: 18px;
         }
     }
 }
 
 @media (max-width: 1000px) {
-    section.music-section{
+    section.music-section {
         height: auto;
 
-        .inner{
+        .inner {
             flex-direction: column;
             padding: 100px 0;
-    
-            .music-info{
+
+            .music-info {
                 width: 80%;
                 min-height: auto;
                 padding: 0;
             }
-            .player-wrap{
+            .player-wrap {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 gap: 48px;
                 width: 100%;
-    
-                .music-player--wrap{
-                    .music-thumbnail--img{
+
+                .music-player--wrap {
+                    .music-thumbnail--img {
                         width: 280px;
                         height: 280px;
                     }
                 }
             }
-            .player-wrap{
+            .player-wrap {
                 height: 260px;
 
-                .music-player--wrap .music-thumbnail--img{
+                .music-player--wrap .music-thumbnail--img {
                     width: 200px;
                     height: 200px;
                 }
-            } 
-            .side-content{
+            }
+            .side-content {
                 width: 80%;
-                
-                > div.lyric{
-                    p{
+
+                > div.lyric {
+                    p {
                         font-size: 18px;
                     }
                 }
-                > div.comment{
+                > div.comment {
                     .write-comment--component,
                     .comment-wrap,
-                    .time{
+                    .time {
                         min-height: 48px;
                     }
                     .write-comment--component,
-                    .time{
+                    .time {
                         font-size: 20px;
 
-                        &:hover{
+                        &:hover {
                             font-size: 20px;
                         }
                     }
-                    .write-comment--component{
-                        .write-modal{
+                    .write-comment--component {
+                        .write-modal {
                             bottom: 60px;
                         }
                     }
                 }
             }
         }
-    } 
-    div.music-history--wrap .music-history--component .music-desc{
-        .title{
+    }
+    div.music-history--wrap .music-history--component .music-desc {
+        .title {
             font-size: 24px;
         }
-        .singer{
+        .singer {
             font-size: 16px;
         }
     }
-    section.artist-section .info-wrap .artist-info{
-        .artist-image img{
+    section.artist-section .info-wrap .artist-info {
+        .artist-image img {
             width: 160px;
             height: 160px;
         }
-        h3{
+        h3 {
             font-size: 24px;
         }
-    } 
-    section.section{
+    }
+    section.section {
         height: auto;
         padding-top: 120px;
 
-        &:last-child{
+        &:last-child {
             padding-bottom: 120px;
         }
     }
-    .play-list--wrap{
+    .play-list--wrap {
         margin-top: 60px;
     }
-    div.play-list-section .play-list--wrap{
+    div.play-list-section .play-list--wrap {
         width: 90%;
     }
 }
 
 @media (max-width: 830px) {
-    header div.inner{
-        h1 a{
+    header div.inner {
+        h1 a {
             font-size: 24px;
         }
-        ul li a{
+        ul li a {
             font-size: 16px;
         }
-    } 
-    form.music-recommend--component{
+    }
+    form.music-recommend--component {
         width: 90%;
     }
-    h2.section-title{
+    h2.section-title {
         font-size: 32px;
     }
-    h3.sub-title{
+    h3.sub-title {
         margin-bottom: 60px;
         font-size: 18px;
     }
-    button.submit-btn--component{
+    button.submit-btn--component {
         width: 30%;
         font-size: 18px;
     }
-    section.music-section .inner{
+    section.music-section .inner {
         .side-content > div.lyric {
             padding-left: 40px;
         }
-        .player-wrap{
+        .player-wrap {
             height: 220px;
             gap: 32px;
 
-            .music-player--wrap{
+            .music-player--wrap {
                 .music-thumbnail--img {
                     width: 180px;
                     height: 180px;
@@ -178,72 +178,75 @@
             font-size: 22px;
         }
     }
-    .more-view--btn__wrap a.more-view--btn{
+    .more-view--btn__wrap a.more-view--btn {
         font-size: 16px;
     }
-    div.music-history--wrap .music-history--component .rate-wrap .time-icon{
+    div.music-history--wrap .music-history--component .rate-wrap .time-icon {
         font-size: 20px;
     }
-    div.music-history--wrap{
+    div.music-history--wrap {
         flex-direction: column;
 
-        .music-history--component{
+        .music-history--component {
             width: 70%;
         }
     }
-    div.everyday-song-page .inner .song-history--wrap .song-history--music--wrap{
+    div.everyday-song-page
+        .inner
+        .song-history--wrap
+        .song-history--music--wrap {
         gap: 32px;
 
-        .song-history--music .song-history--music__img{
+        .song-history--music .song-history--music__img {
             width: 240px;
             height: 240px;
         }
-        .song-history--music .song-history--music__info{
-            .title{
+        .song-history--music .song-history--music__info {
+            .title {
                 margin-bottom: 8px;
                 font-size: 18px;
             }
-            .singer{
+            .singer {
                 font-size: 14px;
             }
-        } 
-    } 
+        }
+    }
 }
 
 @media (max-width: 700px) {
-    section.artist-section{
-        .info-wrap{
-            .song-list{
-                > p{
+    section.artist-section {
+        .info-wrap {
+            .song-list {
+                > p {
                     top: -12px;
                     font-size: 24px;
                 }
-            } 
-        } 
-    } 
-    .notice-page{
-        table thead tr th{
+            }
+        }
+    }
+    .notice-page {
+        table thead tr th {
             font-size: 16px;
         }
-        table tbody tr td{
+        table tbody tr td {
             font-size: 14px;
 
-            a{
-                &:hover{
+            a {
+                &:hover {
                     font-size: 14px;
                 }
             }
         }
-        div.notice-content--header{
+        div.notice-content--header {
             font-size: 20px;
         }
-        div.notice-content--body{
+        div.notice-content--body {
             padding: 28px;
 
-            .content-info--wrap{
+            .content-info--wrap {
                 margin-bottom: 48px;
             }
-            .content-text{
+            .content-text {
                 font-size: 16px;
             }
         }
@@ -254,18 +257,18 @@
     button.submit-btn--component {
         width: 40%;
     }
-    form.music-recommend--component{
+    form.music-recommend--component {
         min-height: 340px;
 
-        label{
+        label {
             margin-bottom: 40px;
 
-            > span{
+            > span {
                 font-size: 16px;
             }
         }
-    } 
-    section.music-section .inner{
+    }
+    section.music-section .inner {
         .side-content {
             width: 90%;
 
@@ -276,12 +279,12 @@
                 .time {
                     font-size: 16px;
 
-                    &:hover{
+                    &:hover {
                         font-size: 16px;
                     }
                 }
-                .write-comment--component{
-                    .write-modal{
+                .write-comment--component {
+                    .write-modal {
                         left: -130%;
                     }
                 }
@@ -290,10 +293,10 @@
         .music-info {
             width: 90%;
         }
-    } 
-    section.music-recommend-section{
-        .inner{
-            .modal{
+    }
+    section.music-recommend-section {
+        .inner {
+            .modal {
                 width: 300px;
                 height: 160px;
             }
@@ -306,54 +309,55 @@
             width: 80%;
         }
     }
-    section.artist-section{
-        .info-wrap{
+    section.artist-section {
+        .info-wrap {
             padding: 32px;
-            
-            .artist-info{
+
+            .artist-info {
                 gap: 24px;
 
-                .artist-image img{
+                .artist-image img {
                     width: 140px;
                     height: 140px;
                 }
-                h3{
+                h3 {
                     font-size: 20px;
                 }
             }
-            .song-list{
+            .song-list {
                 padding: 56px 16px 16px 16px;
 
-                > p{
+                > p {
                     top: -9px;
                 }
-            } 
-        } 
-    } 
-    section.play-list-section{
-        .play-list{
+            }
+        }
+    }
+    section.play-list-section {
+        .play-list {
             width: 220px;
             height: 300px;
 
-            a > div:not(.tag-wrap) img{
+            a > div:not(.tag-wrap) img {
                 width: 140px;
                 height: 140px;
             }
         }
-        .play-list--wrap .swiper-slide{
+        .play-list--wrap .swiper-slide {
             width: 200px !important;
         }
-    } 
-    footer div.inner{
+    }
+    footer div.inner {
         flex-direction: column;
         height: auto;
         padding-bottom: 0;
 
-        div{
+        div {
             flex-direction: row;
             gap: 14px;
 
-            p, a{
+            p,
+            a {
                 font-size: 15px;
             }
         }
@@ -361,21 +365,21 @@
 }
 
 @media (max-width: 480px) {
-    header div.inner{
-        h1 a{
+    header div.inner {
+        h1 a {
             font-size: 20px;
         }
-        ul li a{
+        ul li a {
             font-size: 14px;
         }
-    } 
-    form.music-recommend--component{
+    }
+    form.music-recommend--component {
         min-height: 310px;
 
         label {
             margin-bottom: 30px;
 
-            > span{
+            > span {
                 font-size: 14px;
             }
         }
@@ -392,7 +396,7 @@
         width: 50%;
         font-size: 16px;
     }
-    section.music-section .inner{
+    section.music-section .inner {
         gap: 24px;
 
         .player-wrap {
@@ -400,137 +404,144 @@
             height: 390px;
             gap: 0px;
 
-            .music-player--wrap .music-thumbnail--img{
-                width: 240px;
-                height: 240px;
-                margin: 28px 0;
+            .music-player--wrap {
+                .thumbnail-container {
+                    margin: 0;
+
+                    .music-thumbnail--img {
+                        width: 240px;
+                        height: 240px;
+                        margin: 28px 0;
+                    }
+                }
             }
         }
-        .side-content{
-            > div.lyric{
+        .side-content {
+            > div.lyric {
                 padding: 24px;
                 padding-right: 12px;
-    
-                p{
+
+                p {
                     font-size: 16px;
                     line-height: 1.6;
                 }
             }
-            > div.comment{
+            > div.comment {
                 .write-comment--component,
-                .time{
+                .time {
                     font-size: 14px;
 
-                    &:hover{
+                    &:hover {
                         font-size: 14px;
                     }
                 }
-                .comment-wrap span{
+                .comment-wrap span {
                     font-size: 14px;
                     line-height: 1.4;
                 }
-                .write-comment--component{
-                    .write-modal{
+                .write-comment--component {
+                    .write-modal {
                         left: -230%;
                     }
                 }
-            } 
+            }
         }
-    } 
-    div.music-history--wrap .music-history--component .music-desc{
-        .title{
+    }
+    div.music-history--wrap .music-history--component .music-desc {
+        .title {
             font-size: 20px;
         }
-        .singer{
+        .singer {
             font-size: 14px;
         }
     }
-    section.artist-section{
-        .info-wrap{
-            .artist-info{
+    section.artist-section {
+        .info-wrap {
+            .artist-info {
                 flex-direction: column;
 
-                .artist-desc{
+                .artist-desc {
                     justify-content: center;
                 }
-                .artist-image img{
+                .artist-image img {
                     width: 160px;
                     height: 160px;
                 }
             }
-            .song-list{
-                > p{
+            .song-list {
+                > p {
                     font-size: 20px;
                 }
-                .song-item-wrap{
+                .song-item-wrap {
                     gap: 24px;
 
-                    .song-item{
+                    .song-item {
                         width: 100%;
 
-                        img{
+                        img {
                             width: 160px;
                             height: 160px;
                         }
-                        .song-info{
-                            h4{
+                        .song-info {
+                            h4 {
                                 font-size: 16px;
                             }
-                            p{
+                            p {
                                 font-size: 13px;
                             }
                         }
                     }
                 }
-            } 
-        } 
-    } 
-    div.everyday-song-page .inner .song-history--wrap{
-        > div{
+            }
+        }
+    }
+    div.everyday-song-page .inner .song-history--wrap {
+        > div {
             margin-bottom: 80px;
         }
-        .song-history--date{
+        .song-history--date {
             margin-top: 24px;
             font-size: 20px;
         }
-        .song-history--music--wrap{
+        .song-history--music--wrap {
             flex-direction: column;
 
-            .song-history--music .song-history--music__img{
+            .song-history--music .song-history--music__img {
                 width: 310px;
             }
-        } 
-    } 
-    div.everyday-song-page .inner .section-title{
+        }
+    }
+    div.everyday-song-page .inner .section-title {
         margin-bottom: 40px;
     }
-    .sub-page--wrap .inner{
+    .sub-page--wrap .inner {
         padding-top: 60px;
     }
 }
 
 @media (max-width: 400px) {
-    header div.inner{
-        h1 a{
+    header div.inner {
+        h1 a {
             font-size: 16px;
         }
-        ul li a{
+        ul li a {
             font-size: 13px;
         }
-    } 
-    section.music-section .inner{
-        .player-wrap{
+    }
+    section.music-section .inner {
+        .player-wrap {
             height: 330px;
 
-            .music-player--wrap .music-thumbnail--img {
+            .music-player--wrap .music-thumbnail--img,
+            .youtube-placeholder .thumbnail-container .music-thumbnail--img {
                 width: 200px;
                 height: 200px;
             }
-        } 
-        .side-content > div.comment .write-comment--component{
-            .write-modal{
+        }
+        .side-content > div.comment .write-comment--component {
+            .write-modal {
                 left: -310%;
             }
         }
-    } 
+    }
 }
