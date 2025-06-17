@@ -60,7 +60,6 @@ export default function ArtistSection() {
                                             alt={artist.name}
                                             width={190}
                                             height={190}
-                                            unoptimized
                                         />
                                     </div>
                                 )}
@@ -93,7 +92,6 @@ export default function ArtistSection() {
                                                     alt={song.title}
                                                     width={120}
                                                     height={120}
-                                                    unoptimized
                                                 />
                                             )}
                                             <div className="song-info">
