@@ -108,23 +108,11 @@
             color: #fff;
             text-shadow: 0 0 16px #00000060;
             
-            > div{
-                transform: translateY(-30px);
-                opacity: 0;
-            }
-            > div.view{
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            .title{
-                transition: all 0.3s;
-            }
             .singer{
                 margin-bottom: 0;
                 font-family: 'p-400';
                 font-size: 20px;
                 color: #a5a5a5;
-                transition: all 0.6s;
             }
         }
     }
