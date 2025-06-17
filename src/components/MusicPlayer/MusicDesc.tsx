@@ -6,7 +6,6 @@ export default function MusicDesc() {
     const [title, setTitle] = useState<string>("");
     const [singer, setSinger] = useState<string>("");
     const [isMorning, setIsMorning] = useState<string>('morning');
-    const [isView, setIsView] = useState('');
 
     const getTime = () => {
         const now = new Date();
@@ -25,18 +24,14 @@ export default function MusicDesc() {
         fetchData();
     }, [isMorning])
 
-    useEffect(() => {
-        setIsView('view');
-    }, []);
-
     return (
         <div className="music-desc--wrap">
             <ul className="music-desc">
                 <li>
-                    <div className={`title ${isView}`}>{title}</div>
+                    <div className={`title view`}>{title}</div>
                 </li>
                 <li>
-                    <div className={`singer ${isView}`}>{singer}</div>
+                    <div className={`singer view`}>{singer}</div>
                 </li>
             </ul>
         </div>
