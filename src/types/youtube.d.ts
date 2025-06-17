@@ -3,6 +3,7 @@ declare namespace YT {
         getPlayerState(): number;
         playVideo(): void;
         pauseVideo(): void;
+        destroy(): void;
     }
 
     const PlayerState: {
@@ -14,8 +15,26 @@ declare namespace YT {
         CUED: 5;
     };
 
+    interface PlayerVars {
+        autoplay?: 0 | 1;
+        modestbranding?: 0 | 1;
+        rel?: 0 | 1;
+        origin?: string;
+        [key: string]: string | number | boolean | undefined;
+    }
+
     interface PlayerConstructor {
-        new (elementId: string, options: { videoId: string }): Player;
+        new (
+            elementId: string, 
+            options: { 
+                videoId: string;
+                host?: string;
+                playerVars?: PlayerVars;
+                events?: {
+                    onReady?: () => void;
+                };
+            }
+        ): Player;
     }
 }
 
@@ -25,5 +44,6 @@ declare global {
             Player: YT.PlayerConstructor;
             PlayerState: typeof YT.PlayerState;
         };
+        onYouTubeIframeAPIReady: () => void;
     }
 }

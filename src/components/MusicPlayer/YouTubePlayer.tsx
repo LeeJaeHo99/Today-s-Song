@@ -1,30 +1,14 @@
 'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from 'react';
 
-interface YouTubePlayer {
-    playVideo: () => void;
-    pauseVideo: () => void;
-    stopVideo: () => void;
-    seekTo: (seconds: number) => void;
-    getPlayerState: () => number;
-    getCurrentTime: () => number;
-    getDuration: () => number;
-    destroy: () => void;
+interface YouTubePlayerProps {
+    videoId: string;
+    onReady?: () => void;
 }
 
-declare global {
-    interface Window {
-        YT: {
-            Player: new (elementId: string, options: { videoId: string, host: string, playerVars: { origin: string }, events: { onReady: () => void } }) => YouTubePlayer;
-        };
-        onYouTubeIframeAPIReady: () => void;
-    }
-}
-
-export function useYoutubePlayer(videoId: string, elementId: string = "youtube-player"){
-    const playerRef = useRef<YouTubePlayer | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+export default function YouTubePlayer({ videoId, onReady }: YouTubePlayerProps) {
+    const playerRef = useRef<YT.Player | null>(null);
 
     useEffect(() => {
         if (!videoId) return;
@@ -39,8 +23,7 @@ export function useYoutubePlayer(videoId: string, elementId: string = "youtube-p
         };
 
         window.onYouTubeIframeAPIReady = () => {
-            setIsLoading(false);
-            playerRef.current = new window.YT.Player(elementId, {
+            playerRef.current = new window.YT.Player("youtube-player", {
                 videoId: videoId,
                 host: 'https://www.youtube.com',
                 playerVars: {
@@ -48,11 +31,12 @@ export function useYoutubePlayer(videoId: string, elementId: string = "youtube-p
                 },
                 events: {
                     onReady: () => {
-                        const iframe = document.getElementById(elementId)?.querySelector('iframe');
+                        const iframe = document.getElementById("youtube-player")?.querySelector('iframe');
                         if (iframe) {
                             iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
                             iframe.setAttribute('loading', 'lazy');
                         }
+                        onReady?.();
                     },
                 },
             });
@@ -65,7 +49,7 @@ export function useYoutubePlayer(videoId: string, elementId: string = "youtube-p
                 playerRef.current.destroy();
             }
         };
-    }, [elementId, videoId]);
+    }, [videoId, onReady]);
 
-    return { playerRef, isLoading };
-}
+    return null;
+} 

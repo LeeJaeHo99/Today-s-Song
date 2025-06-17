@@ -11,7 +11,7 @@ export default function MusicPlayer() {
     const [videoId, setVideoId] = useState<string>("");
     const [isMorning, setIsMorning] = useState<string>("");
 
-    const playerRef = useYoutubePlayer(videoId);
+    const { playerRef, isLoading: isPlayerLoading } = useYoutubePlayer(videoId);
     const [isPlaying, setIsPlaying] = useState(false);
 
     const getTime = () => {
@@ -23,13 +23,18 @@ export default function MusicPlayer() {
     useEffect(() => {
         getTime();
         const fetchData = async () => {
-            const response = await fetch(
-                `${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`
-            );
-            const result = await response.json();
+            try {
+                const response = await fetch(
+                    `${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`
+                );
+                const result = await response.json();
 
-            setVideoId(`${result.data[result.data.length - 1][isMorning].videoId}`);
-            setIsLoading(false);
+                setVideoId(`${result.data[result.data.length - 1][isMorning].videoId}`);
+                setIsLoading(false);
+            } catch (error) {
+                console.error("Error fetching music data:", error);
+                setIsLoading(false);
+            }
         };
         fetchData();
     }, [isMorning]);
@@ -53,27 +58,28 @@ export default function MusicPlayer() {
         }
     };
 
+    if (isLoading || isPlayerLoading) {
+        return <Spinner />;
+    }
+
     return (
-        <>
-            {isLoading && <Spinner />}
-            {!isLoading && (
-                <motion.div
-                    className="music-player--wrap"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                        duration: 0.5,
-                        ease: [0, 0.71, 0.2, 1.01],
-                        delay: 0.5,
-                    }}
-                >
-                    <button
-                        className={`play-btn ${isPlaying ? `play` : `pause`}`}
-                        onClick={clickPlayer}
-                    ></button>
-                    <MusicThumbnail videoId={videoId} isPlaying={isPlaying} />
-                </motion.div>
-            )}
-        </>
+        <motion.div
+            className="music-player--wrap"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+                delay: 0.5,
+            }}
+        >
+            <button
+                className={`play-btn ${isPlaying ? `play` : `pause`}`}
+                onClick={clickPlayer}
+                aria-label={isPlaying ? "일시정지" : "재생"}
+            ></button>
+            <MusicThumbnail videoId={videoId} isPlaying={isPlaying} />
+            <div id="youtube-player" className="music-player" style={{ display: 'none' }}></div>
+        </motion.div>
     );
 }
