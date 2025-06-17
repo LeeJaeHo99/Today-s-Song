@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 interface YouTubePlaceholderProps {
     videoId: string;
@@ -19,7 +20,7 @@ export default function YouTubePlaceholder({ videoId, onClick, isPlaying }: YouT
             transition={{ duration: 0.3 }}
         >
             <div className="thumbnail-container">
-                <img 
+                <Image 
                     src={thumbnailUrl} 
                     alt="YouTube thumbnail"
                     className="thumbnail-image"
