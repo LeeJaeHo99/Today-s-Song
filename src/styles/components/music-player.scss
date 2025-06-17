@@ -152,3 +152,69 @@
     opacity: 1;
     transform: translateX(0px);
 }
+
+.youtube-placeholder {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    max-height: 360px;
+    margin: 40px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0px 0px 20px 16px rgba(0, 0, 0, 0.2);
+
+    .thumbnail-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+    }
+
+    .thumbnail-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 68px;
+        height: 48px;
+        background: rgba(0, 0, 0, 0.8);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .play-icon {
+            position: relative;
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 0 12px 20px;
+            border-color: transparent transparent transparent #fff;
+            margin: 0 auto;
+        }
+
+        &.playing {
+            .play-icon {
+                width: 20px;
+                height: 20px;
+                border: none;
+                background: #fff;
+                clip-path: polygon(0 0, 0 100%, 100% 50%);
+            }
+        }
+    }
+}
