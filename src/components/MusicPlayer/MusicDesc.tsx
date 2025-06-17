@@ -10,7 +10,6 @@ export default async function MusicDesc() {
     const hours = now.getHours();
     const isMorning = hours > 6 && hours < 18 ? "morning" : "night";
     const data = result.data[result.data.length - 1][isMorning];
-    console.log('data: ', data);
 
     return (
         <div className="music-desc--wrap">

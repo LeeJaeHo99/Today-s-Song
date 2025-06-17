@@ -9,7 +9,7 @@ export default function MusicThumbnail({
     isPlaying,
 }: MusicThumnailProp) {
     const [isLoading, setIsLoading] = useState(true);
-    const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
     return (
         <div>
