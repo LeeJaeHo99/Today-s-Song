@@ -28,7 +28,7 @@ export default function MusicThumbnail({
                         alt="thumbnail"
                         priority={false}
                         loading="lazy"
-                        onLoadingComplete={() => setIsLoading(false)}
+                        onLoad={() => setIsLoading(false)}
                         quality={75}
                     />
                 </div>

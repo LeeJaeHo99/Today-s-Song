@@ -25,6 +25,7 @@ export default function YouTubePlaceholder({ videoId, onClick, isPlaying }: YouT
                     width={480}
                     height={480}
                     alt="YouTube thumbnail"
+                    priority
                     className={`music-thumbnail--img ${isPlaying ? 'play' : 'pause'}`}
                 />
                 <button 
