@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.67.1",
+    "critters": "^0.0.23",
     "mongodb": "^6.13.0",
     "motion": "^12.0.6",
     "motion-plus": "^0.1.9",
