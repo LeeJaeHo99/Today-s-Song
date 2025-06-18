@@ -14,7 +14,7 @@ export default function MusicInputAndHistory() {
                 alert('오류가 발생하였습니다. 새로고침 부탁드립니다.');
             }
             const result = await response.json();
-            setMusicData(result.data);
+            setMusicData(result.data.reverse() || []);
         };
         fetchMusicData();
     }, []);
