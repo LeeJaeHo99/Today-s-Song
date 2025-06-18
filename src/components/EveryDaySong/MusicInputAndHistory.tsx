@@ -1,9 +1,9 @@
 "use client";   
 
-import SelectMonthInput from "./SelectMonthInput";
-import SongHistory from "./SongHistory";
 import { useEffect, useState } from "react";
 import { SongData } from "@/types/data-type";
+import SelectMonthInput from "./SelectMonthInput";
+import SongHistory from "./SongHistory";
 
 export default function MusicInputAndHistory() {
     const [musicData, setMusicData] = useState<SongData[]>([]);
