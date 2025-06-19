@@ -11,7 +11,6 @@ interface NoticeData{
 }
 
 export default function NoticeContent({noticeData}: {noticeData: NoticeData[]}){
-    console.log('noticeData: ', noticeData);
     const pathName = usePathname();
     const pathNum: string = pathName?.split('/')?.[2];
     const {title, author, date, content} = noticeData[Number(pathNum)];

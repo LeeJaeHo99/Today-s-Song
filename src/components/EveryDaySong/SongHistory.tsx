@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import NoneMusic from "./NoneMusic";
 
 export default function SongHistory({ music }: { music: SongData[] }) {
-    console.log('music: ', music);
     const [musicList, setMusicList] = useState([...music]);
 
     const { selectedDate } = useSelectedDate();
