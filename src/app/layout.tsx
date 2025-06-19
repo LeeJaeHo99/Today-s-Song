@@ -1,6 +1,7 @@
 import "@/styles/style.scss";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
+import ReactQueryProvider from "@/components/ReactQueryProvider";
 
 import type { Metadata } from "next";
 export const metadata: Metadata = {
@@ -57,9 +58,11 @@ export default function RootLayout({
     return (
         <html lang="ko">
             <body>
-                <Header />
-                {children}
-                <Footer />
+                <ReactQueryProvider>
+                    <Header />
+                    {children}
+                    <Footer />
+                </ReactQueryProvider>
             </body>
         </html>
     );

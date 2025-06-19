@@ -4,25 +4,27 @@ import HistoryMusic from "./HistoryMusic";
 import { useSelectedDate } from "@/store/store";
 import { SongData } from "@/types/data-type";
 import { useEffect, useState } from "react";
+import NoneMusic from "./NoneMusic";
 
 export default function SongHistory({ music }: { music: SongData[] }) {
-    const { selectedDate } = useSelectedDate();
-    const selectedYear = selectedDate.split("-")[0];
-    const selectedMonth = selectedDate.split("-")[1];
+    console.log('music: ', music);
+    const [musicList, setMusicList] = useState([...music]);
 
-    const [dataList, setDataList] = useState([...music.reverse().slice(0, 10)]);
+    const { selectedDate } = useSelectedDate();
+    const selectedYear = Number(selectedDate.split("-")[0]);
+    const selectedMonth = Number(selectedDate.split("-")[1]);
 
     useEffect(() => {
         const filteredMusic = music.filter((data) => {
-            return data.date.year === selectedYear && data.date.month === selectedMonth;
+            return Number(data.date.year) === selectedYear && Number(data.date.month) === selectedMonth;
         });
-        setDataList(filteredMusic);
+        setMusicList(filteredMusic);
     }, [selectedYear, selectedMonth, music]);
     
     return (
         <div className="song-history--wrap">
-            {dataList.length > 0 ? (
-                dataList.map((data) => {
+            {musicList.length > 0 ? (
+                musicList.map((data) => {
                     return (
                         <div key={data._id}>
                             <div className="song-history--date">
@@ -49,10 +51,3 @@ export default function SongHistory({ music }: { music: SongData[] }) {
     );
 }
 
-function NoneMusic(){
-    return (
-        <div className="none-music--comment">
-            🎧 현재 설정하신 날짜에 노래가 존재하지 않습니다 🎧
-        </div>
-    );
-}
