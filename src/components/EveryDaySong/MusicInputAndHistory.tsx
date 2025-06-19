@@ -1,28 +1,53 @@
-"use client";   
+"use client";
 
-import { useEffect, useState } from "react";
-import { SongData } from "@/types/data-type";
+import { useEffect } from "react";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { useInView } from "react-intersection-observer";
 import SelectMonthInput from "./SelectMonthInput";
 import SongHistory from "./SongHistory";
+import Spinner from "../spinner/Spinner";
+import NoneMusic from "./NoneMusic";
 
 export default function MusicInputAndHistory() {
-    const [musicData, setMusicData] = useState<SongData[]>([]);
-    useEffect(() => {
-        const fetchMusicData = async () => {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
-            if(!response.ok){
-                alert('오류가 발생하였습니다. 새로고침 부탁드립니다.');
-            }
-            const result = await response.json();
-            setMusicData(result.data.reverse() || []);
-        };
-        fetchMusicData();
-    }, []);
+    const {
+        data,
+        fetchNextPage,
+        hasNextPage,
+        isFetchingNextPage,
+        status,
+    } = useInfiniteQuery({
+        queryKey: ["music"],
+        queryFn: async ({ pageParam = 1 }) => {
+            const limit = pageParam === 1 ? 10 : 5;
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic?page=${pageParam}&limit=${limit}`);
+            const result = await res.json();
+            return {
+                data: result.data,
+                nextCursor: result.nextPage,
+            };
+        },
+        initialPageParam: 1,
+        getNextPageParam: (lastPage) => lastPage.nextCursor ?? undefined,
+    });
 
-    return (
+    const allMusic = data?.pages.flatMap((page) => page.data) ?? [];
+    const { ref, inView } = useInView();
+
+    useEffect(() => {
+        if (inView && hasNextPage && !isFetchingNextPage) {
+            fetchNextPage();
+        }
+    }, [inView, hasNextPage, isFetchingNextPage, fetchNextPage]);
+
+    if (status === "pending") return <Spinner />;
+    if (status === "error") return <NoneMusic />;
+    if (status === "success") return (
         <>
-            <SelectMonthInput/>
-            <SongHistory  music={musicData}/>
+            <SelectMonthInput />
+            <SongHistory music={allMusic} />
+            {isFetchingNextPage && <Spinner />}
+
+            <div ref={ref} style={{ height: 1 }} />
         </>
     );
 }
