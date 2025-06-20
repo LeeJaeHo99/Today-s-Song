@@ -1,12 +1,10 @@
 'use client';
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Modal from "../ui/Modal";
 
 export default function MusicRecommend() {
-    const router = useRouter();
     const [title, setTitle] = useState('');
     const [singer, setSinger] = useState('');
     const [message, setMessage] = useState('');
@@ -27,8 +25,9 @@ export default function MusicRecommend() {
             if (response.ok) {
                 setTitle('');
                 setSinger('');
-                setShowModal(false);
-                router.refresh();
+                setTimeout(() => {
+                    setShowModal(false);
+                }, 1500);
             } else {
                 setMessage('오류가 발생하였습니다. 다시 시도해 주세요.1');
             }

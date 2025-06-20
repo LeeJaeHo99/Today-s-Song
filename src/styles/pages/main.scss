@@ -198,6 +198,17 @@
                                 font-size: 16px;
                                 background-color: rgb(255 255 255 / 25%);
                             }
+                            p.review-complete{
+                                width: 100%;
+                                text-align: center;
+                                top: 50%;
+                                left: 50%;
+                                right: auto;
+                                transform: translate(-50%, -50%);
+                                font-family: 'bnv';
+                                font-size: 16px;
+                                color: #fff;
+                            }
                         }
                     }
                 }
@@ -288,6 +299,11 @@
                         }
                     }
                 }
+            }
+            .submit-complete{
+                font-family: 'bnv';
+                font-size: 18px;
+                color: #f4f4f4;
             }
         }
     }
