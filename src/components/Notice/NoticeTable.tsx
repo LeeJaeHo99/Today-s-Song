@@ -18,7 +18,7 @@ export default function NoticeTable() {
             try {
                 const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getNotice`);
                 const result = await response.json();
-                setNoticeData(result.data);
+                setNoticeData(result.data.reverse());
             } catch (error) {
                 console.error('Failed to fetch notice data:', error);
             }
@@ -41,9 +41,9 @@ export default function NoticeTable() {
                 {noticeData.map((data: NoticeData, i: number) => {
                     return (
                         <tr key={data._id}>
-                            <td>{i + 1}</td>
+                            <td>{noticeData.length - i}</td>
                             <td className="title-part">
-                                <Link href={`/notice/${i}`}>
+                                <Link href={`/notice/${noticeData.length - 1 - i}`}>
                                     {data.title}
                                 </Link>
                             </td>
