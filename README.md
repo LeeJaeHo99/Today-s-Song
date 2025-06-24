@@ -11,32 +11,48 @@
 
 ## 📍 프로젝트 소개
 <a href="www.todayssong.co.kr" target="blank">www.todayssong.co.kr</a>
-<p>기여도: 💯 (개인 프로젝트)</p>
+<p>기여도: 100%</p>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f4ab2679-6146-43ed-baf3-cd82bcb70d59" width="800"/>
 </p>
+<p align="center">(메인 페이지)</p>
 <p>하루의 시작과 끝을 음악으로 채우는 감성적인 웹 서비스 <strong>"오느래 노래"</strong> 입니다.</p>
 <p>아침, 저녁마다 자동으로 곡이 갱신되며, 사용자들은 각 노래에 대한 감상평을 남길 수 있으며, 자신이 원하는 노래를 신청할 수 있습니다.</p>
 
 ## 📍 사용 기술 및 이유
-<img src="https://github.com/user-attachments/assets/382dea93-0af9-4e8a-8d17-364780745d36" width="48">
+<p>
+  <img src="https://github.com/user-attachments/assets/382dea93-0af9-4e8a-8d17-364780745d36" width="48">
+  <strong>Next JS</strong>
+</p>
 <p>다양한 사용자들이 이용했으면 하는 마음에 NextJS의 <strong>SSR</strong> 기능을 사용하여, <strong>SEO 최적화</strong>와 <strong>빠른 초기 렌더링속도</strong>를 위해 선택했습니다.</p>
 <p>실제로 성능 최적화를 통해 FCP는 <strong>0.2초까지 단축</strong>되었습니다.</p>
 
-<img src="https://github.com/user-attachments/assets/6a9b273e-d93a-40f9-8a9e-3a956bc2648b" width="48">
+<p>
+  <img src="https://github.com/user-attachments/assets/6a9b273e-d93a-40f9-8a9e-3a956bc2648b" width="48">
+  <strong>TypeScript</strong>
+</p>
 <p>정적 타입 시스템을 가진 타입스크립트를 사용하면서, 개발 중이나 빌드시에 <strong>오류를 쉽게 찾아내었습니다.</strong></p>
 <p>그렇게 런타임시 발생하는 오류를 줄여 <strong>안정적인 코드를 작성</strong>할 수 있었습니다.</p>
 
-<img src="https://github.com/user-attachments/assets/89b94b53-0144-429c-b70f-55ef625e1c0f" width="48">
+<p>
+  <img src="https://github.com/user-attachments/assets/89b94b53-0144-429c-b70f-55ef625e1c0f" width="48">
+  <strong>Zustand</strong>
+</p>
 <p>Context API, Redux 등 이전에 사용했던 상태관리 라이브러리와 비교하여, Zustand는 <strong>코드 가독성</strong>이 뛰어난 부분이 마음에 들었고,</p>
 <p>또한, 상태가 변경될 때 해당 상태를 사용하는 컴포넌트만 리렌더링되어, <strong>성능면에서 효율</strong>적인 라이브러리라고 생각해 선택했습니다.</p>
 
-<img src="https://github.com/user-attachments/assets/4c1052bc-fe92-491c-a35b-14050adf13ac" width="48">
+<p>
+  <img src="https://github.com/user-attachments/assets/4c1052bc-fe92-491c-a35b-14050adf13ac" width="48">
+  <strong>Tanstack Query</strong>
+</p>
 <p>이전에 추천된 음악을 소개하는 페이지가 존재하는데, 추후 서비스 기간이 길어지게 된다면 <strong>한번에 많은 양의 데이터</strong>를 가져오느라 해당 <strong>페이지의 진입 속도가 매우 느릴것 같다</strong>는 고민을 했습니다.</p>
 <p>그래서 무한 스크롤을 이용해, 첫 진입 시 몇개의 데이터만 불러오고, 이후 사용자가 스크롤시 데이터를 추가로 불러오는 방식으로 구현했습니다.</p>
 <p>현재는 데이터 양이 적어, 큰 효과를 보이고 있진 않지만, <strong>시간이 지날 수록 데이터 양이 증가하면 더욱 효과적</strong>일 것 같다고 생각하여 선택했습니다.</p>
 
-<img src="https://github.com/user-attachments/assets/78e19658-3cdb-4325-84aa-7b26a30e1068" width="48">
+<p>
+  <img src="https://github.com/user-attachments/assets/78e19658-3cdb-4325-84aa-7b26a30e1068" width="48">
+  <strong>Mongo DB</strong>
+</p>
 <p>MongoDB는 JSON 기반 구조로, 프론트엔드에서 다루는 객체와 거의 동일하게 데이터를 저장할 수 있어서 <strong>초기 개발속도가 빠르고</strong>, 구조 변경이 용이하다는 점이 유용하다 생각되어 선택하게 되었습니다.</p>
 
 ## 📍 트러블 슈팅
