@@ -10,10 +10,10 @@
 - [성과 및 배운점](#프로젝트-소개)
 
 ## 📍 프로젝트 소개
-<a href="www.todayssong.co.kr" target="blank">링크: www.todayssong.co.kr</a>
+<a href="www.todayssong.co.kr" target="blank">www.todayssong.co.kr</a>
 <p>기여도: 💯 (개인 프로젝트)</p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f31ac820-d7f2-4e13-8d65-c7fff078f262" width="800"/>
+  <img src="https://github.com/user-attachments/assets/f4ab2679-6146-43ed-baf3-cd82bcb70d59" width="800"/>
 </p>
 <p>하루의 시작과 끝을 음악으로 채우는 감성적인 웹 서비스 <strong>"오느래 노래"</strong> 입니다.</p>
 <p>아침, 저녁마다 자동으로 곡이 갱신되며, 사용자들은 각 노래에 대한 감상평을 남길 수 있으며, 자신이 원하는 노래를 신청할 수 있습니다.</p>
