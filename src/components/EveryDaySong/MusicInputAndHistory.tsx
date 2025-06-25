@@ -31,6 +31,7 @@ export default function MusicInputAndHistory() {
     });
 
     const allMusic = data?.pages.flatMap((page) => page.data) ?? [];
+    allMusic.shift();
     const { ref, inView } = useInView();
 
     useEffect(() => {

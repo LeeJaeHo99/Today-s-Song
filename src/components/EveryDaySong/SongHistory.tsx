@@ -8,11 +8,11 @@ import NoneMusic from "./NoneMusic";
 
 export default function SongHistory({ music }: { music: SongData[] }) {
     const [musicList, setMusicList] = useState([...music]);
-
+    
     const { selectedDate } = useSelectedDate();
     const selectedYear = Number(selectedDate.split("-")[0]);
     const selectedMonth = Number(selectedDate.split("-")[1]);
-
+    
     useEffect(() => {
         const filteredMusic = music.filter((data) => {
             return Number(data.date.year) === selectedYear && Number(data.date.month) === selectedMonth;

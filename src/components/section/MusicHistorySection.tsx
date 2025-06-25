@@ -14,7 +14,7 @@ export default async function MusicHistorySection() {
         }
 
         const result = await response.json();
-        yesterdayMusicData = result.data[result.data.length - 2];
+        yesterdayMusicData = result.data.reverse()[result.data.length - 2];
     } catch (error) {
         console.error("음악 데이터를 가져오는 중 오류 발생:", error);
         return (

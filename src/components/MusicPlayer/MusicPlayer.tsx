@@ -34,7 +34,7 @@ export default function MusicPlayer() {
                 );
                 const result = await response.json();
 
-                setVideoId(`${result.data[result.data.length - 1][isMorning]?.videoId}`);
+                setVideoId(`${result.data.reverse()[result.data.length - 1][isMorning]?.videoId}`);
                 setIsLoading(false);
             } catch (error) {
                 console.error("Error fetching music data:", error);

@@ -1,23 +1,22 @@
-export const revalidate = 60 * 60 * 6;
-
 export default async function MusicDesc() {
-    const now = new Date();
-    const hours = now.getHours();
-    
-    const dateStr = now.toISOString().split('T')[0];
-    const timeSlot = hours < 18 && hours >= 6 ? 'morning' : 'night';
-    const cacheKey = `${dateStr}-${timeSlot}`;
+    let data;
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`, {
-        next: { 
-            tags: [cacheKey],
-            revalidate: 0
-        },
-    });
-    const result = await res.json();
+    try{
+        const now = new Date();
+        const hours = now.getHours();
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
+        const result = await res.json();
+        const isMorning = hours >= 6 && hours < 18 ? "morning" : "night";
+        data = result.data[result.data.length - 1][isMorning];
+    } catch (error) {
+        if(error instanceof Error) {
+            return new Response(JSON.stringify({ message: error.message }), {
+                status: 500,
+            });
+        }
+    }
 
-    const isMorning = hours >= 6 && hours < 18 ? "morning" : "night";
-    const data = result.data[result.data.length - 1][isMorning];
+
 
     return (
         <div className="music-desc--wrap">
