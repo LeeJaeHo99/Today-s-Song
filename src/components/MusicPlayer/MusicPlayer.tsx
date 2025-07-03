@@ -1,48 +1,25 @@
 "use client";
 
+import { useState } from "react";
 import { useYoutubePlayer } from "@/hooks/useYoutubePlayer";
-import MusicThumbnail from "./MusicThumnail";
-import YouTubePlaceholder from "./YouTubePlaceholder";
-import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import Spinner from "../spinner/Spinner";
+import MusicThumbnail from "./MusicThumnail";
+import YouTubePlaceholder from "./YouTubePlaceholder";
 
-export default function MusicPlayer() {
-    const [isLoading, setIsLoading] = useState(true);
-    const [videoId, setVideoId] = useState<string>("");
-    const [isMorning, setIsMorning] = useState<string>("");
+export default function MusicPlayer({
+    isLoading,
+    videoId,
+}: {
+    isLoading: boolean;
+    videoId: string;
+}) {
     const [shouldLoadPlayer, setShouldLoadPlayer] = useState(false);
-
     const { playerRef, isLoading: isPlayerLoading } = useYoutubePlayer(
         shouldLoadPlayer ? videoId : "",
         "youtube-player"
     );
     const [isPlaying, setIsPlaying] = useState(false);
-
-    const getTime = () => {
-        const now = new Date();
-        const hours = now.getHours();
-        setIsMorning(hours < 18 && hours > 6 ? "morning" : "night");
-    };
-
-    useEffect(() => {
-        getTime();
-        const fetchData = async () => {
-            try {
-                const response = await fetch(
-                    `${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`
-                );
-                const result = await response.json();
-
-                setVideoId(`${result.data.reverse()[result.data.length - 1][isMorning]?.videoId}`);
-                setIsLoading(false);
-            } catch (error) {
-                console.error("Error fetching music data:", error);
-                setIsLoading(false);
-            }
-        };
-        fetchData();
-    }, [isMorning]);
 
     const handlePlayClick = () => {
         if (!shouldLoadPlayer) {

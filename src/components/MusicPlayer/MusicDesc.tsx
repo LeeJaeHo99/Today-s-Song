@@ -1,31 +1,22 @@
-export default async function MusicDesc() {
-    let data;
+import { SongData } from "@/types/types";
 
-    try{
-        const now = new Date();
-        const hours = now.getHours();
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
-        const result = await res.json();
-        const isMorning = hours >= 6 && hours < 18 ? "morning" : "night";
-        data = result.data[result.data.length - 1][isMorning];
-    } catch (error) {
-        if(error instanceof Error) {
-            return new Response(JSON.stringify({ message: error.message }), {
-                status: 500,
-            });
-        }
-    }
-
-
+export default function MusicDesc({
+    isLoading,
+    songData,
+}: {
+    isLoading: boolean;
+    songData: Partial<SongData>;
+}) {
+    if (isLoading) return <div></div>;
 
     return (
         <div className="music-desc--wrap">
             <ul className="music-desc">
                 <li>
-                    <div className="title view">{data.title}</div>
+                    <div className="title view">{songData?.title ?? ""}</div>
                 </li>
                 <li>
-                    <div className="singer view">{data.singer}</div>
+                    <div className="singer view">{songData?.singer ?? ""}</div>
                 </li>
             </ul>
         </div>

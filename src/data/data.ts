@@ -23,7 +23,6 @@ export const artistData: ArtistData = {
 };
 
 export const parsingData: string[] = [
-    '',
     '80137177',
     '80188909',
     '80050546',

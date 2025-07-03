@@ -25,7 +25,7 @@ export default function MusicThumbnail({
                         src={thumbnail}
                         width={480}
                         height={480}
-                        alt="thumbnail"
+                        alt=""
                         priority={false}
                         loading="lazy"
                         onLoad={() => setIsLoading(false)}

@@ -52,3 +52,9 @@ export interface SelectedDateType{
     setSelectedDate: (date: string) => void
 }
 
+export interface SongData {
+    title: string;
+    singer: string;
+    videoId: string;
+    lyric: string;
+}
