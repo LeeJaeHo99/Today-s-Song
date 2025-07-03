@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "https://www.todayssong.co.kr",
         images: [
             {
-                url: "/icons/favicon.png",
+                url: "/images/bg.png",
                 width: 1200,
                 height: 630,
                 alt: "오느래 노래",
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
         ],
     },
     icons: {
-        icon: "/icons/favicon.png",
-        shortcut: "/icons/favicon.png",
-        apple: "/icons/favicon.png",
+        icon: "/icons/favicon.ico",
+        shortcut: "/icons/favicon.ico",
+        apple: "/icons/favicon.ico",
     },
     themeColor: "#ffffff",
     twitter: {
         card: "summary_large_image",
         title: "오느래 노래",
         description: "오늘의 감성 노래를 하루 두 곡씩 추천해드립니다.",
-        images: ["/icons/favicon.png"],
+        images: ["/images/bg.png"],
     },
     robots: {
         index: true,
