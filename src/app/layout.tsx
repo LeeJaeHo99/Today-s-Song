@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "오느래 노래",
     description:
-        "오늘의 노래, 오느래 노래, 하루에 두곡, 오늘의 노래 추천, 오늘의 노래 추천 사이트, 감성 노래, 노래, 아티스트 추천, 플레이리스트 추천",
+        "매일 아침 저녁으로 감성적인 두 곡을 추천해드려요.",
     authors: [{ name: "이재호", url: "https://www.todayssong.co.kr" }],
     creator: "이재호",
     publisher: "이재호",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         locale: "ko_KR",
         title: "오느래 노래",
         description:
-            "오늘의 노래, 오느래 노래, 하루에 두곡, 오늘의 노래 추천, 오늘의 노래 추천 사이트, 감성 노래, 노래, 아티스트 추천, 플레이리스트 추천",
+            "매일 아침 저녁으로 감성적인 두 곡을 추천해드려요.",
         url: "https://www.todayssong.co.kr",
         images: [
             {

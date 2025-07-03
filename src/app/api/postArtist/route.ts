@@ -5,10 +5,11 @@ import { isoWeek } from "@/util/getWeekNum";
 
 export async function POST(){
     try{
-        const artist = await parsing(`${parsingData[isoWeek - 21]}`);
-
+        const artist = await parsing(`${parsingData[isoWeek]}`);
+        
         const db = (await connectDB).db("todaysSong");
         await db.collection("artist").insertOne(artist);
+
 
         return new Response(JSON.stringify({ message: "아티스트 데이터가 추가되었습니다." }), {
             status: 200,

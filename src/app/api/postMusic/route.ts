@@ -11,6 +11,7 @@ export async function POST(){
         await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/deleteNewMusic`, {
             method: "DELETE",
         });
+        console.log('New Music에서 삭제');
 
         return new Response(JSON.stringify({ message: "노래 데이터가 추가되었습니다." }), {
             status: 200,
