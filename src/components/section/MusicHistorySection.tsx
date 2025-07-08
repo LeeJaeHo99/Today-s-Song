@@ -7,7 +7,9 @@ export default async function MusicHistorySection() {
     let yesterdayMusicData = null;
 
     try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getMusic`, {
+            cache: 'no-store',
+        });
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
