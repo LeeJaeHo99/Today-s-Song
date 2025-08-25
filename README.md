@@ -51,6 +51,13 @@
 <p>현재는 데이터 양이 적어, 큰 효과를 보이고 있진 않지만, <strong>시간이 지날 수록 데이터 양이 증가하면 더욱 효과적</strong>일 것 같다고 생각하여 선택했습니다.</p>
 
 <p>
+  <img src="https://github.com/user-attachments/assets/4490b759-b059-441e-bf4d-92718adc1d1d" width="48">
+  <strong>NodeJS</strong>
+</p>
+<p>매주 아티스트 추천 섹션을 추가했고, 아티스트의 이름, 추천곡등 정보를 매번 찾기는 힘들것 같다고 생각하였습니다.</p>
+<p>Puppeteer 라이브러리를 이용하여 음악 사이트에서 사용하는 아티스트의 ID만을 가지고 정보를 크롤링하도록 하였습니다.</p>
+<p>또한 Cron-Job을 이용하여 매주 월요일 정각에 실행되도록 하여 크롤링 자동화로 사용자에게 추천 아티스트 정보를 제공하도록 기능을 구현하였습니다.</p>
+<p>
   <img src="https://github.com/user-attachments/assets/78e19658-3cdb-4325-84aa-7b26a30e1068" width="48">
   <strong>Mongo DB</strong>
 </p>
